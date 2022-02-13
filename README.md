@@ -4,7 +4,7 @@ Welcome to Chainmaille Designer, a Windows program intended to make it easier to
 
 ## Getting Started
 
-The best way to get started with Chainmaille Designer is to download the installer, run the installer on your machine, then to go through first few sections of the manual ("Chainmaille Designer Concepts" and "Get Me Started!!").  It helps, but is not necessary, to have one or more inlay projects in mind while doing so.
+The best way to get started with Chainmaille Designer is to download the installer, run the installer on your machine, then to go through the first few sections of the manual ("Chainmaille Designer Concepts" and "Get Me Started!!").  It helps, but is not necessary, to have one or more inlay projects in mind while doing so.
 
 The installer is the file named Chainmaille Designer Setup.msi in the top-level directory of this repository. It installs not only the program but also the users' manual, the release notes, a ring color palette, and lots of chainmaille weave definitions.
 
