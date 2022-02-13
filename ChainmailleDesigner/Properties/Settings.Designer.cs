@@ -196,8 +196,7 @@ namespace ChainmailleDesigner.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://github.com/CMAlbrecht/ChainmailleDesigner/Documentation/WebHelp/index.htm" +
-            "l")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Help/index.html")]
         public string HelpUrl {
             get {
                 return ((string)(this["HelpUrl"]));
