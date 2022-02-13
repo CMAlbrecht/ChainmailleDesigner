@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Palette name="Ring Lord Colors" version="2">
   <Description>Ring Lord colors as of late October 2019, organized by material. All colors were sampled from images obtained from the Ring Lord web site.</Description>
+  <PaletteSection name="Anodized Alum." abbreviatedName="Al">
     <Color name="bright silver" hsl="90 32 226" rgb="240 242 238" />
     <Color name="frost white" hsl="51 73 229" rgb="247 246 240" />
     <Color name="black ice" hsl="222 19 137" rgb="137 142 154" />
