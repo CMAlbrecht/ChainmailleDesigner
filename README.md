@@ -8,6 +8,8 @@ The best way to get started with Chainmaille Designer is to download the install
 
 The installer is the file named Chainmaille Designer Setup.msi in the top-level directory of this repository. It installs not only the program but also the users' manual, the release notes, a ring color palette, and lots of chainmaille weave definitions.
 
+When you first attempt to run the Chainmaille Designer Setup file, you'll likely be interrupted by Windows "protecting" your computer, and the only button their interface displays is the "Don't run" button. By clicking on the "More info" link, however, you will gain access to the "Run anyway" button, which is the one you want.
+
 ## Contributions
 
 Contributions are welcome, either in the form of bug reports or in the form of pull requests.  If you would like to contribute, please also read [CONTRIBUTING.md](CONTRIBUTING.md).
