@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ChainmailleWeave name="DE-Euro4in1" version ="1">
+  <Description>European 4-in-1 with edges and corners, right way.
+  </Description>
+  <PatternImage file="DE-Euro4in1-Overall.bmp"/>
+  <UnitVisualSize rows="2" columns="1"/>
+  <UnitColorSize x="1" y="2"/>
+  <EvenRowOffset x="0" y="0"/>
+  <Linkage value="sheet"/>
+  <Body verticalUnits="1" horizontalUnits="1" rows="2" columns="1">
+    <OutlineImage file="DE-Euro4in1-sheet-outline.bmp"/>
+    <PatternSpacing x="12" y="25"/>
+    <PatternElements>
+      <PatternElement index="0" file="DE-Euro4in1-sheet-Odd-fill.bmp">
+        <ImageOffset x="1" y="1"/>
+        <ColorOffset x="0" y="0"/>
+        <BuildOffset x="0" y="0"/>
+      </PatternElement>
+      <PatternElement index="1" file="DE-Euro4in1-sheetLeft-Even-fill.bmp">
+        <ImageOffset x="7" y="13"/>
+        <ColorOffset x="0" y="1"/>
+        <BuildOffset x="0" y="1"/>
+      </PatternElement>
+    </PatternElements>
+  </Body>
+  <Edges geometry="rectangular">
+    <Edge orientation="top" verticalUnits="1" horizontalUnits="1" rows="2" columns="1">
+      <OutlineImage file="DE-Euro4in1-TopCenter-outline.bmp"/>
+      <PatternElements>
+        <PatternElement index="0" file="DE-Euro4in1-TopCenter-Odd-fill.bmp">
+          <ImageOffset x="1" y="1"/>
+          <ColorOffset x="0" y="0"/>
+          <BuildOffset x="0" y="0"/>
+        </PatternElement>
+        <PatternElement index="1" file="DE-Euro4in1-sheetLeft-Even-fill.bmp">
+          <ImageOffset x="7" y="13"/>
+          <ColorOffset x="0" y="1"/>
+          <BuildOffset x="0" y="1"/>
+        </PatternElement>
+      </PatternElements>
+    </Edge>
+    <Edge orientation="bottom" verticalUnits="1" horizontalUnits="1" rows="1" columns="1">
+      <OutlineImage file="DE-Euro4in1-BottomCenter-outline.bmp"/>
+      <PatternElements>
+        <PatternElement index="0" file="DE-Euro4in1-BottomCenter-Odd-fill.bmp">
+          <ImageOffset x="1" y="1"/>
+          <ColorOffset x="0" y="0"/>
+          <BuildOffset x="0" y="0"/>
+        </PatternElement>
+      </PatternElements>
+    </Edge>
+    <Edge orientation="left" verticalUnits="1" horizontalUnits="1" rows="2" columns="1">
+      <OutlineImage file="DE-Euro4in1-LeftEdge-outline.bmp"/>
+      <PatternElements>
+        <PatternElement index="0" file="DE-Euro4in1-LeftEdge-Odd-fill.bmp">
+          <ImageOffset x="1" y="1"/>
+          <ColorOffset x="0" y="0"/>
+          <BuildOffset x="0" y="0"/>
+        </PatternElement>
+        <PatternElement index="1" file="DE-Euro4in1-sheetLeft-Even-fill.bmp">
+          <ImageOffset x="7" y="13"/>
+          <ColorOffset x="0" y="1"/>
+          <BuildOffset x="0" y="1"/>
+        </PatternElement>
+      </PatternElements>
+    </Edge>
+    <Edge orientation="right" verticalUnits="1" horizontalUnits="2" rows="2" columns="2">
+      <OutlineImage file="DE-Euro4in1-RightEdge-outline.bmp"/>
+      <PatternElements>
+        <PatternElement index="0" file="DE-Euro4in1-sheet-Odd-fill.bmp">
+          <ImageOffset x="1" y="1"/>
+          <ColorOffset x="0" y="0"/>
+          <BuildOffset x="0" y="0"/>
+        </PatternElement>
+        <PatternElement index="1" file="DE-Euro4in1-RightEdge-Even-fill.bmp">
+          <ImageOffset x="7" y="13"/>
+          <ColorOffset x="0" y="1"/>
+          <BuildOffset x="0" y="1"/>
+        </PatternElement>
+        <PatternElement index="2" file="DE-Euro4in1-RightEdge-Odd-fill.bmp">
+          <ImageOffset x="13" y="1"/>
+          <ColorOffset x="1" y="0"/>
+          <BuildOffset x="1" y="0"/>
+        </PatternElement>
+      </PatternElements>
+    </Edge>
+    <Corners>
+      <Corner orientation="top left" verticalUnits="1" horizontalUnits="1" rows="2" columns="1">
+        <OutlineImage file="DE-Euro4in1-TopLeft-outline.bmp"/>
+        <PatternElements>
+          <PatternElement index="0" file="DE-Euro4in1-TopLeft-Odd-fill.bmp">
+            <ImageOffset x="1" y="1"/>
+            <ColorOffset x="0" y="0"/>
+            <BuildOffset x="0" y="0"/>
+          </PatternElement>
+          <PatternElement index="1" file="DE-Euro4in1-sheetLeft-Even-fill.bmp">
+            <ImageOffset x="7" y="13"/>
+            <ColorOffset x="0" y="1"/>
+            <BuildOffset x="0" y="1"/>
+          </PatternElement>
+        </PatternElements>
+      </Corner>
+      <Corner orientation="top right" verticalUnits="1" horizontalUnits="2" rows="2" columns="2">
+        <OutlineImage file="DE-Euro4in1-TopRight-outline.bmp"/>
+        <PatternElements>
+          <PatternElement index="0" file="DE-Euro4in1-TopCenter-Odd-fill.bmp">
+            <ImageOffset x="1" y="1"/>
+            <ColorOffset x="0" y="0"/>
+            <BuildOffset x="0" y="0"/>
+          </PatternElement>
+          <PatternElement index="1" file="DE-Euro4in1-RightEdge-Even-fill.bmp">
+            <ImageOffset x="7" y="13"/>
+            <ColorOffset x="0" y="1"/>
+            <BuildOffset x="0" y="1"/>
+          </PatternElement>
+          <PatternElement index="2" file="DE-Euro4in1-TopRight-Odd-fill.bmp">
+            <ImageOffset x="13" y="1"/>
+            <ColorOffset x="1" y="0"/>
+            <BuildOffset x="1" y="0"/>
+          </PatternElement>
+        </PatternElements>
+      </Corner>
+      <Corner orientation="bottom left" verticalUnits="1" horizontalUnits="1" rows="1" columns="1">
+        <OutlineImage file="DE-Euro4in1-BottomLeft-outline.bmp"/>
+        <PatternElements>
+          <PatternElement index="0" file="DE-Euro4in1-BottomLeft-Odd-fill.bmp">
+            <ImageOffset x="1" y="1"/>
+            <ColorOffset x="0" y="0"/>
+            <BuildOffset x="0" y="0"/>
+          </PatternElement>
+        </PatternElements>
+      </Corner>
+      <Corner orientation="bottom right" verticalUnits="1" horizontalUnits="2" rows="1" columns="2">
+        <OutlineImage file="DE-Euro4in1-BottomRight-outline.bmp"/>
+        <PatternElements>
+          <PatternElement index="0" file="DE-Euro4in1-BottomCenter-Odd-fill.bmp">
+            <ImageOffset x="1" y="1"/>
+            <ColorOffset x="0" y="0"/>
+            <BuildOffset x="0" y="0"/>
+          </PatternElement>
+          <PatternElement index="1" file="DE-Euro4in1-BottomRight-Odd-fill.bmp">
+            <ImageOffset x="13" y="1"/>
+            <ColorOffset x="1" y="0"/>
+            <BuildOffset x="1" y="0"/>
+          </PatternElement>
+        </PatternElements>
+      </Corner>
+    </Corners>
+  </Edges>
+  <Scales>
+    <Scale>
+      <RingSizes>
+        <RingSize idinches="3/16" gauge="16" ar="3.3"/>
+      </RingSizes>
+    </Scale>
+  </Scales>
+</ChainmailleWeave>

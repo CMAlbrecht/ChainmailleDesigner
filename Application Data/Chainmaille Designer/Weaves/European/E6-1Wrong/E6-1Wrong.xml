@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ChainmailleWeave name="E6-1Wrong" version ="1" creator="Clawe">
+  <Description>European 6-in-1, wrong way.
+  </Description>
+  <PatternImage file="E6-1Wrong.bmp"/>
+  <UnitVisualSize rows="2" columns="1"/>
+  <UnitColorSize x="1" y="2"/>
+  <EvenRowOffset x="0" y="0"/>
+  <Linkage value="sheet"/>
+  <Body verticalUnits="1" horizontalUnits="1" rows="2" columns="1">
+    <OutlineImage file="E6-1Wrong-Outline.bmp"/>
+    <PatternSpacing x="62" y="30"/>
+    <PatternElements>
+      <PatternElement index="0" file="E6-1Wrong-1.bmp">
+        <ImageOffset x="1" y="1"/>
+        <ColorOffset x="0" y="0"/>
+        <BuildOffset x="0" y="0"/>
+      </PatternElement>
+      <PatternElement index="1" file="E6-1Wrong-2.bmp">
+        <ImageOffset x="32" y="1"/>
+        <ColorOffset x="0" y="1"/>
+        <BuildOffset x="0" y="1"/>
+      </PatternElement>
+    </PatternElements>
+  </Body>
+  <Scales>
+    <Scale>
+      <RingSizes>
+        <RingSize idinches="3/8" gauge="14" ar="6.25"/>
+      </RingSizes>
+    </Scale>
+  </Scales>
+</ChainmailleWeave>

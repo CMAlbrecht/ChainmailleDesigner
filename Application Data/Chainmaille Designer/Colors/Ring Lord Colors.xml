@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Palette name="Ring Lord Colors" version="2">
+  <Description>Ring Lord colors as of late October 2019, organized by material. All colors were sampled from images obtained from the Ring Lord web site.</Description>
+    <Color name="bright silver" hsl="90 32 226" rgb="240 242 238" />
+    <Color name="frost white" hsl="51 73 229" rgb="247 246 240" />
+    <Color name="black ice" hsl="222 19 137" rgb="137 142 154" />
+    <Color name="black" hsl="0 0 52" rgb="55 55 55" />
+    <Color name="bronze" hsl="31 111 105" rgb="163 113 60" />
+    <Color name="champagne" hsl="37 118 192" rgb="229 210 179" />
+    <Color name="yellow" hsl="60 195 125" rgb="232 232 34" />
+    <Color name="gold" hsl="51 180 168" rgb="236 219 121" />
+    <Color name="orange" hsl="39 221 108" rgb="221 147 9" />
+    <Color name="red" hsl="359 182 127" rgb="226 43 46" />
+    <Color name="dark rose" hsl="341 163 158" rgb="227 109 146" />
+    <Color name="pink" hsl="339 101 201" rgb="231 196 208" />
+    <Color name="electric violet" hsl="274 158 144" rgb="162 86 220" />
+    <Color name="purple" hsl="254 157 121" rgb="84 46 211" />
+    <Color name="light purple" hsl="227 203 179" rgb="136 159 245" />
+    <Color name="royal blue" hsl="212 189 106" rgb="24 107 201" />
+    <Color name="sky blue" hsl="195 157 164" rgb="122 200 227" />
+    <Color name="green" hsl="131 112 97" rgb="55 151 73" />
+    <Color name="seafoam" hsl="115 65 151" rgb="139 186 135" />
+    <Color name="lime" hsl="82 159 123" rgb="153 213 49" />
+  </PaletteSection>
+  <PaletteSection name="Anod. Alum. Older" abbreviatedName="Alo">
+    <Color name="black" hsl="160 17 20" rgb="20 23 22" />
+    <Color name="bronze" hsl="16 82 106" rgb="151 95 74" />
+    <Color name="gold" hsl="48 110 141" rgb="198 179 101" />
+    <Color name="yellow" hsl="57 159 114" rgb="201 193 41" />
+    <Color name="green" hsl="135 103 114" rgb="69 173 95" />
+    <Color name="blue" hsl="205 153 121" rgb="48 142 209" />
+    <Color name="purple" hsl="250 148 111" rgb="69 45 191" />
+    <Color name="violet" hsl="277 148 137" rgb="161 78 213" />
+    <Color name="red" hsl="7 155 114" rgb="199 61 43" />
+    <Color name="pink" hsl="313 153 167" rgb="227 128 206" />
+    <Color name="orange" hsl="36 223 107" rgb="220 135 8" />
+  </PaletteSection>
+  <PaletteSection name="EPDM Rubber" abbreviatedName="Rub">
+    <Color name="white" hsl="60 189 231" rgb="253 253 238" />
+    <Color name="black" hsl="195 5 89" rgb="93 96 97" />
+    <Color name="brown" hsl="21 79 127" rgb="174 122 95" />
+    <Color name="orange" hsl="35 223 136" rgb="247 162 42" />
+    <Color name="yellow" hsl="56 214 136" rgb="243 230 46" />
+    <Color name="green" hsl="147 122 142" rgb="98 204 146" />
+    <Color name="light blue" hsl="188 151 171" rgb="136 215 228" />
+    <Color name="blue" hsl="215 139 135" rgb="79 133 208" />
+    <Color name="purple" hsl="244 116 151" rgb="121 115 206" />
+    <Color name="red" hsl="1 177 125" rgb="223 46 43" />
+    <Color name="pink" hsl="345 228 201" rgb="253 175 194" />
+  </PaletteSection>
+  <PaletteSection name="Silicone Rubber" abbreviatedName="Sil">
+    <Color name="blue glows green" hsl="195 160 178" rgb="145 211 233" />
+    <Color name="green glow of blue" hsl="168 235 46" rgb="1 97 77" />
+    <Color name="green glows green" hsl="111 205 155" rgb="111 242 88" />
+    <Color name="green glow of green" hsl="132 237 84" rgb="1 177 36" />
+    <Color name="yellow glows yellow" hsl="75 199 136" rgb="190 236 53" />
+    <Color name="yellow glow of yellow" hsl="110 203 98" rgb="45 192 16" />
+    <Color name="pink glows orange" hsl="4 235 191" rgb="254 158 152" />
+    <Color name="orange glow of pink" hsl="26 176 81" rgb="150 78 23" />
+    <Color name="milky (no glow)" hsl="50 51 227" rgb="244 243 238" />
+  </PaletteSection>
+  <PaletteSection name="Metals" abbreviatedName="Met">
+    <Color name="black stainless" hsl="60 8 82" rgb="90 90 84" />
+    <Color name="stainless steel" hsl="55 15 148" rgb="163 162 151" />
+    <Color name="carbon steel" hsl="63 25 154" rgb="172 173 154" />
+    <Color name="galvanized steel" hsl="315 7 176" rgb="189 185 188" />
+    <Color name="silver" hsl="49 50 215" rgb="234 232 223" />
+    <Color name="nickel silver" hsl="42 186 215" rgb="249 237 208" />
+    <Color name="bright aluminum" hsl="45 17 214" rgb="229 228 225" />
+    <Color name="titanium" hsl="57 65 205" rgb="228 227 208" />
+    <Color name="niobium" hsl="46 50 170" rgb="196 189 165" />
+    <Color name="bronze" hsl="26 123 159" rgb="213 163 125" />
+    <Color name="copper" hsl="9 181 190" rgb="242 174 162" />
+    <Color name="brass" hsl="43 130 143" rgb="208 176 96" />
+    <Color name="10k gold solid" hsl="41 130 170" rgb="221 196 140" />
+    <Color name="yellow gold filled" hsl="35 174 179" rgb="237 198 143" />
+    <Color name="white gold filled" hsl="46 153 214" rgb="245 237 210" />
+    <Color name="rose gold filled" hsl="30 189 196" rgb="245 208 171" />
+  </PaletteSection>
+  <PaletteSection name="Enameled Copper" abbreviatedName="EC">
+    <Color name="black" hsl="165 9 53" rgb="54 58 57" />
+    <Color name="purple" hsl="261 65 98" rgb="96 76 132" />
+    <Color name="dark blue" hsl="223 42 125" rgb="111 123 154" />
+    <Color name="brass" hsl="49 115 148" rgb="204 187 110" />
+    <Color name="bronze" hsl="38 168 133" rgb="221 163 62" />
+    <Color name="natural" hsl="31 182 122" rgb="225 133 35" />
+    <Color name="amber" hsl="26 215 115" rgb="232 108 13" />
+    <Color name="majenta" hsl="356 180 138" rgb="228 65 76" />
+    <Color name="burgundy" hsl="0 115 85" rgb="133 47 47" />
+    <Color name="brown" hsl="27 130 121" rgb="197 122 61" />
+  </PaletteSection>
+  <PaletteSection name="Silvered Copper" abbreviatedName="ECS">
+    <Color name="silver" hsl="72 48 228" rgb="244 245 240" />
+    <Color name="tangerine" hsl="21 215 141" rgb="244 122 56" />
+    <Color name="lemon" hsl="56 211 140" rgb="242 229 56" />
+    <Color name="peridot" hsl="67 157 131" rgb="198 215 63" />
+    <Color name="christmas green" hsl="162 214 97" rgb="11 195 140" />
+    <Color name="seafoam" hsl="172 188 117" rgb="27 221 195" />
+    <Color name="blue" hsl="220 164 104" rgb="35 85 186" />
+    <Color name="orchid" hsl="242 95 145" rgb="116 114 194" />
+    <Color name="amethyst" hsl="253 25 81" rgb="81 77 95" />
+  </PaletteSection>
+  <PaletteSection name="Titanium" abbreviatedName="Ti">
+    <Color name="uncolored" hsl="60 54 205" rgb="226 226 209" />
+    <Color name="bronze" hsl="43 114 177" rgb="220 202 157" />
+    <Color name="gold" hsl="54 126 139" rgb="204 193 91" />
+    <Color name="rose" hsl="353 174 196" rgb="242 174 182" />
+    <Color name="violet" hsl="301 79 100" rgb="141 71 140" />
+    <Color name="purple" hsl="243 39 129" rgb="120 118 156" />
+    <Color name="dark blue" hsl="217 49 131" rgb="116 134 163" />
+    <Color name="light blue" hsl="189 51 165" rgb="158 187 192" />
+    <Color name="teal" hsl="181 116 158" rgb="126 209 210" />
+    <Color name="green" hsl="127 90 148" rgb="121 194 130" />
+  </PaletteSection>
+  <PaletteSection name="Niobium" abbreviatedName="Nio">
+    <Color name="uncolored" hsl="42 67 167" rgb="199 186 156" />
+    <Color name="black" hsl="160 8 40" rgb="41 44 43" />
+    <Color name="brown" hsl="37 51 79" rgb="102 88 66" />
+    <Color name="bronze" hsl="41 71 144" rgb="183 164 123" />
+    <Color name="yellow" hsl="54 122 142" rgb="204 193 98" />
+    <Color name="rose gold" hsl="45 177 133" rgb="225 183 58" />
+    <Color name="dark rose" hsl="7 126 165" rgb="217 143 133" />
+    <Color name="violet" hsl="309 78 145" rgb="187 121 177" />
+    <Color name="indigo" hsl="275 144 134" rgb="154 74 210" />
+    <Color name="royal purple" hsl="247 36 112" rgb="105 101 137" />
+    <Color name="cobalt blue" hsl="208 75 107" rgb="78 116 149" />
+    <Color name="light blue" hsl="203 85 129" rgb="95 147 179" />
+    <Color name="peacock blue" hsl="198 194 156" rgb="93 195 238" />
+    <Color name="teal" hsl="183 97 148" rgb="118 193 197" />
+    <Color name="green" hsl="137 119 135" rgb="88 199 119" />
+  </PaletteSection>
+</Palette>

@@ -1,0 +1,34 @@
+﻿// Chainmaille Designer  (c) 2022
+// Created by Christopher Matthew Albrecht
+// https://github.com/CMAlbrecht/ChainmailleDesigner
+// File: ChainmaillePatternElementId.cs
+
+
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License, version 3, as
+// published by the Free Software Foundation.
+
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+
+namespace ChainmailleDesigner
+{
+  /// <summary>
+  /// Identified a specific design pattern element by column, row, and
+  /// element index. Unlike in the rest of the program, all three of these
+  /// indices are expected to be one-based.
+  /// </summary>
+  public class ChainmaillePatternElementId
+  {
+    public int Column { get; set; }
+    public int Row { get; set; }
+    public int ElementIndex { get; set; }
+
+  }
+}

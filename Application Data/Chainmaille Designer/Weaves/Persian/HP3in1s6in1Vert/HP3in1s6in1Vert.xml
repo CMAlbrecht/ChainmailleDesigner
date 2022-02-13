@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ChainmailleWeave name="HP3in1s6in1Vert" version ="1" creator="MaxumX">
+  <Description>Half-Persian 3-in-1 sheet 6, vertical.
+  </Description>
+  <PatternImage file="HP361.bmp"/>
+  <UnitVisualSize rows="2" columns="1"/>
+  <UnitColorSize x="1" y="2"/>
+  <EvenRowOffset x="0" y="0"/>
+  <Linkage value="sheet"/>
+  <Body verticalUnits="1" horizontalUnits="1" rows="2" columns="1">
+    <OutlineImage file="HP361-O.bmp"/>
+    <PatternSpacing x="25" y="27"/>
+    <PatternElements>
+      <PatternElement index="0" file="HP361-001.bmp">
+        <ImageOffset x="1" y="1"/>
+        <ColorOffset x="0" y="0"/>
+        <BuildOffset x="0" y="0"/>
+      </PatternElement>
+      <PatternElement index="1" file="HP361-002.bmp">
+        <ImageOffset x="7" y="17"/>
+        <ColorOffset x="0" y="1"/>
+        <BuildOffset x="0" y="1"/>
+      </PatternElement>
+    </PatternElements>
+  </Body>
+  <Scales>
+    <Scale>
+      <RingSizes>
+        <RingSize idinches="5/16" gauge="16" ar="5.2"/>
+      </RingSizes>
+    </Scale>
+  </Scales>
+</ChainmailleWeave>

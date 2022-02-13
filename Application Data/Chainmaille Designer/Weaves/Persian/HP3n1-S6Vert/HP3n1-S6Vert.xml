@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ChainmailleWeave name="HP3n1-S6Vert" version ="1" creator="based on Leatherwing">
+  <Description>Half-Persian 3-in-1 sheet 6, vertical, right-handed.
+  </Description>
+  <PatternImage file="HP3-1S6.bmp"/>
+  <UnitVisualSize rows="2" columns="5"/>
+  <UnitColorSize x="10" y="1"/>
+  <EvenRowOffset x="0" y="0"/>
+  <Linkage value="sheet"/>
+  <Body verticalUnits="1" horizontalUnits="1" rows="2" columns="5">
+    <OutlineImage file="HP3-1S6O.bmp"/>
+    <PatternSpacing x="100" y="13"/>
+    <PatternElements>
+      <PatternElement index="0" file="HP3-1S6L.bmp">
+        <ImageOffset x="1" y="-6"/>
+        <ColorOffset x="0" y="0"/>
+        <BuildOffset x="0" y="0"/>
+      </PatternElement>
+      <PatternElement index="1" file="HP3-1S6R.bmp">
+        <ImageOffset x="5" y="-1"/>
+        <ColorOffset x="1" y="0"/>
+        <BuildOffset x="0" y="1"/>
+      </PatternElement>
+      <PatternElement index="2" file="HP3-1S6L.bmp">
+        <ImageOffset x="21" y="4"/>
+        <ColorOffset x="2" y="0"/>
+        <BuildOffset x="1" y="0"/>
+      </PatternElement>
+      <PatternElement index="3" file="HP3-1S6R.bmp">
+        <ImageOffset x="25" y="9"/>
+        <ColorOffset x="3" y="0"/>
+        <BuildOffset x="1" y="1"/>
+      </PatternElement>
+      <PatternElement index="4" file="HP3-1S6L.bmp">
+        <ImageOffset x="41" y="2"/>
+        <ColorOffset x="4" y="0"/>
+        <BuildOffset x="2" y="0"/>
+      </PatternElement>
+      <PatternElement index="5" file="HP3-1S6R.bmp">
+        <ImageOffset x="45" y="7"/>
+        <ColorOffset x="5" y="0"/>
+        <BuildOffset x="2" y="1"/>
+      </PatternElement>
+      <PatternElement index="6" file="HP3-1S6L.bmp">
+        <ImageOffset x="61" y="0"/>
+        <ColorOffset x="6" y="0"/>
+        <BuildOffset x="3" y="0"/>
+      </PatternElement>
+      <PatternElement index="7" file="HP3-1S6R.bmp">
+        <ImageOffset x="65" y="5"/>
+        <ColorOffset x="7" y="0"/>
+        <BuildOffset x="3" y="1"/>
+      </PatternElement>
+      <PatternElement index="8" file="HP3-1S6L.bmp">
+        <ImageOffset x="81" y="-3"/>
+        <ColorOffset x="8" y="0"/>
+        <BuildOffset x="4" y="0"/>
+      </PatternElement>
+      <PatternElement index="9" file="HP3-1S6R.bmp">
+        <ImageOffset x="85" y="2"/>
+        <ColorOffset x="9" y="0"/>
+        <BuildOffset x="4" y="1"/>
+      </PatternElement>
+    </PatternElements>
+  </Body>
+</ChainmailleWeave>

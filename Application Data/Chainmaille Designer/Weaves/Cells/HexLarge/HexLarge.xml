@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ChainmailleWeave name="HexLarge" version ="1">
+  <Description>Large-sized hexagonal grid.
+  </Description>
+  <PatternImage file="hex.bmp"/>
+  <UnitVisualSize rows="1" columns="1"/>
+  <UnitColorSize x="1" y="1"/>
+  <EvenRowOffset x="11" y="0"/>
+  <Linkage value="sheet"/>
+  <Body verticalUnits="1" horizontalUnits="1" rows="1" columns="1">
+    <OutlineImage file="hex-o.bmp"/>
+    <PatternSpacing x="22" y="19"/>
+    <PatternElements>
+      <PatternElement index="0" file="hex-001.bmp">
+        <ImageOffset x="0" y="0"/>
+        <ColorOffset x="0" y="0"/>
+        <BuildOffset x="0" y="0"/>
+      </PatternElement>
+    </PatternElements>
+  </Body>
+</ChainmailleWeave>

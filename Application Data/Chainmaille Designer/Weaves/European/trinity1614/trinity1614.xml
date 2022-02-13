@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ChainmailleWeave name="trinity1614" version ="1" creator="Tawnos">
+  <Description>Trinity, right way.
+  </Description>
+  <PatternImage file="trinity1614.bmp"/>
+  <UnitVisualSize rows="4" columns="1"/>
+  <UnitColorSize x="1" y="4"/>
+  <EvenRowOffset x="0" y="0"/>
+  <Linkage value="sheet"/>
+  <Body verticalUnits="1" horizontalUnits="1" rows="4" columns="1">
+    <OutlineImage file="trinity1614-o.bmp"/>
+    <PatternSpacing x="22" y="82"/>
+    <PatternElements>
+      <PatternElement index="0" file="trinity1614-001.bmp">
+        <ImageOffset x="17" y="3"/>
+        <ColorOffset x="0" y="0"/>
+        <BuildOffset x="0" y="0"/>
+      </PatternElement>
+      <PatternElement index="1" file="trinity1614-002.bmp">
+        <ImageOffset x="20" y="27"/>
+        <ColorOffset x="0" y="1"/>
+        <BuildOffset x="0" y="1"/>
+      </PatternElement>
+      <PatternElement index="2" file="trinity1614-001.bmp">
+        <ImageOffset x="6" y="44"/>
+        <ColorOffset x="0" y="2"/>
+        <BuildOffset x="0" y="2"/>
+      </PatternElement>
+      <PatternElement index="3" file="trinity1614-002.bmp">
+        <ImageOffset x="9" y="68"/>
+        <ColorOffset x="0" y="3"/>
+        <BuildOffset x="0" y="3"/>
+      </PatternElement>
+    </PatternElements>
+  </Body>
+  <Scales>
+    <Scale>
+      <RingSizes>
+        <RingSize idinches="1/4" gauge="16" ar="3.9"/>
+      </RingSizes>
+    </Scale>
+  </Scales>
+</ChainmailleWeave>

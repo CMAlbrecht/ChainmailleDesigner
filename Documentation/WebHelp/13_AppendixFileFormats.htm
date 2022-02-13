@@ -1,0 +1,2080 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta name="generator" content=
+"HTML Tidy for Windows (vers 25 March 2009), see www.w3.org">
+<meta content="text/html; charset=utf-8" http-equiv="content-type">
+<meta name="Generator" content="Microsoft Word 15 (filtered)">
+<link rel="stylesheet" type="text/css" href="embeddedstyles.css">
+<title>Appendix:&nbsp; File Formats</title>
+<meta name="generator" content="chmProcessor">
+</head>
+<body lang="EN-US" link="blue" vlink="#954F72" style=
+"word-wrap:break-word">
+<div class="WordSection3">
+<h1><a name="_Toc95395436">Appendix:&nbsp; File Formats</a></h1>
+<h2><a name="_Toc95395437">A Brief Introduction to XML</a></h2>
+<p class="MsoNormal">XML files are ordinary text files with
+specially-formatted text.&nbsp; There is plenty about them on the
+internet if you want to know more, but for our purposes it is
+sufficient to know that an XML file starts with an <i>XML</i>
+<i>header</i>.&nbsp; The <i>header</i> is followed by one or more
+<i>tags</i>, set off by angled brackets (&lt;&nbsp;&nbsp; &gt;),
+each of which have any number of attributes (of the form
+valueName=”value”) and can contain any number of other tags.</p>
+<p class="MsoNormal">There are two ways to delineate a tag, either
+as a single tag (starting with &lt; and ending with /&gt;) or by
+using a starting tag (&lt;TagName&gt;) and an ending tag
+(&lt;/TagName&gt;) with the contents in between.&nbsp; In the
+example below, the Color tags are all specified as a single tag,
+while the other tags are delineated using starting and ending
+tags.</p>
+<p class="MsoNormal">As an example, here’s the beginning and end of
+the Ring Lord Colors palette file.</p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&lt;?xml version="1.0"
+encoding="UTF-8"?&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&lt;Palette name="Ring
+Lord Colors" version="1"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;
+&lt;Description&gt;Ring Lord colors as of mid-September 2017,
+organized by material. All colors were sampled from images obtained
+from the Ring Lord web site.&lt;/Description&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;
+&lt;PaletteSection name="Anodized Alum."
+abbreviatedName="Al"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;Color name="bright silver" hsl="90 32 226" rgb="240 242 238"
+/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;Color name="frost white" hsl="51 73 229" rgb="247 246 240"
+/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;Color name="black ice" hsl="222 19 137" rgb="137 142 154"
+/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;Color name="black" hsl="0 0 52" rgb="55 55 55" /&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;Color name="bronze" hsl="31 111 105" rgb="163 113 60"
+/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;Color name="champagne" hsl="37 118 192" rgb="229 210 179"
+/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;Color name="yellow" hsl="60 195 125" rgb="232 232 34"
+/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;Color name="gold" hsl="51 180 168" rgb="236 219 121"
+/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;Color name="orange" hsl="39 221 108" rgb="221 147 9"
+/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;Color name="red" hsl="359 182 127" rgb="226 43 46"
+/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;Color name="dark rose" hsl="341 163 158" rgb="227 109 146"
+/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;Color name="pink" hsl="339 101 201" rgb="231 196 208"
+/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;Color name="lavender" hsl="227 203 179" rgb="136 159 245"
+/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;Color name="purple" hsl="236 157 121" rgb="46 57 211"
+/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;Color name="royal blue" hsl="212 189 106" rgb="24 107 201"
+/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;Color name="sky blue" hsl="195 157 164" rgb="122 200 227"
+/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;Color name="green" hsl="131 112 97" rgb="55 151 73"
+/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;Color name="seafoam" hsl="115 65 151" rgb="139 186 135"
+/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;Color name="lime" hsl="82 159 123" rgb="153 213 49"
+/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;
+&lt;/PaletteSection&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;
+&lt;PaletteSection name="Anod. Alum. Older"
+abbreviatedName="Alo"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;Color name="black" hsl="160 17 20" rgb="20 23 22"
+/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;Color name="bronze" hsl="16 82 106" rgb="151 95 74"
+/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;Color name="gold" hsl="48 110 141" rgb="198 179 101"
+/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;Color name="yellow" hsl="57 159 114" rgb="201 193 41"
+/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;</span></p>
+<p class="MsoNoSpacing"><b><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+...</span></b></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;
+&lt;/PaletteSection&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&lt;/Palette&gt;</span></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Reading the example, the file starts with the
+XML header.&nbsp; The rest of the file is one big Palette
+tag.&nbsp; The palette tag has attributes for name and version, a
+Description tag, and one or more PaletteSection tags.&nbsp; Each
+PaletteSection tag has attributes for name and abbreviatedName and
+one or more Color tags.&nbsp; Each Color tag has attributes for
+name, hsl, and rgb.</p>
+<p class="MsoNormal"><b>Note:&nbsp; In the following sections, each
+format description is accompanied by an example file.&nbsp; If you
+find the descriptions baffling, it will probably help to switch
+between description and example frequently.</b></p>
+<h2><a name="_Toc95395438">Pattern File Format</a></h2>
+<p class="MsoNormal">A pattern file is an XML file which describes
+how to graphically depict one chainmaille weave.&nbsp; It starts
+with identifying and descriptive information, then defines how to
+depict the interior of the sheet.&nbsp; The description of the
+interior can be optionally followed by descriptions of the edges
+and corners of the sheet.&nbsp; Additionally, information about
+ring sizes (or combinations of ring sizes) can be included.</p>
+<p class="MsoNormal">The file starts with a standard XML
+header.&nbsp; The entire rest of the document is composed of a
+single mandatory <b>ChainmailleWeave</b> tag.&nbsp; The
+<b>ChainmailleWeave</b> tag has the mandatory attributes
+<b>name</b> and <b>version</b>, and may optionally have an
+attribute for <b>creator</b>.&nbsp; The <b>name</b> is, of course,
+the name of the weave.&nbsp; The <b>version</b> is the version of
+the pattern file format in which the file was generated. &nbsp;At
+present, there are two versions, <i>1</i> and <i>2</i>; only
+version 2 has the <b>ringSize</b> attribute for the
+<b>PatternElement</b> tag and the <b>name</b> attribute for the
+<b>RingSize</b> tag.&nbsp; The value of the <b>creator</b>
+attribute is intended to identify the person or organization who
+created the pattern file.</p>
+<p class="MsoNormal">The <b>ChainmailleWeave</b> tag also contains
+optional tags for <b>Description</b> and <b>PatternImage</b>,
+mandatory tags for <b>UnitVisualSize</b> and <b>UnitColorSize</b>,
+an optional tag for <b>EvenRowOffset</b>, mandatory tags for
+<b>Linkage</b> and <b>Body</b>, and optional tags for <b>Edges</b>
+and <b>Scales</b>.</p>
+<p class="MsoNormal">The <b>Description</b> tag, if present,
+contains text describing the weave.</p>
+<p class="MsoNormal">The <b>PatternImage</b> tag, if present,
+identifies an image which shows all of the component rings of a
+portion of the weave in their proper relationships and has the
+mandatory attribute <b>file</b>.&nbsp; The value of the <b>file</b>
+attribute is the file name of the image file, which is assumed to
+be in the same directory as the rest of the pattern definition
+components.</p>
+<p class="MsoNormal">The <b>UnitVisualSize</b> tag relates units of
+the weave to visual rows and columns and has the mandatory
+attributes <b>rows</b> and <b>columns</b>.&nbsp; The values of the
+<b>rows</b> and <b>columns</b> attributes are the number of visual
+rows and columns, respectively, occupied by a single unit of the
+weave</p>
+<p class="MsoNormal">The <b>UnitColorSize</b> tag relates units of
+the weave to pixels in a color image and has the mandatory
+attributes <b>x</b> and <b>y</b>.&nbsp; The values of the <b>x</b>
+and <b>y</b> attributes are the number of pixels, horizontally and
+vertically, respectively, required to represent the colors of each
+of the rings in a single unit of the weave.</p>
+<p class="MsoNormal">The <b>EvenRowOffset</b> tag, if present,
+specifies an additional offset in the rendered image to be applied
+to every even-numbered row of the weave and has the mandatory
+attributes <b>x</b> and <b>y</b>.&nbsp; The values of the <b>x</b>
+and <b>y</b> attributes are the number of pixels, horizontally and
+vertically, respectively, by which to offset the drawing elements
+of the even rows.</p>
+<p class="MsoNormal">The <b>Linkage</b> tag specifies the way in
+which the weave elements connect and has the mandatory attribute
+<b>value</b>.&nbsp; The value of the <b>value</b> attribute must be
+either <i>sheet</i> or <i>chain</i>.&nbsp; At present, only
+<i>sheet</i> is supported by the program, but the intent is to be
+able eventually to design color patterns for chains.</p>
+<p class="MsoNormal">The <b>Body</b> tag describes how to depict
+the interior of the sheet and has the mandatory attributes
+<b>verticalUnits</b>, <b>horizontalUnits</b>, <b>rows</b>, and
+<b>columns</b>.&nbsp; The values of the <b>verticalUnits</b> and
+<b>horizontalUnits</b> attributes specify how many weave units
+vertically and horizontally are being described; typically these
+are both 1.&nbsp; The values of the <b>rows</b> and <b>columns</b>
+attributes specify how many visual rows and columns are spanned by
+the description; typically this is the same as the unit visual
+size.</p>
+<p class="MsoNormal">The <b>Body</b> tag contains the mandatory
+<b>OutlineImage</b> tag, the optional <b>PatternSpacing</b> tag,
+and the mandatory <b>PatternElements</b> tag.</p>
+<p class="MsoNormal">The <b>OutlineImage</b> tag identifies a
+tileable image containing the outlines of the rings of a unit of
+the weave and has the mandatory attribute <b>file</b>.&nbsp; The
+value of the <b>file</b> attribute is the file name of the image
+file, which is assumed to be in the same directory as the rest of
+the pattern definition components.</p>
+<p class="MsoNormal">The <b>PatternSpacing</b> tag, if present,
+identifies the spacing between the depiction of one unit and the
+depiction of the next unit, horizontally and vertically (also
+subject to the <b>EvenRowOffset</b>, if specified) and has the
+mandatory attributes <b>x</b> and <b>y</b>.&nbsp; The values of the
+<b>x</b> and <b>y</b> attributes are the number of pixels,
+horizontally and vertically, respectively, by which to offset the
+drawing elements of successive columns and rows of weave
+units.&nbsp; If not specified, the size of the outline image is
+used for the pattern spacing.</p>
+<p class="MsoNormal">The <b>PatternElements</b> tag contains one
+<b>PatternElement</b> tag for each ring in its section (whether
+<b>Body</b>, <b>Edge</b>, or <b>Corner</b>).</p>
+<p class="MsoNormal">Each <b>PatternElement</b> tag describes how
+to depict a single ring and has a mandatory attribute <b>index</b>,
+an optional attribute <b>ringSize</b>, and a mandatory attribute
+<b>file</b>. The value of the <b>index</b> attribute is a number
+which identifies the element within its collection of elements,
+starting with 1.&nbsp; The value of the <b>ringSize</b> attribute,
+if present, is the <b>name</b> of the <b>RingSize</b> from the
+<b>Scale</b> tags (see below) corresponding to the ring to be used
+for the element. &nbsp;The value of the <b>file</b> attribute is
+the file name of the image file depicting that one ring, which is
+assumed to be in the same directory as the rest of the pattern
+definition components.</p>
+<p class="MsoNormal">Each <b>PatternElement</b> also contains
+mandatory tags for <b>ImageOffset</b> and <b>ColorOffset</b>, and
+may contain an optional tag for <b>BuildOffset</b>.</p>
+<p class="MsoNormal">The <b>ImageOffset</b> tag specifies where to
+place the upper left corner of the ring image with respect to the
+upper left corner of the weave unit and has the mandatory
+attributes <b>x</b> and <b>y</b>.&nbsp; The values of the <b>x</b>
+and <b>y</b> attributes specify the horizontal and vertical offset,
+in pixels, of the ring image with respect to the weave unit
+location.</p>
+<p class="MsoNormal">The <b>ColorOffset</b> tag specifies where to
+place the upper left corner of the pixel specifying the color of
+the ring within the color image with respect to the upper left
+corner of the weave unit’s position in the color image and has the
+mandatory attributes <b>x</b> and <b>y</b>.&nbsp; The values of the
+<b>x</b> and <b>y</b> attributes specify the horizontal and
+vertical offset, in pixels, of the ring pixel with respect to the
+weave unit pixel block.</p>
+<p class="MsoNormal">The <b>BuildOffset</b> tag, if present,
+specifies the offset, in visual rows and columns, of where the ring
+must be introduced into the weave during the build process from its
+apparent position and has the mandatory attributes <b>x</b> and
+<b>y</b>.&nbsp; The values of the <b>x</b> and <b>y</b> attributes
+specify the number of visual columns and rows, respectively, to
+offset the element when providing anything like build instructions
+(such as in the detailed color report).&nbsp; This is not needed
+for all weaves, but for Dragonscale, as an example, each of the
+small rings must be introduced into the weave 3 rows further down
+than where they appear visually in a design.</p>
+<p class="MsoNormal">The <b>Edges</b> tag, if present, has a
+mandatory attribute <b>geometry</b>.&nbsp; The value of the
+<b>geometry</b> attribute can be either <i>rectangular</i> or
+<i>hexagonal</i> and describes the kind of edges being
+specified.&nbsp; At present, only <i>rectangular</i> edges are
+supported by the program.&nbsp; The <b>Edges</b> tag contains one
+<b>Edge</b> tag for each of the edges appropriate to its geometry
+and may contain an optional <b>Corners</b> tag.</p>
+<p class="MsoNormal">Each <b>Edge</b> tag describes how to depict
+one edge of the sheet and has the mandatory attributes
+<b>orientation</b>, <b>verticalUnits</b>, <b>horizontalUnits</b>,
+<b>rows</b>, and <b>columns</b> and may have the optional
+attributes <b>verticalUnitsExtent</b>, and
+<b>horizontalUnitsExtent</b>.&nbsp; The value of the
+<b>orientation</b> attribute, for rectangular edges, must be either
+<i>top</i>, <i>bottom</i>, <i>left</i>, or <i>right</i>.&nbsp; The
+values of the <b>verticalUnits</b> and <b>horizontalUnits</b>
+attributes specify how many weave units vertically and horizontally
+are being described.&nbsp; The values of the <b>rows</b> and
+<b>columns</b> attributes specify how many visual rows and columns
+are spanned by the description.&nbsp; The values of the
+<b>verticalUnitsExtent</b> and/or <b>horizontalUnitsExtent</b>, if
+present, give the distance equivalent, in weave units, of the area
+spanned by the description; otherwise the distance spanned is
+assumed to be the distance that would be spanned by the number of
+units specified in the <b>verticalUnits</b> and
+<b>horizontalUnits</b> attributes.&nbsp; Each <b>Edge</b> tag also
+contains a mandatory <b>OutlineImage</b> tag and a mandatory
+<b>PatternElements</b> tag, the contents of which are just as
+described previously, under the <b>Body</b> tag, except that the
+outline image depicts the outlines of all of the rings in the edge,
+which is not necessarily a single weave unit tall or wide.</p>
+<p class="MsoNormal">The <b>Corners</b> tag, if present, describes
+how to depict the corners where the edges of the sheet meet and
+contains a <b>Corner</b> tag for each corner appropriate to the
+edge geometry.</p>
+<p class="MsoNormal">Each Corner tag describes how to depict a
+single corner of the sheet and has the mandatory attributes
+<b>orientation</b>, <b>verticalUnits</b>, <b>horizontalUnits</b>,
+<b>rows</b>, and <b>columns</b>.&nbsp; The value of the
+<b>orientation</b> attribute, for rectangular edges, must be either
+<i>top left</i>, <i>top right</i>, <i>bottom</i> <i>left</i>, or
+<i>bottom</i> <i>right</i>.&nbsp; The values of the
+<b>verticalUnits</b> and <b>horizontalUnits</b> attributes specify
+how many weave units vertically and horizontally are being
+described.&nbsp; The values of the <b>rows</b> and <b>columns</b>
+attributes specify how many visual rows and columns are spanned by
+the description.&nbsp; Each <b>Corner</b> tag also contains a
+mandatory <b>OutlineImage</b> tag and a mandatory
+<b>PatternElements</b> tag, the contents of which are just as
+described previously, under the <b>Body</b> tag, except that the
+outline image depicts the outlines of all of the rings in the
+corner, which is not necessarily a single weave unit tall or
+wide.</p>
+<p class="MsoNormal">The <b>Scales</b> tag, if present, contains
+one or more <b>Scale</b> tags.&nbsp; Each <b>Scale</b> tag contains
+an optional <b>Measure</b> tag and a mandatory <b>RingSizes</b>
+tag.</p>
+<p class="MsoNormal">The <b>Measure</b> tag, if present, relates
+chainmaille units to distance units and has the mandatory
+attributes of <b>unitsHorizontal</b>, <b>unitsVertical</b>, and
+<b>referenceUnit</b>.&nbsp; The value of the <b>unitsHorizontal</b>
+attribute is the number of chainmaille units that fit horizontally
+within one reference distance unit.&nbsp; The value of the
+<b>unitsVertical</b> attribute is the number of chainmaille units
+that fit vertically within one reference distance unit.&nbsp; The
+value of the <b>referenceUnit</b> attribute is the reference
+distance unit used for each of the previous two measurements,
+either <i>inch</i> or <i>cm</i>.</p>
+<p class="MsoNormal">The <b>RingSizes</b> tag contains one
+<b>RingSize</b> tag for each ring size needed by the weave.&nbsp;
+Each <b>RingSize</b> tag specifies, for its particular scale, the
+size of the ring used for the weave and has the mandatory
+attributes <b>idinches</b> and <b>gauge</b>, and may have the
+optional attributes of <b>ar</b> and <b>name</b>.&nbsp; The value
+of the <b>idinches</b> attribute is the inside diameter of the
+ring, given in fractional inches, with the numerator and
+denominator of the fraction separated by a forward slash and the
+denominator being a positive integral power of 2, e.g.
+“3/16”.&nbsp; The value of the <b>gauge</b> attribute is the
+thickness (actually the cross-sectional area) of the wire used to
+make the ring, given as the American Standard wire gauge, e.g.
+“18”.&nbsp; The value of the <b>ar</b> attribute, if present, is
+the aspect ratio of the ring, given as a decimal number, typically
+expressed to a precision of one tenth, e.g. “4.1”.&nbsp; The value
+of the <b>name</b> attribute is the abbreviated name of the ring
+size.&nbsp; I use “VS”, “S”, “M”, “L”, “XL” for “very small”,
+“small”, “medium”, “large”, and “extra large”, although S and L or
+S, M, and L suffice for most weaves.&nbsp; These names ought to
+match the values of the <b>ringSize</b> attribute, if present, of
+each <b>PatternElement</b>.</p>
+<h3><a name="_Toc95395439">Example Pattern File</a></h3>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&lt;?xml version="1.0"
+encoding="UTF-8"?&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&lt;ChainmailleWeave
+name="DEDragonscale" version ="2"
+creator="DragonEnchained"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;
+&lt;Description&gt;Dragonscale is structurally equivalent to two
+interwoven European 4 in 1</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp; sheets. Two
+ring sizes must be used to make this weave. The larger
+rings</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp; connect only to
+smaller rings (not to other larger rings) and vice
+versa,</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp; of course. The
+smaller rings' outer diameter must be at least slightly</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp; smaller than
+the larger rings' inner diameter. When the same wire
+gauge</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp; is used for
+both ring sizes in the weave, the minimum AR for the
+small</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp; rings is about
+3.6, and the AR of the large ring must be at least 2.0</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp; higher than
+that of the small rings (because the small rings must
+fit</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp; inside the
+large rings). A more visually interesting effect is
+created</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp; when the larger
+rings are also thicker, for example when using 16G 5/16</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp; rings with 18G
+3/16 rings.</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;
+&lt;/Description&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;
+&lt;PatternImage
+file="DEDragonscale-Sheet-overall.bmp"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;
+&lt;UnitVisualSize rows="2" columns="2"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;
+&lt;UnitColorSize x="4" y="1"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;
+&lt;EvenRowOffset x="0" y="0"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp; &lt;Linkage
+value="sheet"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp; &lt;Body
+verticalUnits="1" horizontalUnits="1" rows="2"
+columns="2"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;OutlineImage
+file="DEDragonscale-Sheet-outline.bmp"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;PatternSpacing x="42" y="18"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;PatternElements&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="0" ringSize="L"
+file="DEDragonscale-Sheet-LargeRing.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="1" y="1"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="0" y="0"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="0" y="0"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="1" ringSize="S"
+file="DEDragonscale-Sheet-SmallRing.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="10" y="5"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="1" y="0"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="0" y="3"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="2" ringSize="L"
+file="DEDragonscale-Sheet-LargeRing.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="22" y="10"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="2" y="0"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="1" y="1"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="3" ringSize="S"
+file="DEDragonscale-Sheet-SmallRing.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="31" y="14"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="3" y="0"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="1" y="4"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;/PatternElements&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;
+&lt;/Body&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp; &lt;Edges
+geometry="rectangular"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;Edge orientation="top" verticalUnits="3" horizontalUnits="1"
+rows="5" columns="2" verticalUnitsExtent="2.7"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;OutlineImage
+file="DEDragonscale-TopEdge-outline.bmp"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElements&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="0" ringSize="L"
+file="DEDragonscale-TopEdge-LargeRing-odd.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&lt;ImageOffset x="2" y="1"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="0" y="1"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="0" y="2"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="1" ringSize="S"
+file="DEDragonscale-TopEdge-SmallRing-odd.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="10" y="17"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="1" y="1"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="0" y="5"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="2" ringSize="L"
+file="DEDragonscale-TopEdge-LargeRing-even.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="22" y="3"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="2" y="1"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="1" y="3"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="3" ringSize="S"
+file="DEDragonscale-TopEdge-SmallRing-even.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="28" y="9"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="3" y="0"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="1" y="4"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="4" ringSize="S"
+file="DEDragonscale-Sheet-SmallRing.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="31" y="26"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="3" y="1"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="1" y="6"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="5" ringSize="L"
+file="DEDragonscale-Sheet-LargeRing.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="1" y="31"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="0" y="2"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="0" y="4"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="6" ringSize="S"
+file="DEDragonscale-Sheet-SmallRing.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="10" y="35"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="1" y="2"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="0" y="7"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="7" ringSize="L"
+file="DEDragonscale-Sheet-LargeRing.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="22" y="40"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="2" y="2"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="1" y="5"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="8" ringSize="S"
+file="DEDragonscale-Sheet-SmallRing.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="31" y="44"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="3" y="2"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="1" y="8"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElements&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;/Edge&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;Edge orientation="bottom" verticalUnits="3" horizontalUnits="1"
+rows="5" columns="2" verticalUnitsExtent="3"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;OutlineImage
+file="DEDragonscale-BottomEdge-outline.bmp"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElements&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="0" ringSize="L"
+file="DEDragonscale-Sheet-LargeRing.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="1" y="1"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="0" y="0"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="0" y="0"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="1" ringSize="S"
+file="DEDragonscale-Sheet-SmallRing.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="10" y="5"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="1" y="0"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="0" y="3"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="2" ringSize="L"
+file="DEDragonscale-Sheet-LargeRing.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="22" y="10"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="2" y="0"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="1" y="1"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="3" ringSize="S"
+file="DEDragonscale-BottomEdge-SmallRing.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="31" y="14"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="3" y="0"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="1" y="4"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="4" ringSize="L"
+file="DEDragonscale-Sheet-LargeRing.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="1" y="19"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="0" y="1"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="0" y="2"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;PatternElement index="5"
+ringSize="L"
+file="DEDragonscale-BottomEdge-LargeRing.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="22" y="18"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="2" y="1"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="1" y="3"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="6" ringSize="L"
+file="DEDragonscale-BottomEdge-LargeRing.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="1" y="27"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="0" y="2"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="0" y="4"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElements&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;/Edge&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;Edge orientation="left" verticalUnits="1" horizontalUnits="1"
+rows="2" columns="2" horizontalUnitsExtent="1"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;OutlineImage
+file="DEDragonscale-LeftEdge-outline.bmp"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElements&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="0" ringSize="L"
+file="DEDragonscale-LeftEdge-LargeRing-odd.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="1" y="-20"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="0" y="0"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="0" y="0"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="1" ringSize="L"
+file="DEDragonscale-LeftEdge-LargeRing-even.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="22" y="1"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="2" y="0"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="1" y="1"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="0" y="0"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="2" ringSize="S"
+file="DEDragonscale-LeftEdge-SmallRing.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="31" y="14"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="3" y="0"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="1" y="4"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElements&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;/Edge&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;Edge orientation="right" verticalUnits="1" horizontalUnits="2"
+rows="2" columns="3" horizontalUnitsExtent="2"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;OutlineImage
+file="DEDragonscale-RightEdge-outline.bmp"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElements&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="0" ringSize="L"
+file="DEDragonscale-Sheet-LargeRing.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="1" y="1"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="0" y="0"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="0" y="0"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="1" ringSize="S"
+file="DEDragonscale-Sheet-SmallRing.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="10" y="5"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="1" y="0"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="0" y="3"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="2" ringSize="L"
+file="DEDragonscale-RightEdge-LargeRing-even.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="22" y="1"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="2" y="0"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="1" y="1"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="3" ringSize="S"
+file="DEDragonscale-RightEdge-SmallRing.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="31" y="14"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="3" y="0"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="1" y="4"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="4" ringSize="L"
+file="DEDragonscale-RightEdge-LargeRing-odd.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="43" y="-20"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="4" y="0"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="2" y="0"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElements&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;/Edge&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;Corners&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Corner orientation="top left" verticalUnits="3"
+horizontalUnits="1" rows="5" columns="2"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;OutlineImage
+file="DEDragonscale-TopLeft-outline.bmp"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElements&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="0" ringSize="L"
+file="DEDragonscale-TopLeft-LargeRing-odd1.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="1" y="1"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="0" y="1"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="0" y="2"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="1" ringSize="L"
+file="DEDragonscale-TopLeft-LargeRing-even.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="22" y="3"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="2" y="1"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="1" y="3"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="2" ringSize="S"
+file="DEDragonscale-TopLeft-SmallRing-even.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="27" y="9"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="3" y="0"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="1" y="4"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="3" ringSize="S"
+file="DEDragonscale-LeftEdge-SmallRing.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="31" y="26"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="3" y="1"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="1" y="6"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="4" ringSize="L"
+file="DEDragonscale-TopLeft-LargeRing-odd2.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="1" y="14"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="0" y="2"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="0" y="4"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="5" ringSize="L"
+file="DEDragonscale-LeftEdge-LargeRing-even.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="22" y="31"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="2" y="2"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="1" y="5"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="6" ringSize="S"
+file="DEDragonscale-LeftEdge-SmallRing.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="31" y="44"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="3" y="2"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="1" y="8"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElements&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/Corner&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Corner orientation="top right" verticalUnits="3"
+horizontalUnits="2" rows="5" columns="3"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;OutlineImage
+file="DEDragonscale-TopRight-outline.bmp"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElements&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="0" ringSize="L"
+file="DEDragonscale-TopEdge-LargeRing-odd.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="2" y="1"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="0" y="1"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="0" y="2"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="1" ringSize="S"
+file="DEDragonscale-TopEdge-SmallRing-odd.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="10" y="17"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="1" y="1"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="0" y="5"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="2" ringSize="L"
+file="DEDragonscale-TopRight-LargeRing-even.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="22" y="3"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="2" y="1"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="1" y="3"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="3" ringSize="S"
+file="DEDragonscale-TopRight-SmallRing-even.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="28" y="9"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="3" y="0"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="1" y="4"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="4" ringSize="S"
+file="DEDragonscale-RightEdge-SmallRing.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="31" y="26"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="3" y="1"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="1" y="6"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="5" ringSize="L"
+file="DEDragonscale-TopRight-LargeRing-odd1.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="44" y="1"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="4" y="1"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="2" y="2"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="6" ringSize="L"
+file="DEDragonscale-Sheet-LargeRing.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="1" y="31"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="0" y="2"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="0" y="4"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="7" ringSize="S"
+file="DEDragonscale-Sheet-SmallRing.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="10" y="35"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="1" y="2"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="0" y="7"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="8" ringSize="L"
+file="DEDragonscale-RightEdge-LargeRing-even.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="22" y="31"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="2" y="2"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="1" y="5"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="9" ringSize="S"
+file="DEDragonscale-RightEdge-SmallRing.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="31" y="44"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="3" y="2"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="1" y="8"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="10" ringSize="L"
+file="DEDragonscale-TopRight-LargeRing-odd2.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="46" y="14"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="4" y="2"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="2" y="4"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElements&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/Corner&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Corner orientation="bottom left" verticalUnits="3"
+horizontalUnits="1" rows="5" columns="2"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;OutlineImage
+file="DEDragonscale-BottomLeftCorner-outline.bmp"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElements&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="0" ringSize="L"
+file="DEDragonscale-LeftEdge-LargeRing-odd.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="1" y="-20"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="0" y="0"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="0" y="0"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="1" ringSize="L"
+file="DEDragonscale-LeftEdge-LargeRing-even.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="22" y="1"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="2" y="0"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="1" y="1"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="2" ringSize="S"
+file="DEDragonscale-BottomLeftCorner-SmallRing.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="30" y="14"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="3" y="0"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="1" y="4"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="3" ringSize="L"
+file="DEDragonscale-LeftEdge-LargeRing-odd.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="1" y="-2"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="0" y="1"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="0" y="2"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="4" ringSize="L"
+file="DEDragonscale-BottomEdge-LargeRing.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="22" y="18"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="2" y="1"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="1" y="3"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="5" ringSize="L"
+file="DEDragonscale-BottomLeftCorner-LargeRing.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="1" y="16"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="0" y="2"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="0" y="4"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElements&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/Corner&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Corner orientation="bottom right" verticalUnits="3"
+horizontalUnits="2" rows="5" columns="3"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;OutlineImage
+file="DEDragonscale-BottomRightCorner-outline.bmp"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElements&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="0" ringSize="L"
+file="DEDragonscale-Sheet-LargeRing.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="1" y="1"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="0" y="0"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="0" y="0"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="1" ringSize="S"
+file="DEDragonscale-Sheet-SmallRing.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="10" y="5"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&lt;ColorOffset x="1" y="0"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="0" y="3"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="2" ringSize="L"
+file="DEDragonscale-RightEdge-LargeRing-even.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="22" y="1"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="2" y="0"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="1" y="1"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="3" ringSize="S"
+file="DEDragonscale-BottomRightCorner-SmallRing.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="31" y="14"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="3" y="0"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="1" y="4"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="4" ringSize="L"
+file="DEDragonscale-RightEdge-LargeRing-odd.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="43" y="-20"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="4" y="0"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="2" y="0"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&lt;PatternElement index="5" ringSize="L"
+file="DEDragonscale-Sheet-LargeRing.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="1" y="19"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="0" y="1"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="0" y="2"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="6" ringSize="L"
+file="DEDragonscale-BottomEdge-LargeRing.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="22" y="18"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="2" y="1"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="1" y="3"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="7" ringSize="L"
+file="DEDragonscale-RightEdge-LargeRing-odd.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="43" y="-2"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="4" y="1"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="2" y="2"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="8" ringSize="L"
+file="DEDragonscale-BottomEdge-LargeRing.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="1" y="27"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="0" y="2"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="0" y="4"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PatternElement index="9" ringSize="L"
+file="DEDragonscale-BottomRightCorner-LargeRing.bmp"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ImageOffset x="43" y="16"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ColorOffset x="4" y="2"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;BuildOffset x="2" y="4"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElement&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PatternElements&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/Corner&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;/Corners&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;
+&lt;/Edges&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;
+&lt;Scales&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;Scale&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Measure unitsHorizontal="2.18" unitsVertical="6.0"
+referenceUnit="inch"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;RingSizes&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;RingSize name="L" idinches="5/16" gauge="16"
+ar="5.2"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;RingSize name="S" idinches="3/16" gauge="18"
+ar="4.1"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/RingSizes&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;/Scale&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;
+&lt;/Scales&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&lt;/ChainmailleWeave&gt;</span></p>
+<p class="MsoNormal">&nbsp;</p>
+<h2><a name="_Toc95395440">Design File Format</a></h2>
+<p class="MsoNormal">A design file is an XML file describing a
+single design which starts with identifying and descriptive
+information, then defines the weave, design size, ring sizes,
+overlay image (if any) and the image which contains the color
+assignments for each of the rings in the design.</p>
+<p class="MsoNormal">The file starts with a standard XML
+header.&nbsp; The entire rest of the document is composed of a
+single mandatory <b>ChainmailleDesign</b> tag.&nbsp; The
+<b>ChainmailleDesign</b> tag has the mandatory attributes,
+<b>name</b> and <b>version</b>.&nbsp; The <b>name</b> is, of
+course, the name of the design.&nbsp; The <b>version</b> is the
+version of the design file format in which the file was
+generated.&nbsp; At present, there are two versions, <i>1</i> and
+<i>2</i>; only version 2 has the HiddenSection tags for a Palette
+tag and the Guidelines tag.&nbsp; The <b>ChainmailleDesign</b> tag
+also contains optional tags for <b>DesignedBy</b>, <b>Date</b>,
+<b>DesignedFor</b>, <b>Description</b>, <b>Palette</b>,
+<b>DisplayRotation</b>, <b>Guidelines</b>, and (for now) a single
+mandatory <b>DesignSection</b> tag.</p>
+<p class="MsoNormal">The <b>DesignedBy</b> tag, if present,
+contains text intended to identify either the designer (a person)
+or their organization (the designer’s company or household).</p>
+<p class="MsoNormal">The <b>Date</b> tag, if present, contains a
+textual representation of a date and time.</p>
+<p class="MsoNormal">The <b>DesignedFor</b> tag, if present,
+contains text intended to identify the person or organization for
+whom the design was produced.</p>
+<p class="MsoNormal">The <b>Description</b> tag, if present,
+contains text describing any additional design-related information
+that the designer wishes to include.</p>
+<p class="MsoNormal">The <b>Palette</b> tag, if present, identifies
+the palette used with the design and has the mandatory attributes
+<b>name</b> and <b>file</b>.&nbsp; The value of the <b>name</b>
+attribute is the name of the palette.&nbsp; The value of the
+<b>file</b> attribute is the full filepath to the palette file.</p>
+<p class="MsoNormal">The <b>Palette</b> tag may also optionally
+contain any number of <b>HiddenSection</b> tags.&nbsp; Each
+<b>HiddenSection</b> tag has the mandatory attribute
+<b>name</b>.&nbsp; The value of the <b>name</b> attribute is the
+name of a palette section (see the Palette File Format, below)
+which was collapsed at the time the design was saved.</p>
+<p class="MsoNormal">The <b>DisplayRotation</b> tag, if present,
+indicates the orientation of the design and has the mandatory
+attribute <b>degrees</b>.&nbsp; The value of the <b>degrees</b>
+attribute is the angle by which to rotate the rendered image of the
+design (and its overlay, if any) before presenting it to the user
+in the design area.</p>
+<p class="MsoNormal">The <b>DesignSection</b> tag contains
+mandatory tags for <b>ChainmaillePattern</b>, <b>DesignSize</b>,
+and <b>ColorImage</b>, and may optionally contain tags for
+<b>RingSizes</b> and <b>Overlay</b>.</p>
+<p class="MsoNormal">The <b>ChainmaillePattern</b> tag contains the
+mandatory attributes <b>name</b> and <b>file</b>.&nbsp; The value
+of the <b>name</b> attribute is the name of the weave used in the
+design.&nbsp; The value of the <b>file</b> attribute is the
+filepath to the weave definition folder, starting from the
+configured Weaves directory.</p>
+<p class="MsoNormal">The <b>DesignSize</b> tag contains the
+mandatory attributes <b>rows</b> and <b>columns</b>, and may
+optionally contain an attribute for <b>wrap</b>.&nbsp; The values
+of the <b>rows</b> and <b>columns</b> attributes are the vertical
+and horizontal extents, respectively, of the design, given in
+chainmaille units (not in any of the other kinds of size units
+available within the program).&nbsp; The value of the <b>wrap</b>
+attribute describes the topology of the design, and may only have
+the values <i>none</i>, <i>horizontal</i>, or
+<i>vertical</i>.&nbsp; If the <b>wrap</b> attribute is not
+specified, it is assumed to have the value <i>none</i>.</p>
+<p class="MsoNormal">The <b>RingSizes</b> tag, if present, contains
+one <b>RingSize</b> tag for each of the ring sizes used in the
+design.&nbsp; Each <b>RingSize</b> tag has the mandatory attributes
+<b>idinches</b> and <b>gauge</b>, and may optionally contain an
+attribute for <b>ar</b>.&nbsp; The value of the <b>idinches</b>
+attribute is the inside diameter of the ring, given in fractional
+inches, with the numerator and denominator of the fraction
+separated by a forward slash and the denominator being a positive
+integral power of 2.&nbsp; The value of the <b>gauge</b> attribute
+is the thickness (actually the cross-sectional area) of the ring,
+given as the American Standard wire gauge.&nbsp; The value of the
+<b>ar</b> attribute, if present, is the aspect ratio of the ring,
+given as a decimal number, typically expressed to a precision of
+one tenth, e.g. “4.1”.</p>
+<p class="MsoNormal">The <b>ColorImage</b> tag identifies the image
+which contains the color assignments for each of the rings in the
+design and has the mandatory attributes <b>name</b> and
+<b>file</b>.&nbsp; The value of the <b>name</b> attribute is the
+name of the image file.&nbsp; The value of the <b>file</b>
+attribute is the full filepath to the image file.</p>
+<p class="MsoNormal">The <b>Overlay</b> tag, if present, identifies
+the image which contains the design overlay and has the mandatory
+attributes <b>name</b>, <b>file</b>, and <b>shown</b>.&nbsp; The
+value of the <b>name</b> attribute is the name of the overlay image
+file.&nbsp; The value of the <b>file</b> attribute is the full
+filepath to the overlay image file.&nbsp; The value of the
+<b>shown</b> attribute, either <i>true</i> or <i>false</i>,
+indicates whether the overlay is visible in the program.</p>
+<p class="MsoNormal">The <b>Overlay</b> tag contains the mandatory
+tags <b>Transparency</b>, <b>Center</b>, and <b>Scale</b>, and an
+optional <b>Rotation</b> tag.&nbsp; The <b>Transparency</b> tag has
+the mandatory <b>value</b> attribute, which represents the
+transparency (0-1) at which to show the overlay when it is
+shown.&nbsp; The <b>Center</b> tag has the mandatory values
+<b>x</b>, <b>y</b>, and <b>reference</b>.&nbsp; The values of the
+<b>x</b> and <b>y</b> attributes identify the position in the
+design of the center of the overlay.&nbsp; The value of the
+<b>reference</b> attribute indicates the reference point from which
+center position is offset.&nbsp; At present, the only recognized
+value for the <b>reference</b> attribute is <i>rendered
+image</i>.&nbsp; The <b>Scale</b> tag has the mandatory values
+<b>x</b>, <b>y</b>, and <b>reference</b>.&nbsp; The values of the
+<b>x</b> and <b>y</b> attributes identify the horizontal and
+vertical scaling factors, respectively, to apply when displaying
+the overlay.&nbsp; The value of the <b>reference</b> attribute
+indicates the reference for the scaling factors.&nbsp; At present,
+the only recognized value for the <b>reference</b> attribute is
+<i>rendered image</i>.&nbsp; The <b>Rotation</b> tag, if present,
+has the mandatory value <b>degrees</b>, which indicates the number
+of degrees the overlay is to be rotated before applying it to the
+rendered image.</p>
+<p class="MsoNormal">The <b>Guidelines</b> tag, if present,
+contains any number of <b>HorizontalGuideline</b> and
+<b>VerticalGuideline</b> tags.&nbsp; Each
+<b>HorizontalGuideline</b> or <b>VerticalGuideline</b> tag
+describes a single guideline assigned to the design and has the
+mandatory attribute <b>position</b>.&nbsp; The value of the
+<b>position</b> attribute is the y-coordinate (if for a horizontal
+guideline) or x-coordinate (if for a vertical guideline) of the
+guideline, referenced to the rendered image of the design.</p>
+<h3><a name="_Toc95395441">Example Design File</a></h3>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&lt;?xml version="1.0"
+encoding="UTF-8"?&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&lt;ChainmailleDesign
+name="Triskel for Jade" version="2"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;
+&lt;DesignedBy&gt;Dragon Enchained&lt;/DesignedBy&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;
+&lt;Date&gt;2/23/2017 12:00:00 AM&lt;/Date&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;
+&lt;DesignedFor&gt;Jade&lt;/DesignedFor&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;
+&lt;Description&gt;European 4-in-1 hanging. Green on bright
+aluminum with black shadows at
+crossings.&lt;/Description&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp; &lt;Palette
+name="Ring Lord Colors" file="C:\Chainmaille Designer\Colors\Ring
+Lord Colors.xml"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;HiddenSection name="Anod. Alum. Older" /&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;HiddenSection name="Silicone Rubber" /&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;HiddenSection name="Metals" /&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;HiddenSection name="Enameled Copper" /&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;HiddenSection name="Silvered Copper" /&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;HiddenSection name="Titanium" /&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;HiddenSection name="Niobium" /&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;
+&lt;/Palette&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;
+&lt;DisplayRotation degrees="0" /&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;
+&lt;DesignSection&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;ChainmaillePattern name="E4-1GA16316"
+file="Maille\European\E4-1GA16316" /&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;DesignSize rows="35" columns="70" wrap="none" /&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;RingSizes&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;RingSize idinches="3/16" gauge="18" ar="4.1" /&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;/RingSizes&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;ColorImage name="Triskel for Jade"
+file="D:\TirNanOg\Chainmaille\IGP patterns\Triskel for Jade.png"
+/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;Overlay name="The Frozen Hearth Shop Sign"
+file="D:\TirNanOg\Chainmaille\Own Work\The Frozen Hearth Shop
+Sign.gif" shown="true"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Transparency value="0.5" /&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Center x="419.518" y="176.9339" reference="rendered image"
+/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Scale x="5.05252" y="5.05252" reference="rendered image"
+/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Rotation degrees="180" /&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;/Overlay&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;
+&lt;/DesignSection&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;
+&lt;Guidelines&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;HorizontalGuideline position="221" /&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;HorizontalGuideline position="442" /&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;HorizontalGuideline position="663" /&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;VerticalGuideline position="213" /&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;VerticalGuideline position="426" /&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;VerticalGuideline position="639" /&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;
+&lt;/Guidelines&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&lt;/ChainmailleDesign&gt;&gt;</span></p>
+<p class="MsoNormal">&nbsp;</p>
+<h2><a name="_Toc95395442">Palette File Format</a></h2>
+<p class="MsoNormal">A palette file is an XML file describing a
+single palette which starts with identifying and descriptive
+information, then specifies, for each palette section, the colors
+in that section.</p>
+<p class="MsoNormal">The file starts with a standard XML
+header.&nbsp; The entire rest of the document is composed of a
+single mandatory <b>Palette</b> tag.&nbsp; The <b>Palette</b> tag
+has the mandatory attributes, <b>name</b> and <b>version</b>.&nbsp;
+The <b>name</b> is, of course, the name of the palette.&nbsp; The
+<b>version</b> is the version of the palette file format in which
+the file was generated (at present, there are two versions).</p>
+<p class="MsoNormal">The <b>Palette</b> tag may optionally include
+a <b>Description</b> tag enclosing descriptive text.</p>
+<p class="MsoNormal">Next within the Palette tag come one or more
+<b>PaletteSection</b> tags.&nbsp; Each <b>PaletteSection</b> tag
+has two mandatory attributes, <b>name</b> and
+<b>abbreviatedName</b>.&nbsp; Each <b>PaletteSection</b> tag also
+contains one or more <b>Color</b> tags, each of which defines a
+color for that section.</p>
+<p class="MsoNormal">Each <b>Color</b> tag may have from 1 to 3
+attributes, an optional <b>name</b> and at least one of <b>hsl</b>
+or <b>rgb</b>.&nbsp; The value of each <b>hsl</b> or <b>rgb</b>
+attribute is an ordered color triple with a single space between
+each of the three numeric components.</p>
+<p class="MsoNormal">An <b>hsl</b> triple specifies hue (0-360),
+saturation (0-240), and luminance (0-240), in that order.&nbsp;
+Note that because of the way HSL color space is defined, not all
+values of luminance are valid for non-zero values of
+saturation.</p>
+<p class="MsoNormal">An <b>rgb</b> triple specifies red (0-255),
+green (0-255), and blue (0-255) color components, in that
+order.</p>
+<h3><a name="_Toc95395443">Example Palette File</a></h3>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&lt;?xml version="1.0"
+encoding="UTF-8"?&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&lt;Palette name="Ring
+Lord Colors" version="1"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;
+&lt;Description&gt;Ring Lord colors as of mid-September 2017,
+organized by material. All colors were sampled from images obtained
+from the Ring Lord web site.&lt;/Description&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;
+&lt;PaletteSection name="Anodized Alum."
+abbreviatedName="Al"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;Color name="bright silver" hsl="90 32 226" rgb="240 242 238"
+/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;Color name="frost white" hsl="51 73 229" rgb="247 246 240"
+/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;Color name="black ice" hsl="222 19 137" rgb="137 142 154"
+/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;Color name="black" hsl="0 0 52" rgb="55 55 55" /&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;Color name="bronze" hsl="31 111 105" rgb="163 113 60"
+/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;Color name="champagne" hsl="37 118 192" rgb="229 210 179"
+/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;Color name="yellow" hsl="60 195 125" rgb="232 232 34"
+/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;Color name="gold" hsl="51 180 168" rgb="236 219 121"
+/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;
+&nbsp;&lt;Color name="orange" hsl="39 221 108" rgb="221 147 9"
+/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;Color name="red" hsl="359 182 127" rgb="226 43 46"
+/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;Color name="dark rose" hsl="341 163 158" rgb="227 109 146"
+/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;Color name="pink" hsl="339 101 201" rgb="231 196 208"
+/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;Color name="lavender" hsl="227 203 179" rgb="136 159 245"
+/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;Color name="purple" hsl="236 157 121" rgb="46 57 211"
+/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;Color name="royal blue" hsl="212 189 106" rgb="24 107 201"
+/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;Color name="sky blue" hsl="195 157 164" rgb="122 200 227"
+/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;Color name="green" hsl="131 112 97" rgb="55 151 73"
+/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;Color name="seafoam" hsl="115 65 151" rgb="139 186 135"
+/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;Color name="lime" hsl="82 159 123" rgb="153 213 49"
+/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;
+&lt;/PaletteSection&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;
+&lt;PaletteSection name="Anod. Alum. Older"
+abbreviatedName="Alo"&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;Color name="black" hsl="160 17 20" rgb="20 23 22"
+/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;Color name="bronze" hsl="16 82 106" rgb="151 95 74"
+/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;Color name="gold" hsl="48 110 141" rgb="198 179 101"
+/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;Color name="yellow" hsl="57 159 114" rgb="201 193 41"
+/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;</span></p>
+<p class="MsoNoSpacing"><b><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+...</span></b></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&nbsp;
+&lt;/PaletteSection&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:10.0pt;font-family:"Courier New"'>&lt;/Palette&gt;</span></p>
+<p class="MsoNormal">&nbsp;</p>
+</div>
+</body>
+</html>

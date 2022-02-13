@@ -1,0 +1,66 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ChainmailleDesigner.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="PatternDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Chainmaille Designer\Weaves</Value>
+    </Setting>
+    <Setting Name="DesignDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Chainmaille Designer\Designs</Value>
+    </Setting>
+    <Setting Name="CurrentPattern" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Hex\HexSmall</Value>
+    </Setting>
+    <Setting Name="BackgroundColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Gray</Value>
+    </Setting>
+    <Setting Name="OutlineColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Black</Value>
+    </Setting>
+    <Setting Name="UnspecifiedElementColor" Type="System.Drawing.Color" Scope="Application">
+      <Value Profile="(Default)">Transparent</Value>
+    </Setting>
+    <Setting Name="MaterialPalette" Type="System.String" Scope="User">
+      <Value Profile="(Default)">RingLord\AnodizedAluminum</Value>
+    </Setting>
+    <Setting Name="PatternFileFilter" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Pattern File|*.xml;*.ini|XML File|*.xml|IGP Pattern File|*.ini</Value>
+    </Setting>
+    <Setting Name="DesignFileFilter" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Design File (*.xml)|*.xml|Image File|*.bmp;*.png;*.tif|Bitmap (*.bmp)|*.bmp|Portable Network Graphic (*.png)|*.png|Tagged Image File (*.tif)|*.tif</Value>
+    </Setting>
+    <Setting Name="ImageFileFilter" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Image File|*.bmp;*.gif;*.jpg;*.png;*.tif|Bitmap (*.bmp)|*.bmp|Graphics Interchange Format (*.gif)|*.gif|Joint Photographic Experts Group (*.jpg)|*.jpg|Portable Network Graphic (*.png)|*.png|Tagged Image File (*.tif)|*.tif</Value>
+    </Setting>
+    <Setting Name="PaletteDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Chainmaille Designer\Colors</Value>
+    </Setting>
+    <Setting Name="PaletteFileFilter" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Palette File (*.xml)|*.xml</Value>
+    </Setting>
+    <Setting Name="PaletteSelectedColorImageFile" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">.\ColorIndicator2Rings.bmp</Value>
+    </Setting>
+    <Setting Name="ReportFileFilter" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Any File (*.*)|*.*|Text File (*.txt)|*.txt</Value>
+    </Setting>
+    <Setting Name="DesignFileOutFilter" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Design File (*.xml)|*.xml</Value>
+    </Setting>
+    <Setting Name="DesignerName" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="HelpUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://github.com/CMAlbrecht/ChainmailleDesigner/Documentation/WebHelp/index.html</Value>
+    </Setting>
+    <Setting Name="LicenseFileName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">LICENSE.rtf</Value>
+    </Setting>
+    <Setting Name="GuidelineColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Fuchsia</Value>
+    </Setting>
+    <Setting Name="ColorImageFileFilter" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Image File|*.bmp;*.png;*.tif|Bitmap (*.bmp)|*.bmp|Portable Network Graphic (*.png)|*.png|Tagged Image File|*.bmp;*.png;*.tif|Bitmap (*.bmp)|*.bmp|Portable Network Graphic (*.png)|*.png|Tagged Image File (*.tif)|*.tif</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

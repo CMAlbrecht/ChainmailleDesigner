@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ChainmailleWeave name="J4-3GA1638GA1614" version ="1">
+  <Description>Japanese 4-in-3.
+  </Description>
+  <PatternImage file="j4-3.bmp"/>
+  <UnitVisualSize rows="1" columns="7"/>
+  <UnitColorSize x="7" y="1"/>
+  <EvenRowOffset x="0" y="0"/>
+  <Linkage value="sheet"/>
+  <Body verticalUnits="1" horizontalUnits="1" rows="1" columns="7">
+    <OutlineImage file="j4-3o.bmp"/>
+    <PatternSpacing x="43" y="43"/>
+    <PatternElements>
+      <PatternElement index="0" ringSize="L" file="1638.bmp">
+        <ImageOffset x="5" y="5"/>
+        <ColorOffset x="0" y="0"/>
+        <BuildOffset x="0" y="0"/>
+      </PatternElement>
+      <PatternElement index="1" ringSize="S" file="1614d90.bmp">
+        <ImageOffset x="16" y="29"/>
+        <ColorOffset x="1" y="0"/>
+        <BuildOffset x="1" y="0"/>
+      </PatternElement>
+      <PatternElement index="2" ringSize="S" file="1614d90.bmp">
+        <ImageOffset x="20" y="29"/>
+        <ColorOffset x="2" y="0"/>
+        <BuildOffset x="2" y="0"/>
+      </PatternElement>
+      <PatternElement index="3" ringSize="S" file="1614d90.bmp">
+        <ImageOffset x="24" y="29"/>
+        <ColorOffset x="3" y="0"/>
+        <BuildOffset x="3" y="0"/>
+      </PatternElement>
+      <PatternElement index="4" ringSize="S" file="1614d0.bmp">
+        <ImageOffset x="29" y="16"/>
+        <ColorOffset x="4" y="0"/>
+        <BuildOffset x="4" y="0"/>
+      </PatternElement>
+      <PatternElement index="5" ringSize="S" file="1614d0.bmp">
+        <ImageOffset x="29" y="20"/>
+        <ColorOffset x="5" y="0"/>
+        <BuildOffset x="5" y="0"/>
+      </PatternElement>
+      <PatternElement index="6" ringSize="S" file="1614d0.bmp">
+        <ImageOffset x="29" y="24"/>
+        <ColorOffset x="6" y="0"/>
+        <BuildOffset x="6" y="0"/>
+      </PatternElement>
+    </PatternElements>
+  </Body>
+  <Scales>
+    <Scale>
+      <RingSizes>
+        <RingSize name="L" idinches="3/8" gauge="16" ar="6.0"/>
+        <RingSize name="S" idinches="1/4" gauge="16" ar="4.0"/>
+      </RingSizes>
+    </Scale>
+  </Scales>
+</ChainmailleWeave>

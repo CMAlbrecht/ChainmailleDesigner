@@ -1,0 +1,36 @@
+How to Prepare a Release of Chainmaille Designer
+
+Tools Needed
+
+Visual Studio 2022 Community Edition or equivalent
+Microsoft Visual Studio Installer Projects 2022 (an extension for Visual Studio 2022)
+Microsoft Word or equivalent
+chmProcessor
+
+Process
+
+Open the solution in Visual Studio.
+Select the ChainmailleDesigner project.
+Open project properties for the ChainmailleDesigner project (right click, select Properties).
+On the Application tab, select the Assembly Information button.
+In the dialog that appears, update the Assembly version and File version, and, if necessary, the copyright.
+Click OK to close the dialog, then the Save button to save the changes.
+Select the Setup project.
+In the properties window (*not* the property pages), update the Version property.
+Save the change.
+
+Using Word (or equivalent) make any necessary revisions to the Chainmaille Designer Users Manual.docx file in Documentation\Users Manual to describe new or altered features.
+Save the revised users' manual.
+If changes were made to the users' manual, from the Documentation directory, open the Chainmaille Designer Help.WHC. This displays the chmProcessor tool with the Chainmaille Designer Help project loaded.
+Click the Generate button and confirm the replacement of files. When file generation is complete, click the Accept button and close the chmProcessor window.
+The chmProcessor tool converts the users' manual word document into 1) a series of web help (HTML) files in Documentation\WebHelp and 2) a PDF users' manual in Documentation.
+
+Using Word (or equivalent) modify the Chainmaille Designer Release Notes.rtf file in the Documentation directory to describe the version being released.
+Save the changes to the release notes.
+
+Back in Visual Studio, rebuild the solution using the Release configuration.
+
+Test the Chainmaille Designer Setup.msi that was updated by the setup project in Setup/Release.
+Note: Currently, any previous version of Chainmaille Designer must be uninstalled through the Windows Control Panel before a new version can be installed.
+
+Copy the Chainmaille Designer Setup.msi file from Setup/Release to the base ChainmailleDesigner directory (the parent of the Setup directory) so that it is easier for users to find.

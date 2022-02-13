@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ChainmailleWeave name="KnitSmall" version ="1" creator="B Pannell">
+  <Description>Small-sized rectangular grid for knit patterns.
+  </Description>
+  <PatternImage file="knitsm.bmp"/>
+  <UnitVisualSize rows="1" columns="1"/>
+  <UnitColorSize x="1" y="1"/>
+  <EvenRowOffset x="0" y="0"/>
+  <Linkage value="sheet"/>
+  <Body verticalUnits="1" horizontalUnits="1" rows="1" columns="1">
+    <OutlineImage file="knitsm-o.bmp"/>
+    <PatternSpacing x="7" y="5"/>
+    <PatternElements>
+      <PatternElement index="0" file="knitsm-001.bmp">
+        <ImageOffset x="1" y="1"/>
+        <ColorOffset x="0" y="0"/>
+        <BuildOffset x="0" y="0"/>
+      </PatternElement>
+    </PatternElements>
+  </Body>
+</ChainmailleWeave>

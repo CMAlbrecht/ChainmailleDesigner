@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Chainmaille Designer Project Notes</title>
+</head>
+<body>
+    <h1>Project Notes</h1>
+    <p>as of 20 October 2019</p>
+    <h2>Chainmaille Designer</h2>
+    <h3>Current Near-Term Activities</h3>
+    <p>Maintenance.</p>
+    <h3>Overall Priorities</h3>
+    <p>Get the designer working well enough to replace IGP.</p>
+    <p>Maintain compatibility with IGP patterns and color maps, but do everything better.</p>
+    <p>Zoom is a must-have feature.</p>
+    <p>Palettes are a must-have feature.</p>
+    <h3>Completed Features</h3>
+    <h4>IGP Features That Have Been Reimplemented</h4>
+    <p>Exit the program, prompting to save if the current design has been changed.</p>
+    <p>Open an IGP color map, prompting to save if the current design has been changed.</p>
+    <p>Close the current design, prompting to save if the current design has been changed.</p>
+    <p>Save the design with its current name.</p>
+    <p>Save the design as a file with a different name.</p>
+    <p>Save the rendered image to an image file, specifying the file name and image format.</p>
+    <p>Apply an IGP pattern to the current design and display the rendered image.</p>
+    <p>Indicate in the status bar which ring the mouse is over in the zoomed image (row, column, and element).</p>
+    <p>Set left button color</p>
+    <p>Set right button color</p>
+    <p>Paint rings on mouse click of either the left or right button using the color assigned to that button.</p>
+    <p>When the mouse button is being held down while the mouse is being moved, continue painting in the color assigned to the button.</p>
+    <p>Set background color</p>
+    <p>Set outline color</p>
+    <p>Show / hide the palette panel using the Window menu.</p>
+    <p>Help about</p>
+    <p>Count colors and show the number of rings of each color and the total number of rings in a window.</p>
+    <p>Save color counts to a text file, appending row length encodings for each row of the design.</p>
+    <p>File New - Create a new design with a specified color image size (but also see notes in new features about how to specify sizes).</p>
+    <h4>New Completed Features</h4>
+    <h5>Zoom</h5>
+    <p>Zoom in or out without using more memory.</p>
+    <p>Control zoom by</p>
+    <ul>
+        <li>Typing in a zoom factor (%)</li>
+        <li>Using a slider (zoom factor from 0.01 to 100, default 1, logarithmic scale)</li>
+        <li>Using a Reset button to return to 100%, centered in the center of the rendered image.</li>
+        <li>Using a Fit button to fit the entire design into the display area.</li>
+        <li>Using the mouse wheel, centering the zoom at the mouse position.</li>
+    </ul>
+    <h5>Color Counting</h5>
+    <p>In the color count window, show patches of each color next to the color name.</p>
+    <p>In the color count report, substitute the names of colors in the palette for the RGB triples that IGP showed.</p>
+    <p>In the color count report, substitute system color names (e.g. Alice Blue) for colors that are not named in the palette but for which system colors are predefined.</p>
+    <p>Make relationship between visual rows and columns and as-built rows and columns more explicit. When preparing the color report, use as-built rows instead of visual rows, if build information is available, so that the report is more useful as build instructions.</p>
+    <p>In the color report, distinguish between colors from different palette sections that have the same color name, by showing and using the section abbreviated name (e.g. &quot;Anodized Alum. (Al)&quot; ... &quot;EPDM (Rubber) (Rub)&quot;, then, when needed in the row portion of the report, appending the section abbreviated name to the color name (e.g. &quot;green(Al): 7&quot;).</p>
+    <h5>New Designs and Design Editing</h5>
+    <p>Allow design name and weave to be specified when creating a new design.</p>
+    <p>Provide a form that shows information about the design:</p>
+    <ul>
+        <li>Name of the design</li>
+        <li>Weave name</li>
+        <li>Size (width &amp; height in selectable units)</li>
+        <li>Date</li>
+        <li>Who or what the design is for (i.e. customer or recipient)</li>
+        <li>Who or what created the design (i.e. personal name or business name)</li>
+        <li>Other descriptive information (design notes, etc.)</li>
+    </ul>
+    <p>Allow the design area graphics to be rotated, re-orienting the selected weave.</p>
+    <p>Change sheet size of an existing design, adding units or distance to any combination of edges.</p>
+    <p>Use actual chainmaille units in size specifications (not pixels in the color map), i.e. rows and columns.</p>
+    <p>Use distance measurements in size specifications (at least inches and centimeters).&nbsp; This maps back to ring size, obviously, so depends on the size of rings in which a pattern will be woven.</p>
+    <p>Change size from the info. form.</p>
+    <p>Change weave from the info. form.</p>
+    <p>Instead of making the user drill down through 5 layers of menus to choose a weave as IGP did, find all weaves in the configured weave directory and present them in list form for selection.</p>
+    <p>As an alternative to the list, provide a gallery that presents images of the weaves along with their names.&nbsp; Allow the user to select a weave by double-clicking on its image.</p>
+    <p>Provide the ability to set guidelines across the design area.</p>
+    <p>Allow painting actions to affect only rings of a certain size (e.g. only the small rings of Dragonscale).</p>
+    <p>Provide line drawing and polygon / circle / ellipse / rectangle fill for large swatches of color, as well as outlines of these kinds of areas.</p>
+    <h5>Printing</h5>
+    <p>Print the rendered image to fit the printer page, directly to a printer.</p>
+    <p>Print the color count report, including row length encodings for each row of the design, directly to a printer.</p>
+    <h5>Colors, Palette, and Palette Editor</h5>
+    <p>When reading an indexed-color color image, convert it into a 32bppARGB bitmap.</p>
+    <p>Ability to specify rings as not there (making them transparent) for diagonal edges, triangular panels, etc.</p>
+    <p>Provide a nifty tool for color selection.</p>
+    <p>Be able to create named collections (palettes) of colors to use in the designer, e.g. the ring colors available for anodized aluminum rings purchased from Ring Lord.</p>
+    <p>Be able to define palette sections, e.g. Anodized Aluminum ring colors vs. EPDM (Rubber) ring colors. Each section can be assigned a name and an abbreviated name (the abbreviated name is used, if needed, to distinguish between colors from different palette sections that have the same color name in the color report.</p>
+    <p>Define a palette XML file format to save color choices.</p>
+    <p>Read in palette information from a palette file, prompting to save if the current palette has been changed.</p>
+    <p>Devise a palette control to use while painting rings that not only shows the current selected colors, but allows selection of any color in the palette.&nbsp; Show the sections, if any.</p>
+    <p>Tool tips for palette color patches display the name of the color.</p>
+    <p>Be able to define each color either as HSL or as RGB.</p>
+    <p>Allow each color to be named, e.g. royal blue, sky blue, seafoam green.</p>
+    <p>Allow a color to be sampled and averaged from a region of a source image.</p>
+    <p>Replace one color with another color in the design.</p>
+    <p>Allow color replacement to affect only rings of the specified sizes.</p>
+    <p>Modify the palette control so that only the palette sections scroll; the indicator and buttons remain fixed.</p>
+    <p>Show/hide individual palette sections for a design. Save the choices with the design and restore them when the design is read in.</p>
+    <h5>Inlay Overlays</h5>
+    <p>Allow an image to be imported to use as an semi-transparent overlay to the ring pattern, as a guide to coloring the rings.</p>
+    <p>Allow an imported image to be squeezed / stretched to cover the pattern area.</p>
+    <p>Allow the overlay to be rotated independently of the design.</p>
+    <p>Allow the rings to be automatically colored with the color from a given palette section that is closest to the average color of the overlay pixels that lie over the ring.</p>
+    <h5>Weave Specification</h5>
+    <p>Define an XML format for weave pattern files that allows edge and corner images, chain vs. sheet linkage, etc.</p>
+    <p>Edge graphics for rectangular sheet edges.</p>
+    <p>Option to treat edges to wrap around (e.g. for a bracelet), either horizontally or vertically.</p>
+    <p>Make relationship between chainmaille units and visual rows and columns more explicit.&nbsp; Edges will need to have their own numbers of rows and columns, separate from the main sheet.&nbsp; Use this information when design size is specified.</p>
+    <p>Add a name attribute to the RingSize tag and a ringSize attribute to the Element tag. These are optional, and specifically need not be used if the weave consists of rings of a single size.</p>
+    <h5>Other Features</h5>
+    <p>Provide a configuration form for setting the default directories for weave patterns, image files, designs, palettes, etc.</p>
+    <p>Write a user&#39;s manual.</p>
+    <p>Provide useful help files.</p>
+    <p>Create an actual installer.</p>
+    <h3>Fixed Bugs</h3>
+    <p>After a mouse zoom, the first paint action jumps the image to be centered.</p>
+    <p>Background / outline colors do not seem to be saved as preferences, or are not restored on startup.</p>
+    <p>Scroll bars have odd behavior if the mouse has previously been used to zoom.</p>
+    <p>After resizing a sheet, if top or left edges were changed, the position of the overlay needs to be modified accordingly.</p>
+    <p>When preparing the row-by-row color report (for printing or saving as a file), there is no way to distinguish between colors of the same name that are from different palette sections, such a &quot;green&quot; from the &quot;Anodized Alum.&quot; section and &quot;green&quot; from the &quot;EPDM (Rubber)&quot; section.</p>
+    <p>When painting a wrapped design, color applied to the part of a ring on the right or bottom edge that is split by a wrap is not applied to the left or top part of that same ring.&nbsp; Also, the left or top part of split rings cannot be painted at all.</p>
+    <p>Remove the non-functional File-&gt;Import menu choice.&nbsp; It is a holdover from the IGP design, but it had no function in IGP either.</p>
+    <p>The program needs an icon; the image of the two linked rings should do nicely if edited to be square, with colors substituted to coincide with the initial palette state. Also use the icon in all of the dialogs.</p>
+    <p>A middle button is not available on all mice or all systems. Provide an alternate way of un-painting rings by alt-clicking or alt-dragging either the left or right button.</p>
+    <p>Clicking the X box at the top right corner of the palette window destroys the window rather than hiding it, so subsequent efforts to hide or show the palette from the main menu fail with an unhandled exception.&nbsp; When the user does this, have the parent form hide the palette window instead.</p>
+    <p>Design &gt; Overlay &gt; Hide / Show doesn&#39;t do anything.&nbsp; It should.</p>
+    <p>Images in the weave gallery of Choose a Weave dialog are distorted for all except Dragonscale. Tile the source images into the images used in the gallery instead of stretching and squashing them. Then re-take the image of the gallery in the users&#39; manual (Get Me Started!!, Start New Design).</p>
+    <p>A palette can&#39;t be saved if it is given a description.</p>
+    <p>There should there be a way to delete a palette section from the palette editor (but not the last section).&nbsp; If implemented,&nbsp; update the palette editing chapter of the manual.</p>
+    <p>Create XML equivalents of all of the exsiting IGP patterns. Test them all. When that&#39;s done and working go back to the Copy Old Files section of the Get Me Started chapter of the users&#39; manual, remove the bit about copying old IGP patterns, and mention that copying the old patterns is not necessary because they have been provided equivalents. See also the Configuration Directories section of the Concepts chapter.</p>
+    <p>Palette description is not shown in the palette editor. It appears the description is not read in, since an immediate save-as (without invoking the editor) of a palette with a description results in an XML file that has no description tag.</p>
+    <p>Directory fields in the Configuration window are not long enough to hold the default configuration directories.</p>
+    <p>When a wrapped design is initially opened, the wrapped rings are painted only on the right / bottom edges; the color does not wrap to the left / top edges.</p>
+    <p>Installation copies Colors and Weaves directories to username/AppData. They should be for all users, (i.e. ProgramData, and should be enclosed in a Chainmaille Designer directory.</p>
+    <p>Installed shortcut is entitled "Built" and does not start the designer, but the designer can be started from the last window of the installer, so some connection is missing.&nbsp; It should be entitled &quot;Chainmaille Designer&quot; and should start the program when activated.</p>
+    <p>Vertical wrap is not considered when preparing the detailed color count report. For Dragonscale, for example, this results in 3 rows at the top consisting entirely of large rings and 3 rows at the bottom consisting entirely of small rings. When fixed, redo the example in the Detailed Color Report section of the Counting Colors chapter.</p>
+    <p>Supply banner and full-screen images for the installation dialogs.</p>
+    <p>Create a license agreement. Put it into the installer project. (Installation Interview)</p>
+    <p>Web site. Put into installer project. (Company web address under Application Information)</p>
+    <p>After a window has been resized (made larger, then smaller), the Fit button does not work correctly and the scroll bars do not appear when needed.&nbsp; [Observed on laptop. Could not be reproduced on desktop.]</p>
+    <p>When the New Design, Design Info, Weave Selection, or Configuration windows are resized, the OK and Cancel buttons can be hidden.</p>
+    <p>Do better at finding referenced files that aren&#39;t at the exact referenced locations, and if we can&#39;t find them ask the user. We do this for overlay files, but could also do with palettes and patterns.&nbsp; It would be better than just giving up, as we do now.</p>
+    <p>Dialog appears: &quot;Unable to read palette from &quot;<a href="file:///C:/...">C:\...</a>&quot;, but there is a palette with the correct name in the default palette directory which could have been used.&nbsp; Fix also for color images in the default design directory or in the directory from which the design file was obtained.</p>
+    <h3>IGP Features to be Reimplemented</h3>
+    <p>(none left)</p>
+    <h3>Designer Bugs</h3>
+    <p>(none known)</p>
+    <h3>Installer To-Dos</h3>
+    <p>SHA-256 signing certificate. Put into installer project. (Signing tab of the Releases view) Note: These run about $200 per year, not practical for software that is given away for free.</p>
+    <p>Figure out 32- vs. 64-bit installation. Currently only makes a 32-bit installation and puts into Program Files (x86).</p>
+    <p>Figure out how to update existing installations.</p>
+    <h3>Planned New Features</h3>
+    <p>Devise a key combination that allows the right button color to be used with a single-button mouse or a track pad.</p>
+    <p>Provide a way to set the ground color, coloring all uncolored rings that color. Do not actually assign colors to all of the uncolored rings, but paint them in the specified color instead of the transparent color, and count them as that color in the color counter and its report.</p>
+    <p>When a pattern has more than one ring size, allow ground colors to be separately specified for each size.</p>
+    <p>Render the design at 100% of actual size, i.e. consider the resolution of the weave pattern images and the resolution of the screen (horizontal and vertical) when computing the size of the rendered image and when drawing on it, rather than assuming that 1 pixel = 1 pixel.</p>
+    <p>Replace a color in the design (selected from the zoomed image or the color report) with a color selected from the palette or the unassigned color.</p>
+    <p>Allow a palette section to be restricted to a particular ring size (e.g. EPDM for small rings in Dragonscale).</p>
+    <p>Allow printing at actual size.</p>
+    <p>Edge graphics for diagonal sheet edges.</p>
+    <p>Define graphics for some common chains,e.g. Byzantine, candy cane (with variations), helm chain (with variations).</p>
+    <p>Define a template for designing chainmaille cubes with appropriately wrapping elements.</p>
+    <p>Replicate selected portions of the design; copy-paste.</p>
+    <p>Include a few &quot;stock designs&quot;, like the stars, with the program distribution.</p>
+    <p>Adapt &quot;rings within rings&quot; spreadsheets to controls on tab pages as a design aid.</p>
+    <p>How to handle twist chains? Make half- or full-twist (depending on symmetry) a single unit?</p>
+    <p>Can the &quot;outline image&quot; be eliminated by including outlines in the individual ring graphics?</p>
+    <p>Implement undo.</p>
+    <p>Print at actual size, specifying % overlap and other multi-sheet image printing stuff (cf. printing by Campaign Cartographer).</p>
+    <p>Pen / brush shapes for &quot;painting&quot; rings.</p>
+    <p>Line drawing tool.</p>
+    <p>Crop to used area (not unspecified / transparent).</p>
+    <p>Multiple overlays.</p>
+    <p>Delete overlay.</p>
+    <p>Build outline / ground of design based on a parameterized pattern, e.g. a scale bra parameterized by the measurements of the recipient.</p>
+    <h4>Automatic Inlays</h4>
+    <p>Provide control over the transparency of the overlay.</p>
+    <p>Posterize the overlay image per the current palette.</p>
+    <p>Apply the colors of the posterized image to the underlying rings.</p>
+    <h4>Palette Designer</h4>
+    <p>Allow a palette to be automatically generated from an IGP color map image, i.e. if a palette is not defined for a design, define one using the colors in the color image.</p>
+    <h4>Pattern Designer</h4>
+    <p>Starting from an image or drawing of the overall weave, allow the user to segement the image into ring images, possibly by filling each ring with a different color.</p>
+    <p>Automatically generate the individual ring images (possibly with their own outlines) from the segmented image.</p>
+    <p>Automatically generate the pattern file information (relative position of ring images, etc.) from the segmented image.</p>
+    <h3>Preparation for Release</h3>
+    <p>Put together a sample pack of designs.</p>
+    <p>Write a good help document.</p>
+    <p>Create and test an installer.</p>
+    <p>Change default settings (directories, etc.) to match installed locations. Show these in user manual screenshots</p>
+    <h3>Deferred Until a Later Release</h3>
+    <p>Provide 3-D modeling, as for a chainmaille glove.</p>
+    <p>Allow additional patterns in a design, e.g. half-Persian edging on a European 4-in-1 sheet.</p>
+    <p>Allow assemblies (sub-designs) to be replicated and placed in a design, e.g. the string of stars on the bottom of Elsa&#39;s mantle.</p>
+    <p>Enhance the rendering to use shaded ring images to convey an approximation to depth information.</p>
+    <h4>Palette Designer</h4>
+    <p>Enhance palette to include specular reflectance information.</p>
+    <p>Enhance palette to include texture information.</p>
+    <p>&nbsp;</p>
+    </body>
+</html>

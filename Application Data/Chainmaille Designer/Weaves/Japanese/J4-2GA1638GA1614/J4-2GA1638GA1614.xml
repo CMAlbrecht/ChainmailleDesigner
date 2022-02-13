@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ChainmailleWeave name="J4-2GA1638GA1614" version ="1">
+  <Description>Japanese 4-in-2.
+  </Description>
+  <PatternImage file="j4-2.bmp"/>
+  <UnitVisualSize rows="1" columns="5"/>
+  <UnitColorSize x="5" y="1"/>
+  <EvenRowOffset x="0" y="0"/>
+  <Linkage value="sheet"/>
+  <Body verticalUnits="1" horizontalUnits="1" rows="1" columns="5">
+    <OutlineImage file="j4-2o.bmp"/>
+    <PatternSpacing x="45" y="45"/>
+    <PatternElements>
+      <PatternElement index="0" ringSize="L" file="1638.bmp">
+        <ImageOffset x="6" y="6"/>
+        <ColorOffset x="0" y="0"/>
+        <BuildOffset x="0" y="0"/>
+      </PatternElement>
+      <PatternElement index="1" ringSize="S" file="1614d90.bmp">
+        <ImageOffset x="19" y="31"/>
+        <ColorOffset x="1" y="0"/>
+        <BuildOffset x="1" y="0"/>
+      </PatternElement>
+      <PatternElement index="2" ringSize="S" file="1614d90.bmp">
+        <ImageOffset x="23" y="31"/>
+        <ColorOffset x="2" y="0"/>
+        <BuildOffset x="2" y="0"/>
+      </PatternElement>
+      <PatternElement index="3" ringSize="S" file="1614d0.bmp">
+        <ImageOffset x="31" y="19"/>
+        <ColorOffset x="3" y="0"/>
+        <BuildOffset x="3" y="0"/>
+      </PatternElement>
+      <PatternElement index="4" ringSize="S" file="1614d0.bmp">
+        <ImageOffset x="31" y="23"/>
+        <ColorOffset x="4" y="0"/>
+        <BuildOffset x="4" y="0"/>
+      </PatternElement>
+    </PatternElements>
+  </Body>
+  <Scales>
+    <Scale>
+      <RingSizes>
+        <RingSize name="L" idinches="3/8" gauge="16" ar="6.0"/>
+        <RingSize name="S" idinches="1/4" gauge="16" ar="4.0"/>
+      </RingSizes>
+    </Scale>
+  </Scales>
+</ChainmailleWeave>

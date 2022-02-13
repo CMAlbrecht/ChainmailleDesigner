@@ -1,0 +1,1648 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta name="generator" content=
+"HTML Tidy for Windows (vers 25 March 2009), see www.w3.org">
+<meta content="text/html; charset=utf-8" http-equiv="content-type">
+<meta name="Generator" content="Microsoft Word 15 (filtered)">
+<link rel="stylesheet" type="text/css" href="embeddedstyles.css">
+<title>Weave Patterns</title>
+<meta name="generator" content="chmProcessor">
+</head>
+<body lang="EN-US" link="blue" vlink="#954F72" style=
+"word-wrap:break-word">
+<div class="WordSection1">
+<h1><a name="_Toc95395411">Weave Patterns</a></h1>
+<p class="MsoNormal">The pattern information for each weave
+available within the program is contained within a single directory
+located within the configured weaves directory.&nbsp; Each weave
+pattern directory contains a weave pattern file, either in the
+newer XML format or in the old .ini file format, that specifies how
+to create the weave pattern.&nbsp; The weave pattern file refers to
+various image files for the ring outlines and fills, and all of
+these image files must also be present in the weave pattern
+directory.</p>
+<h2><a name="_Toc95395412">Sheets and Rings</a></h2>
+<p class="MsoNormal">Each weave pattern definition specifies the
+ring outlines and ring images for the ring shapes that are used to
+depict the sheet of the weave, how to put those images together to
+render a picture of one unit of the weave, and the positions of
+successive units.</p>
+<p class="MsoNormal">For a very simple weave like European 4-in-1,
+only 3 images are required for the sheet:</p>
+<p class="MsoListParagraphCxSpFirst" style='text-indent:-.25in'>
+<span style='font-family:Symbol'>·<span style=
+'font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+An outline image – A black on white image of the outlines of the
+rings as they appear in the sheet.&nbsp; The outline image must be
+tiling; in other words, fit edge to edge the outline image must be
+able to depict an arbitrarily-large section of the weave sheet.</p>
+<p class="MsoListParagraphCxSpMiddle" style='text-indent:-.25in'>
+<span style='font-family:Symbol'>·<span style=
+'font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+A left ring image – A black on white image of a left-facing
+ring.</p>
+<p class="MsoListParagraphCxSpLast" style='text-indent:-.25in'>
+<span style='font-family:Symbol'>·<span style=
+'font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+A right ring image – A black on white image of a right-facing
+ring.</p>
+<p class="MsoCaption"><img width="16" height="33" id="Picture 108"
+src="Chainmaille%20Designer%20Users%20Manual_files/image075.png"
+alt="image" name="Picture 108">&nbsp;&nbsp;&nbsp; <img width="27"
+height="31" id="Picture 111" src=
+"Chainmaille%20Designer%20Users%20Manual_files/image076.png" alt=
+"image" name="Picture 111">&nbsp;&nbsp;&nbsp;&nbsp;<img width="27"
+height="29" id="Picture 109" src=
+"Chainmaille%20Designer%20Users%20Manual_files/image077.png" alt=
+"image" name="Picture 109"><br>
+Outline and ring images for European 4 in 1 sheet.</p>
+<h2><a name="_Toc95395413">Edges, Corners and Wrapping</a></h2>
+<p class="MsoNormal">A weave pattern may also specify the
+particular appearance of the edges and corners of the sheet.</p>
+<p class="MsoNormal">At present, only rectangular edges and corners
+are supported by the program.&nbsp; An edge is specified as being
+either top, bottom, left, or right.&nbsp; Corners are specified as
+being either top left, top right, bottom left, or bottom
+right.&nbsp; Each edge and corner is specified like the sheet with
+a tiling outline image and one or more ring images.</p>
+<div align="center">
+<table class="MsoTableGrid" border="1" cellspacing="0" cellpadding=
+"0" style='border-collapse:collapse;border:none'>
+<tr>
+<td valign="top" style=
+'border:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoCaption"><img width="12" height="24" id="Picture 99"
+src="Chainmaille%20Designer%20Users%20Manual_files/image078.png"
+alt="image" name="Picture 99"></p>
+</td>
+<td valign="top" style=
+'border:solid windowtext 1.0pt;border-left:none; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoCaption"><img width="12" height="24" id="Picture 98"
+src="Chainmaille%20Designer%20Users%20Manual_files/image079.png"
+alt="image" name="Picture 98"></p>
+</td>
+<td valign="top" style=
+'border:solid windowtext 1.0pt;border-left:none; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoCaption"><img width="33" height="24" id="Picture 100"
+src="Chainmaille%20Designer%20Users%20Manual_files/image080.png"
+alt="image" name="Picture 100"></p>
+</td>
+</tr>
+<tr>
+<td valign="top" style=
+'border:solid windowtext 1.0pt;border-top:none; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoCaption"><img width="12" height="24" id="Picture 101"
+src="Chainmaille%20Designer%20Users%20Manual_files/image081.png"
+alt="image" name="Picture 101"></p>
+</td>
+<td valign="top" style=
+'border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt; border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoCaption"><img width="12" height="24" id="Picture 102"
+src="Chainmaille%20Designer%20Users%20Manual_files/image082.png"
+alt="image" name="Picture 102"></p>
+</td>
+<td valign="top" style=
+'border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt; border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoCaption"><img width="33" height="24" id="Picture 104"
+src="Chainmaille%20Designer%20Users%20Manual_files/image083.png"
+alt="image" name="Picture 104"></p>
+</td>
+</tr>
+<tr>
+<td valign="top" style=
+'border:solid windowtext 1.0pt;border-top:none; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoCaption"><img width="12" height="23" id="Picture 105"
+src="Chainmaille%20Designer%20Users%20Manual_files/image084.png"
+alt="image" name="Picture 105"></p>
+</td>
+<td valign="top" style=
+'border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt; border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoCaption"><img width="12" height="23" id="Picture 106"
+src="Chainmaille%20Designer%20Users%20Manual_files/image085.png"
+alt="image" name="Picture 106"></p>
+</td>
+<td valign="top" style=
+'border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt; border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoCaption"><img width="33" height="23" id="Picture 107"
+src="Chainmaille%20Designer%20Users%20Manual_files/image086.png"
+alt="image" name="Picture 107"></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="MsoCaption">Edge and corner outlines for European 4 in 1,
+with the sheet in the middle.</p>
+<p class="MsoNormal">When a weave pattern specifies edges and
+corners, the wrap of the design determines which of the edge and
+corner definitions are used when rendering the design.</p>
+<p class="MsoListParagraphCxSpFirst" style='text-indent:-.25in'>
+<span style='font-family:Symbol'>·<span style=
+'font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+<b>No Wrap</b> – The design is a flat sheet.&nbsp; All edges and
+corners are used for rendering.</p>
+<p class="MsoListParagraphCxSpMiddle" style='text-indent:-.25in'>
+<span style='font-family:Symbol'>·<span style=
+'font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+<b>Horizontal Wrap</b> – The design is a continuous horizontal band
+which has only top and bottom edges.</p>
+<p class="MsoListParagraphCxSpLast" style='text-indent:-.25in'>
+<span style='font-family:Symbol'>·<span style=
+'font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+<b>Vertical Wrap</b> – The design is a continuous vertical band
+which has only left and right edges.</p>
+<h2><a name="_Toc95395414">Scales</a></h2>
+<p class="MsoNormal">A weave pattern may also specify the sizes of
+rings to use for the weave and, for each size (or set of sizes) may
+also specify how many units per inch (or centimeter) the resulting
+sheet will have vertically and horizontally.&nbsp; For example, the
+DEDragonscale weave specifies 16G 5/16 rings for the large rings
+and 18G 3/16 rings for the small rings, and provides the
+information that with these sizes of rings, there will be 2.18
+units per inch horizontally and 6.0 units per inch vertically.</p>
+<p class="MsoNoSpacing"><span style=
+'font-size:9.0pt;font-family:"Courier New"'>&nbsp;
+&lt;Scales&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:9.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;Scale&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:9.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Measure unitsHorizontal="2.18" unitsVertical="6.0"
+referenceUnit="inch"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:9.0pt;font-family:"Courier New"'>&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&lt;RingSizes&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:9.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;RingSize name="L" idinches="5/16" gauge="16"
+ar="5.2"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:9.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;RingSize name="S" idinches="3/16" gauge="18"
+ar="4.1"/&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:9.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/RingSizes&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:9.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
+&lt;/Scale&gt;</span></p>
+<p class="MsoNoSpacing"><span style=
+'font-size:9.0pt;font-family:"Courier New"'>&nbsp;
+&lt;/Scales&gt;<br>
+<br></span></p>
+<p class="MsoNormal">A weave pattern may specify any number of
+scales.&nbsp; In particular, you can add your favorite scales to
+any weave pattern that you use by assembling the necessary
+measurements, then using any competent text editor to add one or
+more Scale sections to the Scales collection of the weave pattern
+file.&nbsp; See the appendix of file formats for the details of
+what each of the tags and attributes means.</p>
+<p class="MsoNormal">&nbsp;</p>
+</div>
+<b><span style=
+'font-size:16.0pt;font-family:"Book Antiqua",serif'><br clear="all"
+style='page-break-before:always'></span></b>
+<div class="WordSection2">
+<h2><a name="_Toc95395415">Available Weaves</a></h2>
+<p class="MsoNormal">The weave patterns distributed with this
+program include a sampling of some of the most popular sheet weaves
+used for inlay work as well as a few oddballs (such as the knitting
+templates) and the more universally-applicable hexagonal grids.</p>
+<table class="MsoTableGrid" border="1" cellspacing="0" cellpadding=
+"0" style='border-collapse:collapse;border:none'>
+<tr>
+<td width="120" valign="top" style=
+'width:90.3pt;border:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>
+Appearance</p>
+</td>
+<td width="167" valign="top" style=
+'width:125.5pt;border:solid windowtext 1.0pt; border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+Name</p>
+</td>
+<td width="127" valign="top" style=
+'width:95.5pt;border:solid windowtext 1.0pt; border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+Weave</p>
+</td>
+<td width="110" valign="top" style=
+'width:1.15in;border:solid windowtext 1.0pt; border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>
+Source</p>
+</td>
+<td width="109" valign="top" style=
+'width:81.8pt;border:solid windowtext 1.0pt; border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>Ring
+Sizes</p>
+</td>
+<td width="114" valign="top" style=
+'width:85.45pt;border:solid windowtext 1.0pt; border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>Has Edges
+&amp; Corners</p>
+</td>
+<td width="115" valign="top" style=
+'width:86.15pt;border:solid windowtext 1.0pt; border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>Has
+Distance Scaling</p>
+</td>
+</tr>
+<tr>
+<td width="120" valign="top" style=
+'width:90.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>
+<img width="104" height="53" id="Picture 50" src=
+"Chainmaille%20Designer%20Users%20Manual_files/image087.png" alt=
+"image" name="Picture 50"></p>
+</td>
+<td width="167" valign="top" style=
+'width:125.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+DEDragonscale</p>
+</td>
+<td width="127" valign="top" style=
+'width:95.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+Dragonscale</p>
+</td>
+<td width="110" valign="top" style=
+'width:1.15in;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>Dragon
+Enchained</p>
+</td>
+<td width="109" valign="top" style=
+'width:81.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>1
+pair</p>
+</td>
+<td width="114" valign="top" style=
+'width:85.45pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>Yes</p>
+</td>
+<td width="115" valign="top" style=
+'width:86.15pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>Yes</p>
+</td>
+</tr>
+<tr>
+<td width="120" valign="top" style=
+'width:90.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>
+<img width="103" height="53" id="Picture 59" src=
+"Chainmaille%20Designer%20Users%20Manual_files/image088.png" alt=
+"image" name="Picture 59"></p>
+</td>
+<td width="167" valign="top" style=
+'width:125.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+DE-Euro4in1</p>
+</td>
+<td width="127" valign="top" style=
+'width:95.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+European 4 in 1</p>
+</td>
+<td width="110" valign="top" style=
+'width:1.15in;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>Dragon
+Enchained</p>
+</td>
+<td width="109" valign="top" style=
+'width:81.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>1</p>
+</td>
+<td width="114" valign="top" style=
+'width:85.45pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>Yes</p>
+</td>
+<td width="115" valign="top" style=
+'width:86.15pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+</tr>
+<tr>
+<td width="120" valign="top" style=
+'width:90.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>
+<img width="99" height="51" id="Picture 62" src=
+"Chainmaille%20Designer%20Users%20Manual_files/image089.png" alt=
+"image" name="Picture 62"></p>
+</td>
+<td width="167" valign="top" style=
+'width:125.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+DragonScaleGA16</p>
+</td>
+<td width="127" valign="top" style=
+'width:95.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+Dragonscale</p>
+</td>
+<td width="110" valign="top" style=
+'width:1.15in;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>IGP</p>
+</td>
+<td width="109" valign="top" style=
+'width:81.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>1
+pair</p>
+</td>
+<td width="114" valign="top" style=
+'width:85.45pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+<td width="115" valign="top" style=
+'width:86.15pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+</tr>
+<tr>
+<td width="120" valign="top" style=
+'width:90.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>
+<img width="102" height="52" id="Picture 63" src=
+"Chainmaille%20Designer%20Users%20Manual_files/image090.png" alt=
+"image" name="Picture 63"></p>
+</td>
+<td width="167" valign="top" style=
+'width:125.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+E4-1GA1438</p>
+</td>
+<td width="127" valign="top" style=
+'width:95.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+European 4 in 1</p>
+</td>
+<td width="110" valign="top" style=
+'width:1.15in;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>IGP</p>
+</td>
+<td width="109" valign="top" style=
+'width:81.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>1</p>
+</td>
+<td width="114" valign="top" style=
+'width:85.45pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+<td width="115" valign="top" style=
+'width:86.15pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+</tr>
+<tr>
+<td width="120" valign="top" style=
+'width:90.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>
+<img width="104" height="52" id="Picture 67" src=
+"Chainmaille%20Designer%20Users%20Manual_files/image091.png" alt=
+"image" name="Picture 67"></p>
+</td>
+<td width="167" valign="top" style=
+'width:125.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+E4-1GA1614Half</p>
+</td>
+<td width="127" valign="top" style=
+'width:95.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+European 4 in 1</p>
+</td>
+<td width="110" valign="top" style=
+'width:1.15in;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>IGP</p>
+</td>
+<td width="109" valign="top" style=
+'width:81.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>1</p>
+</td>
+<td width="114" valign="top" style=
+'width:85.45pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+<td width="115" valign="top" style=
+'width:86.15pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+</tr>
+<tr>
+<td width="120" valign="top" style=
+'width:90.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>
+<img width="100" height="52" id="Picture 70" src=
+"Chainmaille%20Designer%20Users%20Manual_files/image092.png" alt=
+"image" name="Picture 70"></p>
+</td>
+<td width="167" valign="top" style=
+'width:125.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+E4-1GA1614Right</p>
+</td>
+<td width="127" valign="top" style=
+'width:95.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+European 4 in 1</p>
+</td>
+<td width="110" valign="top" style=
+'width:1.15in;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>IGP</p>
+</td>
+<td width="109" valign="top" style=
+'width:81.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>1</p>
+</td>
+<td width="114" valign="top" style=
+'width:85.45pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+<td width="115" valign="top" style=
+'width:86.15pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+</tr>
+<tr>
+<td width="120" valign="top" style=
+'width:90.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>
+<img width="103" height="51" id="Picture 71" src=
+"Chainmaille%20Designer%20Users%20Manual_files/image093.png" alt=
+"image" name="Picture 71"></p>
+</td>
+<td width="167" valign="top" style=
+'width:125.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+E4-1GA1614Wrong</p>
+</td>
+<td width="127" valign="top" style=
+'width:95.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+European 4 in 1</p>
+</td>
+<td width="110" valign="top" style=
+'width:1.15in;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>IGP</p>
+</td>
+<td width="109" valign="top" style=
+'width:81.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>1</p>
+</td>
+<td width="114" valign="top" style=
+'width:85.45pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+<td width="115" valign="top" style=
+'width:86.15pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+</tr>
+<tr>
+<td width="120" valign="top" style=
+'width:90.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>
+<img width="101" height="51" id="Picture 73" src=
+"Chainmaille%20Designer%20Users%20Manual_files/image094.png" alt=
+"image" name="Picture 73"></p>
+</td>
+<td width="167" valign="top" style=
+'width:125.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+E4-1GA16316</p>
+</td>
+<td width="127" valign="top" style=
+'width:95.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+European 4 in 1</p>
+</td>
+<td width="110" valign="top" style=
+'width:1.15in;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>IGP</p>
+</td>
+<td width="109" valign="top" style=
+'width:81.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>1</p>
+</td>
+<td width="114" valign="top" style=
+'width:85.45pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+<td width="115" valign="top" style=
+'width:86.15pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+</tr>
+<tr>
+<td width="120" valign="top" style=
+'width:90.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>
+<img width="102" height="52" id="Picture 80" src=
+"Chainmaille%20Designer%20Users%20Manual_files/image095.png" alt=
+"image" name="Picture 80"></p>
+</td>
+<td width="167" valign="top" style=
+'width:125.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+E4-1GA16316Wrong</p>
+</td>
+<td width="127" valign="top" style=
+'width:95.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+European 4 in 1</p>
+</td>
+<td width="110" valign="top" style=
+'width:1.15in;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>IGP</p>
+</td>
+<td width="109" valign="top" style=
+'width:81.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>1</p>
+</td>
+<td width="114" valign="top" style=
+'width:85.45pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+<td width="115" valign="top" style=
+'width:86.15pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+</tr>
+<tr>
+<td width="120" valign="top" style=
+'width:90.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>
+<img width="101" height="54" id="Picture 81" src=
+"Chainmaille%20Designer%20Users%20Manual_files/image096.png" alt=
+"image" name="Picture 81"></p>
+</td>
+<td width="167" valign="top" style=
+'width:125.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+E4-1GA16516Right</p>
+</td>
+<td width="127" valign="top" style=
+'width:95.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+European 4 in 1</p>
+</td>
+<td width="110" valign="top" style=
+'width:1.15in;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>IGP</p>
+</td>
+<td width="109" valign="top" style=
+'width:81.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>1</p>
+</td>
+<td width="114" valign="top" style=
+'width:85.45pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+<td width="115" valign="top" style=
+'width:86.15pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+</tr>
+<tr>
+<td width="120" valign="top" style=
+'width:90.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>
+<img width="102" height="52" id="Picture 82" src=
+"Chainmaille%20Designer%20Users%20Manual_files/image097.png" alt=
+"image" name="Picture 82"></p>
+</td>
+<td width="167" valign="top" style=
+'width:125.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+E6-1GA16516</p>
+</td>
+<td width="127" valign="top" style=
+'width:95.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+European 6 in 1</p>
+</td>
+<td width="110" valign="top" style=
+'width:1.15in;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>IGP</p>
+</td>
+<td width="109" valign="top" style=
+'width:81.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>1</p>
+</td>
+<td width="114" valign="top" style=
+'width:85.45pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+<td width="115" valign="top" style=
+'width:86.15pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+</tr>
+<tr>
+<td width="120" valign="top" style=
+'width:90.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>
+<img width="104" height="54" id="Picture 83" src=
+"Chainmaille%20Designer%20Users%20Manual_files/image098.png" alt=
+"image" name="Picture 83"></p>
+</td>
+<td width="167" valign="top" style=
+'width:125.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+E6-1Wrong</p>
+</td>
+<td width="127" valign="top" style=
+'width:95.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+European 6 in 1</p>
+</td>
+<td width="110" valign="top" style=
+'width:1.15in;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>IGP</p>
+</td>
+<td width="109" valign="top" style=
+'width:81.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>
+&nbsp;</p>
+</td>
+<td width="114" valign="top" style=
+'width:85.45pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+<td width="115" valign="top" style=
+'width:86.15pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+</tr>
+<tr>
+<td width="120" valign="top" style=
+'width:90.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>
+<img width="103" height="55" id="Picture 74" src=
+"Chainmaille%20Designer%20Users%20Manual_files/image099.png" alt=
+"image" name="Picture 74"></p>
+</td>
+<td width="167" valign="top" style=
+'width:125.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+HexLarge</p>
+</td>
+<td width="127" valign="top" style=
+'width:95.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+Hex grid</p>
+</td>
+<td width="110" valign="top" style=
+'width:1.15in;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>IGP</p>
+</td>
+<td width="109" valign="top" style=
+'width:81.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>NA</p>
+</td>
+<td width="114" valign="top" style=
+'width:85.45pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+<td width="115" valign="top" style=
+'width:86.15pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+</tr>
+<tr>
+<td width="120" valign="top" style=
+'width:90.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>
+<img width="106" height="53" id="Picture 75" src=
+"Chainmaille%20Designer%20Users%20Manual_files/image100.png" alt=
+"image" name="Picture 75"></p>
+</td>
+<td width="167" valign="top" style=
+'width:125.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+HexLargeXO</p>
+</td>
+<td width="127" valign="top" style=
+'width:95.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+Hex grid</p>
+</td>
+<td width="110" valign="top" style=
+'width:1.15in;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>IGP</p>
+</td>
+<td width="109" valign="top" style=
+'width:81.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>NA</p>
+</td>
+<td width="114" valign="top" style=
+'width:85.45pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+<td width="115" valign="top" style=
+'width:86.15pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+</tr>
+<tr>
+<td width="120" valign="top" style=
+'width:90.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>
+<img width="104" height="54" id="Picture 76" src=
+"Chainmaille%20Designer%20Users%20Manual_files/image101.png" alt=
+"image" name="Picture 76"></p>
+</td>
+<td width="167" valign="top" style=
+'width:125.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+HexSmall</p>
+</td>
+<td width="127" valign="top" style=
+'width:95.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+Hex grid</p>
+</td>
+<td width="110" valign="top" style=
+'width:1.15in;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>IGP</p>
+</td>
+<td width="109" valign="top" style=
+'width:81.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>NA</p>
+</td>
+<td width="114" valign="top" style=
+'width:85.45pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+<td width="115" valign="top" style=
+'width:86.15pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+</tr>
+<tr>
+<td width="120" valign="top" style=
+'width:90.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>
+<img width="105" height="55" id="Picture 77" src=
+"Chainmaille%20Designer%20Users%20Manual_files/image102.png" alt=
+"image" name="Picture 77"></p>
+</td>
+<td width="167" valign="top" style=
+'width:125.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+HexSmallXO</p>
+</td>
+<td width="127" valign="top" style=
+'width:95.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+Hex grid</p>
+</td>
+<td width="110" valign="top" style=
+'width:1.15in;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>IGP</p>
+</td>
+<td width="109" valign="top" style=
+'width:81.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>NA</p>
+</td>
+<td width="114" valign="top" style=
+'width:85.45pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+<td width="115" valign="top" style=
+'width:86.15pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+</tr>
+<tr>
+<td width="120" valign="top" style=
+'width:90.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>
+<img width="104" height="53" id="Picture 84" src=
+"Chainmaille%20Designer%20Users%20Manual_files/image103.png" alt=
+"image" name="Picture 84"></p>
+</td>
+<td width="167" valign="top" style=
+'width:125.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+HP3in1s5in1Horz</p>
+</td>
+<td width="127" valign="top" style=
+'width:95.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+Half-Persian, sheet 5</p>
+</td>
+<td width="110" valign="top" style=
+'width:1.15in;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>IGP</p>
+</td>
+<td width="109" valign="top" style=
+'width:81.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>1</p>
+</td>
+<td width="114" valign="top" style=
+'width:85.45pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+<td width="115" valign="top" style=
+'width:86.15pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+</tr>
+<tr>
+<td width="120" valign="top" style=
+'width:90.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>
+<img width="104" height="54" id="Picture 85" src=
+"Chainmaille%20Designer%20Users%20Manual_files/image104.png" alt=
+"image" name="Picture 85"></p>
+</td>
+<td width="167" valign="top" style=
+'width:125.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+HP3in1s5in1Vert</p>
+</td>
+<td width="127" valign="top" style=
+'width:95.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+Half-Persian, sheet 5</p>
+</td>
+<td width="110" valign="top" style=
+'width:1.15in;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>IGP</p>
+</td>
+<td width="109" valign="top" style=
+'width:81.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>1</p>
+</td>
+<td width="114" valign="top" style=
+'width:85.45pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+<td width="115" valign="top" style=
+'width:86.15pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+</tr>
+<tr>
+<td width="120" valign="top" style=
+'width:90.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>
+<img width="104" height="50" id="Picture 86" src=
+"Chainmaille%20Designer%20Users%20Manual_files/image105.png" alt=
+"image" name="Picture 86"></p>
+</td>
+<td width="167" valign="top" style=
+'width:125.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+HP3in1s6in1Horz</p>
+</td>
+<td width="127" valign="top" style=
+'width:95.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+Half-Persian, sheet 6</p>
+</td>
+<td width="110" valign="top" style=
+'width:1.15in;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>IGP</p>
+</td>
+<td width="109" valign="top" style=
+'width:81.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>1</p>
+</td>
+<td width="114" valign="top" style=
+'width:85.45pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+<td width="115" valign="top" style=
+'width:86.15pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+</tr>
+<tr>
+<td width="120" valign="top" style=
+'width:90.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>
+<img width="105" height="52" id="Picture 87" src=
+"Chainmaille%20Designer%20Users%20Manual_files/image106.png" alt=
+"image" name="Picture 87"></p>
+</td>
+<td width="167" valign="top" style=
+'width:125.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+HP3in1s6in1Vert</p>
+</td>
+<td width="127" valign="top" style=
+'width:95.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+Half-Persian, sheet 6</p>
+</td>
+<td width="110" valign="top" style=
+'width:1.15in;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>IGP</p>
+</td>
+<td width="109" valign="top" style=
+'width:81.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>1</p>
+</td>
+<td width="114" valign="top" style=
+'width:85.45pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+<td width="115" valign="top" style=
+'width:86.15pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+</tr>
+<tr>
+<td width="120" valign="top" style=
+'width:90.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>
+<img width="102" height="51" id="Picture 94" src=
+"Chainmaille%20Designer%20Users%20Manual_files/image107.png" alt=
+"image" name="Picture 94"></p>
+</td>
+<td width="167" valign="top" style=
+'width:125.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+HP3n1-S6</p>
+</td>
+<td width="127" valign="top" style=
+'width:95.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+Half-Persian, sheet 6</p>
+</td>
+<td width="110" valign="top" style=
+'width:1.15in;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>IGP</p>
+</td>
+<td width="109" valign="top" style=
+'width:81.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>
+&nbsp;</p>
+</td>
+<td width="114" valign="top" style=
+'width:85.45pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+<td width="115" valign="top" style=
+'width:86.15pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+</tr>
+<tr>
+<td width="120" valign="top" style=
+'width:90.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>
+<img width="100" height="50" id="Picture 95" src=
+"Chainmaille%20Designer%20Users%20Manual_files/image108.png" alt=
+"image" name="Picture 95"></p>
+</td>
+<td width="167" valign="top" style=
+'width:125.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+HP3n1-S6LH</p>
+</td>
+<td width="127" valign="top" style=
+'width:95.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+Half-Persian, sheet 6</p>
+</td>
+<td width="110" valign="top" style=
+'width:1.15in;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>IGP</p>
+</td>
+<td width="109" valign="top" style=
+'width:81.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>
+&nbsp;</p>
+</td>
+<td width="114" valign="top" style=
+'width:85.45pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+<td width="115" valign="top" style=
+'width:86.15pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+</tr>
+<tr>
+<td width="120" valign="top" style=
+'width:90.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>
+<img width="103" height="50" id="Picture 96" src=
+"Chainmaille%20Designer%20Users%20Manual_files/image109.png" alt=
+"image" name="Picture 96"></p>
+</td>
+<td width="167" valign="top" style=
+'width:125.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+HP3n1-S6Vert</p>
+</td>
+<td width="127" valign="top" style=
+'width:95.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+Half-Persian, sheet 6</p>
+</td>
+<td width="110" valign="top" style=
+'width:1.15in;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>IGP</p>
+</td>
+<td width="109" valign="top" style=
+'width:81.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>
+&nbsp;</p>
+</td>
+<td width="114" valign="top" style=
+'width:85.45pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+<td width="115" valign="top" style=
+'width:86.15pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+</tr>
+<tr>
+<td width="120" valign="top" style=
+'width:90.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>
+<img width="101" height="50" id="Picture 97" src=
+"Chainmaille%20Designer%20Users%20Manual_files/image110.png" alt=
+"image" name="Picture 97"></p>
+</td>
+<td width="167" valign="top" style=
+'width:125.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+HP3n1-S6VertLH</p>
+</td>
+<td width="127" valign="top" style=
+'width:95.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+Half-Persian, sheet 6</p>
+</td>
+<td width="110" valign="top" style=
+'width:1.15in;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>IGP</p>
+</td>
+<td width="109" valign="top" style=
+'width:81.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>
+&nbsp;</p>
+</td>
+<td width="114" valign="top" style=
+'width:85.45pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+<td width="115" valign="top" style=
+'width:86.15pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+</tr>
+<tr>
+<td width="120" valign="top" style=
+'width:90.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>
+<img width="104" height="52" id="Picture 88" src=
+"Chainmaille%20Designer%20Users%20Manual_files/image111.png" alt=
+"image" name="Picture 88"></p>
+</td>
+<td width="167" valign="top" style=
+'width:125.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+J4-1GA1638GA1614</p>
+</td>
+<td width="127" valign="top" style=
+'width:95.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+Japanese 4 in 1</p>
+</td>
+<td width="110" valign="top" style=
+'width:1.15in;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>IGP</p>
+</td>
+<td width="109" valign="top" style=
+'width:81.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>1
+pair</p>
+</td>
+<td width="114" valign="top" style=
+'width:85.45pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+<td width="115" valign="top" style=
+'width:86.15pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+</tr>
+<tr>
+<td width="120" valign="top" style=
+'width:90.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>
+<img width="102" height="51" id="Picture 89" src=
+"Chainmaille%20Designer%20Users%20Manual_files/image112.png" alt=
+"image" name="Picture 89"></p>
+</td>
+<td width="167" valign="top" style=
+'width:125.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+J4-2GA1638GA1614</p>
+</td>
+<td width="127" valign="top" style=
+'width:95.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+Japanese 4 in 2</p>
+</td>
+<td width="110" valign="top" style=
+'width:1.15in;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>IGP</p>
+</td>
+<td width="109" valign="top" style=
+'width:81.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>1
+pair</p>
+</td>
+<td width="114" valign="top" style=
+'width:85.45pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+<td width="115" valign="top" style=
+'width:86.15pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+</tr>
+<tr>
+<td width="120" valign="top" style=
+'width:90.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>
+<img width="106" height="53" id="Picture 90" src=
+"Chainmaille%20Designer%20Users%20Manual_files/image113.png" alt=
+"image" name="Picture 90"></p>
+</td>
+<td width="167" valign="top" style=
+'width:125.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+J4-3GA1638GA1614</p>
+</td>
+<td width="127" valign="top" style=
+'width:95.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+Japanese 4 in 3</p>
+</td>
+<td width="110" valign="top" style=
+'width:1.15in;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>IGP</p>
+</td>
+<td width="109" valign="top" style=
+'width:81.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>1
+pair</p>
+</td>
+<td width="114" valign="top" style=
+'width:85.45pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+<td width="115" valign="top" style=
+'width:86.15pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+</tr>
+<tr>
+<td width="120" valign="top" style=
+'width:90.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>
+<img width="104" height="51" id="Picture 91" src=
+"Chainmaille%20Designer%20Users%20Manual_files/image114.png" alt=
+"image" name="Picture 91"></p>
+</td>
+<td width="167" valign="top" style=
+'width:125.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+J6-2GA1638GA1614</p>
+</td>
+<td width="127" valign="top" style=
+'width:95.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+Japanese 6 in 2</p>
+</td>
+<td width="110" valign="top" style=
+'width:1.15in;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>IGP</p>
+</td>
+<td width="109" valign="top" style=
+'width:81.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>1
+pair</p>
+</td>
+<td width="114" valign="top" style=
+'width:85.45pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+<td width="115" valign="top" style=
+'width:86.15pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+</tr>
+<tr>
+<td width="120" valign="top" style=
+'width:90.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>
+<img width="104" height="52" id="Picture 78" src=
+"Chainmaille%20Designer%20Users%20Manual_files/image115.png" alt=
+"image" name="Picture 78"></p>
+</td>
+<td width="167" valign="top" style=
+'width:125.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+KnitLarge</p>
+</td>
+<td width="127" valign="top" style=
+'width:95.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+Rectangular grid</p>
+</td>
+<td width="110" valign="top" style=
+'width:1.15in;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>IGP</p>
+</td>
+<td width="109" valign="top" style=
+'width:81.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>NA</p>
+</td>
+<td width="114" valign="top" style=
+'width:85.45pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+<td width="115" valign="top" style=
+'width:86.15pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+</tr>
+<tr>
+<td width="120" valign="top" style=
+'width:90.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>
+<img width="105" height="54" id="Picture 79" src=
+"Chainmaille%20Designer%20Users%20Manual_files/image116.png" alt=
+"image" name="Picture 79"></p>
+</td>
+<td width="167" valign="top" style=
+'width:125.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+KnitSmall</p>
+</td>
+<td width="127" valign="top" style=
+'width:95.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+Rectangular grid</p>
+</td>
+<td width="110" valign="top" style=
+'width:1.15in;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>IGP</p>
+</td>
+<td width="109" valign="top" style=
+'width:81.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>NA</p>
+</td>
+<td width="114" valign="top" style=
+'width:85.45pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+<td width="115" valign="top" style=
+'width:86.15pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+</tr>
+<tr>
+<td width="120" valign="top" style=
+'width:90.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>
+<img width="103" height="51" id="Picture 92" src=
+"Chainmaille%20Designer%20Users%20Manual_files/image117.png" alt=
+"image" name="Picture 92"></p>
+</td>
+<td width="167" valign="top" style=
+'width:125.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+Scale</p>
+</td>
+<td width="127" valign="top" style=
+'width:95.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+Scales</p>
+</td>
+<td width="110" valign="top" style=
+'width:1.15in;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>IGP</p>
+</td>
+<td width="109" valign="top" style=
+'width:81.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>NA</p>
+</td>
+<td width="114" valign="top" style=
+'width:85.45pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+<td width="115" valign="top" style=
+'width:86.15pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+</tr>
+<tr>
+<td width="120" valign="top" style=
+'width:90.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>
+<img width="105" height="50" id="Picture 93" src=
+"Chainmaille%20Designer%20Users%20Manual_files/image118.png" alt=
+"image" name="Picture 93"></p>
+</td>
+<td width="167" valign="top" style=
+'width:125.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+trinity1614</p>
+</td>
+<td width="127" valign="top" style=
+'width:95.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" style='margin-bottom:0in;line-height:normal'>
+Trinity</p>
+</td>
+<td width="110" valign="top" style=
+'width:1.15in;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>IGP</p>
+</td>
+<td width="109" valign="top" style=
+'width:81.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>1</p>
+</td>
+<td width="114" valign="top" style=
+'width:85.45pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+<td width="115" valign="top" style=
+'width:86.15pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt'>
+<p class="MsoNormal" align="center" style=
+'margin-bottom:0in;text-align:center; line-height:normal'>No</p>
+</td>
+</tr>
+</table>
+<p class="MsoNormal">&nbsp;</p>
+</div>
+<span style=
+'font-size:12.0pt;line-height:107%;font-family:"Book Antiqua",serif'><br clear="all"
+style='page-break-before:always'></span>
+<div class="WordSection3">
+<h2><a name="_Toc95395416">Decoding IGP Weave Names</a></h2>
+<p class="MsoNormal">As you no doubt noticed in the preceding
+table, the IGP weave names are often unnecessarily cryptic.&nbsp;
+Their creators, following Zlosk’s example, tried to pack too much
+information into the name:&nbsp; not only the name of the weave but
+also the thickness and diameter of each of the ring sizes used.</p>
+<h3><a name="_Toc95395417">Weave</a></h3>
+<p class="MsoNormal">The abbreviated weave name is the first part
+of the IGP weave name:</p>
+<p class="MsoListParagraphCxSpFirst" style='text-indent:-.25in'>
+<span style='font-family:Symbol'>·<span style=
+'font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+E4-1 – European 4-in-1</p>
+<p class="MsoListParagraphCxSpMiddle" style='text-indent:-.25in'>
+<span style='font-family:Symbol'>·<span style=
+'font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+E6-1 – European 6-in-1</p>
+<p class="MsoListParagraphCxSpMiddle" style='text-indent:-.25in'>
+<span style='font-family:Symbol'>·<span style=
+'font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+HP – Half-Persian.&nbsp; 3-in-1 (3n1, 3in1 in the weave
+names).&nbsp; The two principal half-Persian sheet weaves are sheet
+5 and sheet 6 (s5 and s6 in the weave names).</p>
+<p class="MsoListParagraphCxSpLast" style='text-indent:-.25in'>
+<span style='font-family:Symbol'>·<span style=
+'font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+J – Japanese.&nbsp; The two kinds of sheet are 4 in 1/2/3 or 6 in
+1/2/3, where the second number is the number of rings in each set
+of connecting rings.</p>
+<h3><a name="_Toc95395418">Gauge</a></h3>
+<p class="MsoNormal">Gauges for ring sizes are abbreviated GA,
+followed by the gauge number.&nbsp; GA16 in the name, for example,
+means that the rings were made from 16-gauge wire.</p>
+<h3><a name="_Toc95395419">Inner Diameter</a></h3>
+<p class="MsoNormal">Inner diameter for ring sizes in inches are
+used in the names as just the numerator followed by the denominator
+without an intervening symbol.&nbsp; The denominator is always a
+power of two.&nbsp; For example, 316 means that the rings have an
+inner diameter of 3/16 of an inch.</p>
+<h3><a name="_Toc95395420">Putting It All Together</a></h3>
+<p class="MsoNormal">Putting it all together, J4-2GA1638GA1614 is a
+Japanese 4-in-2 weave using the two ring sizes of 16-gauge, 3/8
+inch inside diameter and 16-gauge, 1/4 inch inside diameter.</p>
+<h3><a name="_Toc95395421">Avoiding Such Nonsense</a></h3>
+<p class="MsoNormal">The new weave file format has a special Scales
+section for this information, and the designer shows it in a
+special column in the Choose a Weave window’s list view, features
+that I put in specifically to get away from this ridiculous
+overloading of the file names.</p>
+<p class="MsoNormal">It was really quite absurd anyway.&nbsp;
+E4-1GA16316 specified the exact size of 16G 3/16 rings, but the
+pattern looks exactly the same for any ring size with an AR of
+about 3.1:&nbsp; 20G 3/32, 19G 1/8, 18G 9/64, and 14G 1/4, to name
+a few.&nbsp; It would have made a lot more sense to just call it
+something like European 4-1 AR31.</p>
+<h2><a name="_Toc95395422">Organization of Weave Patterns</a></h2>
+<p class="MsoNormal">As I mentioned in the <b><i>Directories and
+File Organization</i></b> chapter, you can organize your weave
+patterns however you like inside of the configured weaves
+directory.&nbsp; As installed, though, the weaves used by
+Chainmaille Designer are organized into the following groups.</p>
+<p class="MsoNormal"><b>Cells</b> – This directory contains
+patterns for things that are not chainmaille weaves such as the
+various hex grids and the rectangular grids that have Knit in their
+names.</p>
+<p class="MsoNormal"><b>European</b> – This directory contains
+patterns for various flavors of European 4-in-1 weave as well as
+weaves structurally related to the European 4-in-1:&nbsp; 6-in-1,
+the older Dragonscale, and Trinity.</p>
+<p class="MsoNormal"><b>Japanese</b> – This directory contains
+patterns for a few Japanese weaves.</p>
+<p class="MsoNormal"><b>Persian</b> – This directory contains
+patterns for half-Persian 3-in-1 weaves, including various
+orientations of sheet 5 and sheet 6.</p>
+<p class="MsoNormal">In addition, there are three patterns directly
+under the configured weaves directory.</p>
+<p class="MsoNormal"><b>DEDragonscale</b> – A much-improved
+Dragonscale weave pattern which includes edges and corners as well
+as scaling and build information.</p>
+<p class="MsoNormal"><b>DE-Euro4in1</b> – An improved version of
+European 4-in-1 which includes edges and corners.</p>
+<p class="MsoNormal"><b>Scale</b> – A pattern for weaves in which
+metal scales are linked together with chainmaille rings to form a
+sheet with a very distinctive look.&nbsp; These scales are sold
+ready-made in colors by The Ring Lord and other suppliers.</p>
+<span style=
+'font-size:12.0pt;line-height:107%;font-family:"Book Antiqua",serif'><br clear="all"
+style='page-break-before:always'></span>
+<p class="MsoNormal"><b><span style=
+'font-size:18.0pt;line-height:107%'>&nbsp;</span></b></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,415 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta name="generator" content=
+"HTML Tidy for Windows (vers 25 March 2009), see www.w3.org">
+<meta content="text/html; charset=utf-8" http-equiv="content-type">
+<meta name="Generator" content="Microsoft Word 15 (filtered)">
+<link rel="stylesheet" type="text/css" href="embeddedstyles.css">
+<title>IGP and Chainmaille Designer</title>
+<meta name="generator" content="chmProcessor">
+</head>
+<body lang="EN-US" link="blue" vlink="#954F72" style=
+"word-wrap:break-word">
+<div class="WordSection3">
+<h1><a name="_Toc95395423">IGP and Chainmaille Designer</a></h1>
+<p class="MsoNormal">Even though I view Chainmaille Designer as a
+successor to Zlosk’s IGP, this shouldn’t be interpreted too
+literally. IGP was written in Visual Basic, on a very early version
+of Microsoft’s .NET framework.&nbsp; Chainmaille Designer is
+written in C#.&nbsp; Those of you who have a programming background
+will already have inferred what I am about to state
+explicitly:&nbsp; not one speck of the IGP source code could be
+reused in Chainmaille Designer.</p>
+<p class="MsoNormal">What I did instead was to re-use the
+<i>concepts</i> of IGP and produce entirely new implementations of
+IGP <i>functionality</i>, then I went further, providing new
+concepts and new functionality (guided both by Zlosk’s published
+list of features he would like to have implemented and by those
+aspects of using IGP that I found most frustrating).</p>
+<p class="MsoNormal">In this context, it is worthy of mention that
+a web version of the original IGP has been developed by Andrew
+Ganim in Javascript.&nbsp; The web IGP is available through Lost
+Senses Designs (<a href=
+"http://www.lostsensesdesigns.ca/cigp">http://www.lostsensesdesigns.ca/cigp</a>).&nbsp;
+While I don’t agree with Andrew’s published assertion that the best
+thing about IGP is that it “<span class="postbody">doesn't
+specifically care about building chainmail</span>” (and have gone
+to great lengths to make Chainmaille Designer specifically
+<i>more</i> useful for actually building chainmaille), his work has
+done everyone the service of making IGP accessible to users of UNIX
+and Macs and, presumably, mobile phones.</p>
+<h2><a name="_Toc95395424">Important Differences between IGP and
+Chainmaille Designer</a></h2>
+<p class="MsoNormal">A design is more than just an ordered
+collection of colors.&nbsp; Using IGP, the only way in which your
+design could be saved was as a simple sequence of colors in image
+file format.&nbsp; It didn’t even remember which weave you were
+using for that design.&nbsp; The design files of Chainmaille
+Designer maintain your weave selection, the sizes of rings you
+decided to use, whether the design wraps from edge to edge, and
+will even keep track of when and for whom the design was
+created.</p>
+<p class="MsoNormal">Colors are important in inlay work!&nbsp;
+Unless you are anodizing or enameling your rings yourself, there is
+a limited number of colors available with which to execute your
+design, and they are NOT Windows-standard red, green, blue,
+etc.&nbsp; Also, the best way to specify colors is NOT as
+red-green-blue triples, and certainly not with the standard Windows
+color picker.&nbsp; Chainmaille Designer lets you save collections
+of colors as palettes and retrieve them for use in your designs,
+and it provides a color picker that not only has a clue about
+colors but allows you to sample your colors from pictures of rings
+provided by your supplier.&nbsp; IGP didn’t even remember what
+colors you were using from one session to the next.</p>
+<p class="MsoNormal">Printing is a thing.&nbsp; Not very many
+people have their computer open in front of them as they build
+something out of chainmaille.&nbsp; (For one thing, it just doesn’t
+look good at SCA events.)&nbsp; IGP made you save the rendered
+image of your design to an image file, then use some <i>other
+program</i> to open and print the image file (and the same thing
+for the color report, but it had to be a <i>different</i> other
+program because, text).&nbsp; Chainmaille Designer lets you print
+directly from the Designer.</p>
+<p class="MsoNormal">Real designs have edges and corners.&nbsp;
+Pretending that designs take place in an infinite sheet might have
+been a good first approximation for what was, essentially, a class
+project, but (as the DEDragonscale and DE-Euro4in1 weaves
+distributed with this program show) it’s possible to do much
+better, enhancing the ability to visualize what the design will
+actually look like when it is executed by accurately representing
+the interactions of the rings at the edges and corners.</p>
+<p class="MsoNormal">Did we say “infinite sheet”?&nbsp; Ah, but it
+wasn’t infinite, was it?&nbsp; Ever tried to change the size of
+your IGP design?&nbsp; It couldn’t actually be done in IGP.&nbsp;
+Instead you had to open up the color image in an imaging program
+(there’s that <i>other program</i> again) to add just the right
+number of pixels to the edges, which, by the way, required knowing
+how your chosen weave used the color image, which you could only
+know by reading and actually understanding the .ini file that
+defined the weave.&nbsp; Because Chainmaille Designer treats your
+design <i>as a design</i> instead of a bunch of pixels it’s very
+easy to add or subtract chainmaille units from any of the edges of
+your design.</p>
+<p class="MsoNormal">Then there’s zoom.&nbsp; When IGP came out it
+showed the designs in more-or-less actual size (that old 72 pixels
+per inch standard; remember that? No? &nbsp;Well <i>I’m</i> old
+enough to).&nbsp; As monitors acquired higher and higher
+resolutions, those IGP graphics got smaller and smaller on the
+screen, and it got harder and harder to paint the rings you were
+trying to paint.&nbsp; There were also issues at the other end of
+the scale:&nbsp; have you ever designed a chainmaille dress in
+3/16-inch rings using IGP?&nbsp; I have.&nbsp; Trouble was, I could
+never see the whole thing because IGP didn’t let me zoom out.&nbsp;
+Chainmaille Designer fixes those issues for the designer by
+allowing zoom from 1% to 10,000%, with a special button to quickly
+return to 100% and another one to fit the entire design within the
+design area.</p>
+<p class="MsoCaption"><img border="0" width="624" height="350" id=
+"Picture 123" src=
+"Chainmaille%20Designer%20Users%20Manual_files/image119.png" alt=
+"image" name="Picture 123"><br>
+<img border="0" width="624" height="350" id="Picture 124" src=
+"Chainmaille%20Designer%20Users%20Manual_files/image120.png" alt=
+"image" name="Picture 124"><br>
+Chain dress design, with a detail of the marshmallow roasting.<br>
+(Hmm. Can I really call it a detail if it’s only 100 %?)</p>
+<span style=
+'font-size:12.0pt;line-height:107%;font-family:"Book Antiqua",serif'><br clear="all"
+style='page-break-before:always'></span>
+<p class="MsoNormal"><b><span style=
+'font-size:16.0pt;line-height:107%'>&nbsp;</span></b></p>
+<h2><a name="_Toc95395425">IGP Functionality Implemented in
+Chainmaille Designer</a></h2>
+<p class="MsoNormal">Briefly, these are the capabilities of IGP
+that I also put into Chainmaille Designer.</p>
+<p class="MsoListParagraphCxSpFirst" style='text-indent:-.25in'>
+<span style='font-family:Symbol'>·<span style=
+'font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+Create a new design with a specified color image size in
+pixels.</p>
+<p class="MsoListParagraphCxSpMiddle" style='text-indent:-.25in'>
+<span style='font-family:Symbol'>·<span style=
+'font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+Open an existing color image, prompting to save if the current
+design has been changed.</p>
+<p class="MsoListParagraphCxSpMiddle" style='text-indent:-.25in'>
+<span style='font-family:Symbol'>·<span style=
+'font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+Save the design with its current name.</p>
+<p class="MsoListParagraphCxSpMiddle" style='text-indent:-.25in'>
+<span style='font-family:Symbol'>·<span style=
+'font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+Save the design as a file with a different name.</p>
+<p class="MsoListParagraphCxSpMiddle" style='text-indent:-.25in'>
+<span style='font-family:Symbol'>·<span style=
+'font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+Save the rendered image to an image file, specifying the file name
+and image format.</p>
+<p class="MsoListParagraphCxSpMiddle" style='text-indent:-.25in'>
+<span style='font-family:Symbol'>·<span style=
+'font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+Close the current design, prompting to save if the current design
+has been changed.</p>
+<p class="MsoListParagraphCxSpMiddle" style='text-indent:-.25in'>
+<span style='font-family:Symbol'>·<span style=
+'font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+Exit the program, prompting to save if the current design has been
+changed.</p>
+<p class="MsoListParagraphCxSpMiddle" style='text-indent:-.25in'>
+<span style='font-family:Symbol'>·<span style=
+'font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+Apply a weave pattern to the current design and display the
+rendered image.</p>
+<p class="MsoListParagraphCxSpMiddle" style='text-indent:-.25in'>
+<span style='font-family:Symbol'>·<span style=
+'font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+Indicate in the status bar which ring the mouse is over in the
+zoomed image (row, column, and element).</p>
+<p class="MsoListParagraphCxSpMiddle" style='text-indent:-.25in'>
+<span style='font-family:Symbol'>·<span style=
+'font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+Set left button color</p>
+<p class="MsoListParagraphCxSpMiddle" style='text-indent:-.25in'>
+<span style='font-family:Symbol'>·<span style=
+'font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+Set right button color</p>
+<p class="MsoListParagraphCxSpMiddle" style='text-indent:-.25in'>
+<span style='font-family:Symbol'>·<span style=
+'font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+Paint rings on mouse click of either the left or right button using
+the color assigned to that button.</p>
+<p class="MsoListParagraphCxSpMiddle" style='text-indent:-.25in'>
+<span style='font-family:Symbol'>·<span style=
+'font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+When the mouse button is being held down while the mouse is being
+moved, continue painting in the color assigned to the button.</p>
+<p class="MsoListParagraphCxSpMiddle" style='text-indent:-.25in'>
+<span style='font-family:Symbol'>·<span style=
+'font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+Set background color</p>
+<p class="MsoListParagraphCxSpMiddle" style='text-indent:-.25in'>
+<span style='font-family:Symbol'>·<span style=
+'font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+Set outline color</p>
+<p class="MsoListParagraphCxSpMiddle" style='text-indent:-.25in'>
+<span style='font-family:Symbol'>·<span style=
+'font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+Show / hide the palette panel using the Window menu.</p>
+<p class="MsoListParagraphCxSpMiddle" style='text-indent:-.25in'>
+<span style='font-family:Symbol'>·<span style=
+'font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+Help about</p>
+<p class="MsoListParagraphCxSpMiddle" style='text-indent:-.25in'>
+<span style='font-family:Symbol'>·<span style=
+'font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+Count colors and show the number of rings of each color and the
+total number of rings in a window.</p>
+<p class="MsoListParagraphCxSpLast" style='text-indent:-.25in'>
+<span style='font-family:Symbol'>·<span style=
+'font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+Save color counts to a text file, appending row length encodings
+for each row of the design.</p>
+<span style=
+'font-size:12.0pt;line-height:107%;font-family:"Book Antiqua",serif'><br clear="all"
+style='page-break-before:always'></span>
+<p class="MsoNormal"><b><span style=
+'font-size:16.0pt;line-height:107%'>&nbsp;</span></b></p>
+<h2><a name="_Toc95395426">Functionality New to Chainmaille
+Designer</a></h2>
+<p class="MsoNormal">Nearly as briefly, these are the capabilities
+I added to Chainmaille Designer above and beyond what was available
+in IGP.&nbsp; With Chainmaille Designer, you can:</p>
+<h3><a name="_Toc95395427">Zoom</a></h3>
+<p><span style='font-family:"Book Antiqua",serif'>Zoom in or out
+without using more memory.</span></p>
+<p><span style='font-family:"Book Antiqua",serif'>Control zoom
+by</span></p>
+<ul type="disc">
+<li class="MsoNormal" style='line-height:normal'>Typing in a zoom
+factor (%)</li>
+<li class="MsoNormal" style='line-height:normal'>Using a slider
+(zoom factor from 0.01 to 100, default 1, logarithmic scale)</li>
+<li class="MsoNormal" style='line-height:normal'>Using a reset
+button to return to 100%, centered in the center of the rendered
+image.</li>
+<li class="MsoNormal" style='line-height:normal'>Using a Fit button
+to fit the entire design into the display area.</li>
+<li class="MsoNormal" style='line-height:normal'>Using the mouse
+wheel, centering the zoom at the mouse position.</li>
+</ul>
+<h3><a name="_Toc95395428">New Designs and Design Editing</a></h3>
+<p><span style='font-family:"Book Antiqua",serif'>Define the
+components of a chainmaille design and design an XML file format
+capable of representing the design information.&nbsp; Allow designs
+to be saved and read in this format.</span></p>
+<p><span style='font-family:"Book Antiqua",serif'>Allow design name
+and weave to be specified when creating a new design.</span></p>
+<p><span style='font-family:"Book Antiqua",serif'>Provide a form
+that shows information about the design:</span></p>
+<ul type="disc">
+<li class="MsoNormal" style='line-height:normal'>Name of the
+design</li>
+<li class="MsoNormal" style='line-height:normal'>Weave name</li>
+<li class="MsoNormal" style='line-height:normal'>Size (width &amp;
+height in selectable units)</li>
+<li class="MsoNormal" style='line-height:normal'>Date</li>
+<li class="MsoNormal" style='line-height:normal'>Who or what the
+design is for (i.e. client or recipient)</li>
+<li class="MsoNormal" style='line-height:normal'>Who or what
+created the design (i.e. personal name or business name)</li>
+<li class="MsoNormal" style='line-height:normal'>Other descriptive
+information (design notes, etc.)</li>
+</ul>
+<p><span style='font-family:"Book Antiqua",serif'>Change the size
+of an existing design, adding units or distance to any combination
+of edges.</span></p>
+<p><span style='font-family:"Book Antiqua",serif'>Use actual
+chainmaille units in size specifications (not pixels in the color
+map), i.e. rows and columns of units.</span></p>
+<p><span style='font-family:"Book Antiqua",serif'>Use distance
+measurements in size specifications (at least inches and
+centimeters).&nbsp; This maps back to ring size, obviously, so
+depends on the size of rings in which a pattern will be
+woven.</span></p>
+<p><span style='font-family:"Book Antiqua",serif'>Instead of making
+the user drill down through many layers of menus to choose a weave
+as IGP did, find all weaves in the configured weave directory and
+present them in list form for selection.</span></p>
+<p><span style='font-family:"Book Antiqua",serif'>As an alternative
+to the list, provide a gallery that presents images of the weaves
+along with their names. &nbsp;Allow the user to select a weave by
+double-clicking on its image.</span></p>
+<p><span style='font-family:"Book Antiqua",serif'>When reading an
+indexed-color color image, convert it into a 32bppARGB
+bitmap.</span></p>
+<p><span style='font-family:"Book Antiqua",serif'>Provide the
+ability to specify rings as not there (making them transparent) for
+diagonal edges, triangular panels, etc.&nbsp; Transparent rings are
+not counted by the color counter.</span></p>
+<p><span style='font-family:"Book Antiqua",serif'>Allow a design to
+be rotated, so that weaves available in one orientation can be
+presented in another, and to better fit the available screen
+dimensions.</span></p>
+<p><span style='font-family:"Book Antiqua",serif'>Provide a way to
+specify guidelines for the design to aid in layout.</span></p>
+<p><span style='font-family:"Book Antiqua",serif'>For weaves of
+more than one size of ring, allow painting operations to be
+restricted to rings of only one of those sizes.</span></p>
+<p><span style='font-family:"Book Antiqua",serif'>Provide a way to
+paint shapes, i.e. to draw straight lines and to paint either
+hollow or filled circles, ellipses, rectangles, or polygons to
+rough in large swatches of color.</span></p>
+<h3><a name="_Toc95395429">Printing</a></h3>
+<p><span style='font-family:"Book Antiqua",serif'>Print the
+rendered image to fit the printer page, directly to a
+printer.</span></p>
+<p><span style='font-family:"Book Antiqua",serif'>Print the color
+count report, including row length encodings for each row of the
+design, directly to a printer.</span></p>
+<h3><a name="_Toc95395430">Colors, Palette, and Palette
+Editor</a></h3>
+<p><span style='font-family:"Book Antiqua",serif'>Be able to create
+named collections (palettes) of colors to use in the designer, e.g.
+the ring colors available for anodized aluminum rings purchased
+from The Ring Lord.</span></p>
+<p><span style='font-family:"Book Antiqua",serif'>Be able to define
+palette sections, e.g. Anodized Aluminum ring colors vs. EPDM
+(Rubber) ring colors.&nbsp; Each section can be assigned a name and
+an abbreviated name (the abbreviated name is used, if needed, to
+distinguish between colors from different palette sections that
+have the same color name in the color report.</span></p>
+<p><span style='font-family:"Book Antiqua",serif'>Define a palette
+XML file format to save color choices.</span></p>
+<p><span style='font-family:"Book Antiqua",serif'>Read in palette
+information from a palette file, prompting to save if the current
+palette has been changed.</span></p>
+<p><span style='font-family:"Book Antiqua",serif'>Devise a palette
+control to use while painting rings that not only shows the current
+selected colors, but allows selection of any color in the palette.
+&nbsp;Show the sections, if any.</span></p>
+<p><span style='font-family:"Book Antiqua",serif'>In the palette
+control, allow sections to be collapsed (when they aren’t needed)
+or expanded (if they are).</span></p>
+<p><span style='font-family:"Book Antiqua",serif'>Tool tips for
+palette color patches display the name of the color.</span></p>
+<p><span style='font-family:"Book Antiqua",serif'>Provide a nifty
+tool for color selection.</span></p>
+<p><span style='font-family:"Book Antiqua",serif'>Be able to define
+each color either as HSL or as RGB.</span></p>
+<p><span style='font-family:"Book Antiqua",serif'>Allow each color
+to be named, e.g. royal blue, sky blue, seafoam green.</span></p>
+<p><span style='font-family:"Book Antiqua",serif'>Allow a color to
+be sampled and averaged from a region of a source image.</span></p>
+<p><span style='font-family:"Book Antiqua",serif'>Provide a way to
+replace one color in a design with another color, either from the
+current palette or specified either as HSL or RGB.&nbsp; For weaves
+that use more than one ring size, allow color replacement to affect
+only one ring size, if desired.&nbsp; This allows all of those old
+IGP designs done in Windows-standard red, green, etc. to be easily
+recast in colors drawn from the appropriate palette.&nbsp; It also
+makes it absurdly easy to change, say, a fire-themed design into a
+water-themed design.</span></p>
+<h3><a name="_Toc95395431">Color Counting</a></h3>
+<p><span style='font-family:"Book Antiqua",serif'>In the color
+count window, show patches of each color next to the color
+name.</span></p>
+<p><span style='font-family:"Book Antiqua",serif'>In the color
+count report, substitute the names of colors in the palette for the
+RGB triples that IGP showed.</span></p>
+<p><span style='font-family:"Book Antiqua",serif'>In the color
+count report, substitute system color names (e.g. Alice Blue) for
+colors that are not named in the palette but for which system
+colors are predefined.</span></p>
+<p><span style='font-family:"Book Antiqua",serif'>Make relationship
+between visual rows and columns and as-built rows and columns more
+explicit. &nbsp;When preparing the color report, use as-built rows
+instead of visual rows, if build information is available, so that
+the report is more useful as build instructions.</span></p>
+<p><span style='font-family:"Book Antiqua",serif'>In the color
+report, distinguish between colors from different palette sections
+that have the same color name, by showing and using the section
+abbreviated name (e.g. "Anodized Alum. (Al)" ... "EPDM (Rubber)
+(Rub)", then, when needed in the row portion of the report,
+appending the section abbreviated name to the color name (e.g.
+"green(Al): 7").</span></p>
+<h3><a name="_Toc95395432">Inlay Overlays</a></h3>
+<p><span style='font-family:"Book Antiqua",serif'>Allow an image to
+be imported to use as a semi-transparent overlay to the ring
+pattern, as a guide to coloring the rings.</span></p>
+<p><span style='font-family:"Book Antiqua",serif'>Allow an imported
+overlay image to be moved, rotated, and squeezed or stretched to
+cover the design area.</span></p>
+<p><span style='font-family:"Book Antiqua",serif'>Provide control
+over the transparency of an overlay.</span></p>
+<p><span style='font-family:"Book Antiqua",serif'>Automatically use
+the colors of an overlay image to color the rings of the design,
+matching the ring colors to the colors available in the
+palette.</span></p>
+<h3><a name="_Toc95395433">Weave Specification</a></h3>
+<p><span style='font-family:"Book Antiqua",serif'>Define an XML
+format for weave pattern files that allows edge and corner images,
+chain vs. sheet linkage, etc.</span></p>
+<p><span style='font-family:"Book Antiqua",serif'>Edge graphics for
+rectangular sheet edges.&nbsp; Corner graphics for
+corners.</span></p>
+<p><span style='font-family:"Book Antiqua",serif'>Option to treat
+edges to wrap around (e.g. for a bracelet), either horizontally or
+vertically.</span></p>
+<p><span style='font-family:"Book Antiqua",serif'>Make relationship
+between chainmaille units and visual rows and columns more
+explicit.&nbsp; Edges will need to have their own numbers of rows
+and columns, separate from the main sheet.&nbsp; Use this
+information when design size is specified.</span></p>
+<h3><a name="_Toc95395434">Other Features</a></h3>
+<p><span style='font-family:"Book Antiqua",serif'>Provide a
+configuration form for setting the default directories for weave
+patterns, image files, designs, palettes, etc.</span></p>
+<span style=
+'font-size:12.0pt;line-height:107%;font-family:"Book Antiqua",serif'><br clear="all"
+style='page-break-before:always'></span>
+<p class="MsoNormal"><b><span style=
+'font-size:18.0pt;line-height:107%'>&nbsp;</span></b></p>
+</div>
+</body>
+</html>

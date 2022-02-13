@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ChainmailleWeave name="Scale" version ="1">
+  <Description>Scale maille of overlapping sheet-metal scales.
+  </Description>
+  <PatternImage file="scale.bmp"/>
+  <UnitVisualSize rows="2" columns="1"/>
+  <UnitColorSize x="1" y="2"/>
+  <EvenRowOffset x="0" y="0"/>
+  <Linkage value="sheet"/>
+  <Body verticalUnits="1" horizontalUnits="1" rows="2" columns="1">
+    <OutlineImage file="scale-o.bmp"/>
+    <PatternSpacing x="28" y="28"/>
+    <PatternElements>
+      <PatternElement index="0" file="scale-001.bmp">
+        <ImageOffset x="1" y="1"/>
+        <ColorOffset x="0" y="0"/>
+        <BuildOffset x="0" y="0"/>
+      </PatternElement>
+      <PatternElement index="1" file="scale-001.bmp">
+        <ImageOffset x="15" y="15"/>
+        <ColorOffset x="0" y="1"/>
+        <BuildOffset x="0" y="1"/>
+      </PatternElement>
+    </PatternElements>
+  </Body>
+</ChainmailleWeave>

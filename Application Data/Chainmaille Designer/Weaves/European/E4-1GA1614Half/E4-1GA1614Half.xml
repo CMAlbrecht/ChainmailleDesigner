@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ChainmailleWeave name="E4-1GA1614Half" version ="1">
+  <Description>European 4-in-1, half-stretch.
+  </Description>
+  <PatternImage file="e4-1ga1614.bmp"/>
+  <UnitVisualSize rows="2" columns="1"/>
+  <UnitColorSize x="1" y="2"/>
+  <EvenRowOffset x="0" y="0"/>
+  <Linkage value="sheet"/>
+  <Body verticalUnits="1" horizontalUnits="1" rows="2" columns="1">
+    <OutlineImage file="e4-1ga1614-o.bmp"/>
+    <PatternSpacing x="18" y="27"/>
+    <PatternElements>
+      <PatternElement index="0" file="e4-1ga1614-001.bmp">
+        <ImageOffset x="1" y="1"/>
+        <ColorOffset x="0" y="0"/>
+        <BuildOffset x="0" y="0"/>
+      </PatternElement>
+      <PatternElement index="1" file="e4-1ga1614-002.bmp">
+        <ImageOffset x="7" y="14"/>
+        <ColorOffset x="0" y="1"/>
+        <BuildOffset x="0" y="1"/>
+      </PatternElement>
+    </PatternElements>
+  </Body>
+  <Scales>
+    <Scale>
+      <RingSizes>
+        <RingSize idinches="1/4" gauge="16" ar="4.2"/>
+      </RingSizes>
+    </Scale>
+  </Scales>
+</ChainmailleWeave>

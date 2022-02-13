@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32126.317
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChainmailleDesigner", "ChainmailleDesigner\ChainmailleDesigner.csproj", "{891B59BB-E902-47BE-AC02-B6337874C07C}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{A4B07854-8DFB-4701-A2C6-3C8DB6B88C2A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		CD_ROM|Any CPU = CD_ROM|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		DVD-5|Any CPU = DVD-5|Any CPU
+		Release|Any CPU = Release|Any CPU
+		SingleImage|Any CPU = SingleImage|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{891B59BB-E902-47BE-AC02-B6337874C07C}.CD_ROM|Any CPU.ActiveCfg = Release|Any CPU
+		{891B59BB-E902-47BE-AC02-B6337874C07C}.CD_ROM|Any CPU.Build.0 = Release|Any CPU
+		{891B59BB-E902-47BE-AC02-B6337874C07C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{891B59BB-E902-47BE-AC02-B6337874C07C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{891B59BB-E902-47BE-AC02-B6337874C07C}.DVD-5|Any CPU.ActiveCfg = Debug|Any CPU
+		{891B59BB-E902-47BE-AC02-B6337874C07C}.DVD-5|Any CPU.Build.0 = Debug|Any CPU
+		{891B59BB-E902-47BE-AC02-B6337874C07C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{891B59BB-E902-47BE-AC02-B6337874C07C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{891B59BB-E902-47BE-AC02-B6337874C07C}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
+		{891B59BB-E902-47BE-AC02-B6337874C07C}.SingleImage|Any CPU.Build.0 = Release|Any CPU
+		{A4B07854-8DFB-4701-A2C6-3C8DB6B88C2A}.CD_ROM|Any CPU.ActiveCfg = Debug
+		{A4B07854-8DFB-4701-A2C6-3C8DB6B88C2A}.CD_ROM|Any CPU.Build.0 = Debug
+		{A4B07854-8DFB-4701-A2C6-3C8DB6B88C2A}.Debug|Any CPU.ActiveCfg = Debug
+		{A4B07854-8DFB-4701-A2C6-3C8DB6B88C2A}.Debug|Any CPU.Build.0 = Debug
+		{A4B07854-8DFB-4701-A2C6-3C8DB6B88C2A}.DVD-5|Any CPU.ActiveCfg = Debug
+		{A4B07854-8DFB-4701-A2C6-3C8DB6B88C2A}.DVD-5|Any CPU.Build.0 = Debug
+		{A4B07854-8DFB-4701-A2C6-3C8DB6B88C2A}.Release|Any CPU.ActiveCfg = Release
+		{A4B07854-8DFB-4701-A2C6-3C8DB6B88C2A}.Release|Any CPU.Build.0 = Release
+		{A4B07854-8DFB-4701-A2C6-3C8DB6B88C2A}.SingleImage|Any CPU.ActiveCfg = Debug
+		{A4B07854-8DFB-4701-A2C6-3C8DB6B88C2A}.SingleImage|Any CPU.Build.0 = Debug
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C365E473-371D-487E-80E2-F1D58729F008}
+	EndGlobalSection
+EndGlobal
