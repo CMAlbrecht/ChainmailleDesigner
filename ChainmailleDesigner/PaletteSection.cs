@@ -61,6 +61,20 @@ namespace ChainmailleDesigner
 
     public void AddColor(Color color, string colorName)
     {
+      // Issue #2, Overlapping color names
+      if (colors.ContainsKey(colorName))
+      {
+        string tempColorName;
+        var counter = 1;
+        do
+        {
+          tempColorName = colorName + "_" + counter; // Append indexer to make a unique name while preserving what the user typed
+          counter++;
+        } while (colors.ContainsKey(tempColorName));
+        colorName = tempColorName;
+      }
+      // ~Issue #2
+
       colors.Add(colorName, color);
       labColors.Add(colorName, ColorUtils.RgbToLab(color));
     }
