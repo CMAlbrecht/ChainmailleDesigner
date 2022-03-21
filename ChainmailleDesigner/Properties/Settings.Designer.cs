@@ -46,7 +46,22 @@ namespace ChainmailleDesigner.Properties {
                 this["DesignDirectory"] = value;
             }
         }
-        
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("500")]
+        public int HistoryLimit
+        {
+            get
+            {
+                return ((int)(this["HistoryLimit"]));
+            }
+            set
+            {
+                this["HistoryLimit"] = value;
+            }
+        }
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("Hex\\HexSmall")]

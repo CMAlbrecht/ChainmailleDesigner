@@ -151,6 +151,13 @@
       <DependentUpon>DocumentDisplayForm.cs</DependentUpon>
     </Compile>
     <Compile Include="EnumUtils.cs" />
+    <Compile Include="Features\CommandHistory.cs" />
+    <Compile Include="Features\CommandHistorySupport\ActionReplaceColor.cs" />
+    <Compile Include="Features\CommandHistorySupport\ActionRingColorChange.cs" />
+    <Compile Include="Features\CommandHistorySupport\ActionRotateDesign.cs" />
+    <Compile Include="Features\CommandHistorySupport\ActionRotateOverlay.cs" />
+    <Compile Include="Features\CommandHistorySupport\IAction.cs" />
+    <Compile Include="Features\CommandHistorySupport\HistoryStack.cs" />
     <Compile Include="FileUtils.cs" />
     <Compile Include="IniFile.cs" />
     <Compile Include="IShapeProgressIndicator.cs" />
@@ -279,6 +286,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>copy /y "$(ProjectDir)ColorIndicator2Rings.bmp" "$(TargetDir)ColorIndicator2Rings.bmp"

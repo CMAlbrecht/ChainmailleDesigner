@@ -36,6 +36,7 @@ namespace ChainmailleDesigner
         Properties.Settings.Default.PaletteDirectory;
       designerTextBox.Text =
         Properties.Settings.Default.DesignerName;
+      historyLimitUpDown.Value = Properties.Settings.Default.HistoryLimit;
     }
 
     private void okButton_Click(object sender, EventArgs e)
@@ -48,6 +49,7 @@ namespace ChainmailleDesigner
         paletteDirectoryTextBox.Text;
       Properties.Settings.Default.DesignerName =
         designerTextBox.Text;
+            Properties.Settings.Default.HistoryLimit = (int)historyLimitUpDown.Value;
       Properties.Settings.Default.Save();
     }
 
@@ -87,5 +89,9 @@ namespace ChainmailleDesigner
       }
     }
 
-  }
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
