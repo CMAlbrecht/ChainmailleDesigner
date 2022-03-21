@@ -12,6 +12,7 @@ namespace ChainmailleDesigner.Features
     /// https://betterprogramming.pub/utilizing-the-command-pattern-to-support-undo-redo-and-history-of-operations-b28fa9d58910
     /// 
     /// Undo/Redo system for Chainmaille Designer
+    /// Can handle single items or grouped batches of items as a single entry.
     /// </summary>
     public class CommandHistory
     {
@@ -43,6 +44,10 @@ namespace ChainmailleDesigner.Features
             stackRedo = new HistoryStack<List<IAction>>();
         }
 
+        /// <summary>
+        /// Record an item that can be undone
+        /// </summary>
+        /// <param name="newAction">An IAction item to be recorded on the undo stack</param>
         public static void Executed(IAction newAction)
         {
             if (newAction != null)
@@ -54,6 +59,10 @@ namespace ChainmailleDesigner.Features
             }
         }
 
+        /// <summary>
+        /// Records a list of items as a single entry on the undo stack
+        /// </summary>
+        /// <param name="newActionGroup">A list of IAction(s) to be recorded on the undo stack</param>
         public static void Executed(List<IAction> newActionGroup)
         {
             if (newActionGroup != null && newActionGroup.Count > 0)
@@ -63,6 +72,10 @@ namespace ChainmailleDesigner.Features
             }
         }
 
+        /// <summary>
+        /// Trigger the most recent item on the undo stack to be reversed, and push the item on to the redo stack.
+        /// Will respect the History Limit configuration setting for how much history to remember.
+        /// </summary>
         public static void Undo()
         {
             var UndoActions = instance.stackUndo.Pop();
@@ -76,6 +89,9 @@ namespace ChainmailleDesigner.Features
             }
         }
 
+        /// <summary>
+        /// Trigger the most recent item on the redo stack and push it back on to the undo stack
+        /// </summary>
         public static void Redo()
         {
             var RedoActions = instance.stackRedo.Pop();
@@ -89,6 +105,9 @@ namespace ChainmailleDesigner.Features
             }
         }
 
+        /// <summary>
+        /// Event handling to update the UI Enabled state for the Undo and Redo menu items
+        /// </summary>
         private void TriggerEvent()
         {
             if (HistoryChanged != null && (stackUndo.EnableDisableMenuItems || stackRedo.EnableDisableMenuItems))
@@ -100,7 +119,7 @@ namespace ChainmailleDesigner.Features
 
         private void ClearReverse()
         {
-            if (stackUndo.HasItems)
+            if (stackRedo.HasItems)
             {
                 stackRedo.Clear();
                 TriggerEvent();
