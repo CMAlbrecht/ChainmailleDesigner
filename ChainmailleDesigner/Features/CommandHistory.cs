@@ -56,6 +56,8 @@ namespace ChainmailleDesigner.Features
                 SingleActionList.Add(newAction);
                 instance.stackUndo.Push(SingleActionList, limitQueue: true);
                 instance.ClearReverse();
+
+                instance.TriggerEvent();
             }
         }
 
@@ -69,6 +71,8 @@ namespace ChainmailleDesigner.Features
             {
                 instance.stackUndo.Push(newActionGroup, limitQueue: true);
                 instance.ClearReverse();
+
+                instance.TriggerEvent();
             }
         }
 
