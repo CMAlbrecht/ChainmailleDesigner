@@ -25,6 +25,8 @@ using System.Drawing.Imaging;
 using System.IO;
 using System.Text;
 using System.Xml;
+using ChainmailleDesigner.Features;
+using ChainmailleDesigner.Features.CommandHistorySupport;
 
 using LabColor = System.Tuple<double, double, double>;
 
@@ -3663,10 +3665,16 @@ namespace ChainmailleDesigner
     }
 
     public void ReplaceColorsInDesign(
-      Dictionary<Color, Color> colorReplacements, string ringFilter)
+      Dictionary<Color, Color> colorReplacements, string ringFilter, bool calledFromCommandHistory = false)
     {
       if (colorReplacements.Count > 0 && colorImage != null)
       {
+        if (!calledFromCommandHistory)
+        {
+          var SaveAction = new ActionReplaceColor(this, colorReplacements, ringFilter);
+          CommandHistory.Executed(SaveAction);
+        }
+
         // Build the color map.
         ImageAttributes imageAttributes = new ImageAttributes();
         ColorMap[] colorMap = new ColorMap[colorReplacements.Count];
@@ -4125,11 +4133,20 @@ namespace ChainmailleDesigner
     }
 
     public void SetElementColor(ChainmaillePatternElementId elementId,
-      Color color, ChainmaillePatternElement referencedElement)
+      Color color, ChainmaillePatternElement referencedElement, bool calledFromCommandHistory=false)
     {
       Point? cPoint = ElementToPointInColorImage(elementId, referencedElement);
       if (cPoint.HasValue)
       {
+        var OldColor = colorImage.BitmapImage.GetPixel(cPoint.Value.X, cPoint.Value.Y);
+        if (color.ToArgb() == OldColor.ToArgb()) { return; } // If the point hasn't changed, exit
+
+        if (!calledFromCommandHistory)
+        {
+          var SaveAction = new ActionRingColorChange(this, elementId, color, referencedElement, OldColor);
+          CommandHistory.Executed(SaveAction);
+        }
+
         colorImage.BitmapImage.SetPixel(cPoint.Value.X, cPoint.Value.Y, color);
         hasBeenChanged = true;
       }

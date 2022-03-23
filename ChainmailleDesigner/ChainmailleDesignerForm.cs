@@ -112,6 +112,7 @@ namespace ChainmailleDesigner
         renderedImagePictureBox.BackgroundImage);
 
       EnableMenuItems();
+      EnableDynamicMenuItems();
       EnableRingSizeControls();
       EnableOverlayControls();
       ShowZoomControlValues();
@@ -145,20 +146,32 @@ namespace ChainmailleDesigner
       RotateOverlay(-quarterCircleInDegrees);
     }
 
-    private void RotateDesign(float degreesToRotate)
+    public void RotateDesign(float degreesToRotate, bool calledFromCommandHistory = false)
     {
       if (chainmailleDesign != null)
       {
+        if (!calledFromCommandHistory)
+        {
+          var SaveAction = new ChainmailleDesigner.Features.CommandHistorySupport.ActionRotateDesign(this, degreesToRotate);
+          ChainmailleDesigner.Features.CommandHistory.Executed(SaveAction);
+        }
+
         chainmailleDesign.RotateDesign(degreesToRotate);
         ShowRenderedImageAtZoom();
         RefreshScrollBars();
       }
     }
 
-    private void RotateOverlay(float degreesToRotate)
+    public void RotateOverlay(float degreesToRotate, bool calledFromCommandHistory = false)
     {
       if (chainmailleDesign != null)
       {
+        if (!calledFromCommandHistory)
+        {
+          var SaveAction = new ChainmailleDesigner.Features.CommandHistorySupport.ActionRotateOverlay(this, degreesToRotate);
+          ChainmailleDesigner.Features.CommandHistory.Executed(SaveAction);
+        }
+                
         chainmailleDesign.RotateOverlay(degreesToRotate);
         ShowRenderedImageAtZoom();
       }
@@ -1844,6 +1857,20 @@ namespace ChainmailleDesigner
       ringFilterGroupBox.Enabled = haveADesign;
     }
 
+    private void EnableDynamicMenuItems()
+    {
+      undoToolStripMenuItem.Enabled = false;
+      redoToolStripMenuItem.Enabled = false;
+      ChainmailleDesigner.Features.CommandHistory.instance.HistoryChanged += CommandHistory_HistoryChanged;
+    }
+
+    private void CommandHistory_HistoryChanged(object source, EventArgs args)
+    {
+      var HistoryChanged = (ChainmailleDesigner.Features.CommandHistory.HistoryStatus)args;
+      undoToolStripMenuItem.Enabled = HistoryChanged.HasUndoAvailable;
+      redoToolStripMenuItem.Enabled = HistoryChanged.HasRedoAvailable;
+    }
+
     private void EnableOverlayControls()
     {
       overlayGroupBox.Visible = chainmailleDesign != null &&
@@ -2439,6 +2466,18 @@ namespace ChainmailleDesigner
           "Opacity " + overlayOpacityTrackBar.Value + "%";
         ShowRenderedImageAtZoom();
       }
+    }
+
+    private void undoToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+      ChainmailleDesigner.Features.CommandHistory.Undo();
+      ShowRenderedImageAtZoom();
+    }
+
+    private void redoToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+      ChainmailleDesigner.Features.CommandHistory.Redo();
+      ShowRenderedImageAtZoom();
     }
   }
 }
