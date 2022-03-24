@@ -30,4 +30,6 @@ This particular work owes much of its form and function to Zlosk, the creator of
 
 Celtic_Chainman, MusicMan, Zlosk, and TrenchCoatGuy on the M.A.I.L. forum were particularly helpful with earlier versions of the Chainmaille Designer.
 
+Jeremy Cunningham [kennebel](https://github.com/kennebel) has made several valuable contributions to the program, including the undo/redo capability.
+
 The implementations of the DEDragonscale and DE-Euro4in1 weaves distributed with this program were almost entirely dependent on the skill and persistence of my wife, Elsa DieLöwin.  Without her work, the edge and corner treatments of the weave sheets couldn’t have happened.
