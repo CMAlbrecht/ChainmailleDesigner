@@ -30,6 +30,8 @@ Save the changes to the release notes.
 
 Back in Visual Studio, rebuild the solution using the Release configuration.
 
+Note: The chmProcessor is not terribly consistent about how it numbers the image files for the web help. This can cause mismatches between the list of files to be included by the installer and the list of files placed by the chmProcessor into the Documentation\WebHelp\Chainmaille Designer Users Manual_files directory. When this occurs, the Visual Studio rebuild will report that it could not find image003.png or image024.jpg. Typically, a jpg was assigned a number that had previously been assigned to a png image. The remedy is to go to the File System (Setup) pane for the install project, drill down to the Application Folder\Help\Chainmaille Designer Users Manual_files folder (on the left side), then remove the files that couldn't be found from the file list (on the right side). Then, open up the Documentation\WebHelp\Chainmaille Designer Users Manual_files directory in a file browser, select the "missing" files there, and control-drag them into the installer file list from which their counterparts were deleted. Once this is done, rebuilding the solution should be successful. If images were added to or removed from the manual, a similar issue arises; simply ensure that the installer's file list corresponds exactly to all of the files created by the chmProcessor before rebuilding.
+
 Test the Chainmaille Designer Setup.msi that was updated by the setup project in Setup/Release.
 Note: Currently, any previous version of Chainmaille Designer must be uninstalled through the Windows Control Panel before a new version can be installed.
 
