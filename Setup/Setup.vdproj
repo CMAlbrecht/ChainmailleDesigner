@@ -9555,7 +9555,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C4E6561F2F3B4F6A8FB77A4F455FA519"
             {
-            "SourcePath" = "8:..\\..\\..\\ChainmailleDesigner\\ChainmailleDesigner\\ChainmailleDesigner.ico"
+            "SourcePath" = "8:..\\ChainmailleDesigner\\ChainmailleDesigner.ico"
             "TargetName" = "8:ChainmailleDesigner.ico"
             "Tag" = "8:"
             "Folder" = "8:_E3E5959EDCA04A62A50833B501407D1F"
