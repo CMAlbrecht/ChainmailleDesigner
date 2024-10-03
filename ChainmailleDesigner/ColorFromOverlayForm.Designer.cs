@@ -165,6 +165,7 @@ namespace ChainmailleDesigner
       this.paletteSectionComboBox.Name = "paletteSectionComboBox";
       this.paletteSectionComboBox.Size = new System.Drawing.Size(220, 24);
       this.paletteSectionComboBox.TabIndex = 0;
+      this.paletteSectionComboBox.SelectedIndexChanged += new System.EventHandler(this.paletteSectionComboBox_SelectedIndexChanged);
       // 
       // colorMatchingGroupBox
       // 
