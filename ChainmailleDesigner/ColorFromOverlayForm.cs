@@ -19,6 +19,7 @@
 
 using System;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Windows.Forms;
 
 namespace ChainmailleDesigner
@@ -47,6 +48,7 @@ namespace ChainmailleDesigner
 
       InitializeFromDesign();
       InitializeFromPalette();
+      DrawPreviewImage();
     }
 
     private void AddRingFilterButton(int filterIndex, string filterName,
@@ -130,6 +132,7 @@ namespace ChainmailleDesigner
     {
       paletteSection =
         palette.Section((string)paletteSectionComboBox.SelectedItem);
+      DrawPreviewImage();
     }
 
     private void RingFilterButton_CheckedChanged(object sender, EventArgs e)
@@ -145,12 +148,91 @@ namespace ChainmailleDesigner
           // "All Rings" means no filtering.
           ringFilterString = string.Empty;
         }
+        DrawPreviewImage();
       }
     }
 
     public string RingFilterString
     {
       get { return ringFilterString; }
+    }
+
+    private void DrawPreviewImage()
+    {
+      if (design != null && design.RenderedImage != null)
+      {
+        ringFilterString = string.Empty;
+        if (ringFilterGroupBox.Visible)
+        {
+          // Determine which ring filter to apply.
+          foreach (Control control in ringFilterGroupBox.Controls)
+          {
+            if (control is RadioButton && (control as RadioButton).Checked)
+            {
+              ringFilterString = (control as RadioButton).Text;
+              if (ringFilterString == "All Rings")
+              {
+                // "All Rings" means no filtering.
+                ringFilterString = string.Empty;
+              }
+              break;
+            }
+          }
+        }
+
+        if (previewPanel.BackgroundImage == null)
+        {
+          previewPanel.BackgroundImage = new Bitmap(
+            previewPanel.ClientRectangle.Width,
+            previewPanel.ClientRectangle.Height);
+        }
+
+        // Create a local copy of the color image of the design.
+        ColorImage previewColorImage =
+          new ColorImage(new Bitmap(design.ColorImage.BitmapImage));
+
+        // Set the preview color image based on the overlay colors.
+        design.ColorDesignFromOverlay(paletteSection, ringFilterString, null,
+          previewColorImage);
+        Bitmap sourceImage;
+        // Because this is a preview, we don't want to change the render image
+        // of the design yet, so we will use an alternative render image, then
+        // transform it for dispaly in the preview panel.
+        Bitmap alternativeRenderedImage =
+          design.RenderImage(true, null, ringFilterString, false,
+          previewColorImage);
+
+        sourceImage =
+          design.TransformRenderedImageForDisplay(alternativeRenderedImage);
+        previewColorImage.Dispose();
+        alternativeRenderedImage.Dispose();
+
+        Graphics g = Graphics.FromImage(previewPanel.BackgroundImage);
+        g.Clear(SystemColors.Control);
+        float zoomFactor = Math.Min(
+          previewPanel.BackgroundImage.Width /
+          (float)sourceImage.Width,
+          previewPanel.BackgroundImage.Height /
+          (float)sourceImage.Height);
+        Size destinationSize = new Size(
+          (int)(sourceImage.Width * zoomFactor),
+          (int)(sourceImage.Height * zoomFactor));
+        Rectangle destinationRectangle = new Rectangle(
+          (int)((previewPanel.BackgroundImage.Width -
+          destinationSize.Width) * 0.5F),
+          (int)((previewPanel.BackgroundImage.Height -
+          destinationSize.Height) * 0.5F),
+          destinationSize.Width, destinationSize.Height);
+        ImageAttributes imageAttributes = new ImageAttributes();
+        g.DrawImage(sourceImage, destinationRectangle,
+          0, 0, sourceImage.Width, sourceImage.Height,
+          GraphicsUnit.Pixel, imageAttributes);
+        g.Dispose();
+        sourceImage.Dispose();
+
+        // Invalidate the panel so that it is redrawn.
+        previewPanel.Invalidate();
+      }
     }
 
   }

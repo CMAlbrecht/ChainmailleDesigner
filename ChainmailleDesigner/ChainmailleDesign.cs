@@ -574,7 +574,8 @@ namespace ChainmailleDesigner
     /// of the overlay pixels found within the outline of that ring.
     /// </summary>
     public void ColorDesignFromOverlay(PaletteSection paletteSection,
-      string ringFilter, IShapeProgressIndicator progress = null)
+      string ringFilter, IShapeProgressIndicator progress = null,
+      ColorImage alternateColorImage = null)
     {
       if (chainmaillePattern != null && colorImage != null &&
           paletteSection != null && paletteSection.ColorCount > 0 &&
@@ -697,11 +698,20 @@ namespace ChainmailleDesigner
           }
         }
 
-        // Assign the new color image to the design and redraw the design.
-        colorImage.BitmapImage = newColorImage;
-        hasBeenChanged = true;
+        if (alternateColorImage != null)
+        {
+          // Don't assign the color image to the design; we're probably using
+          // it for a preview.
+          alternateColorImage.BitmapImage = newColorImage;
+        }
+        else
+        {
+          // Assign the new color image to the design and redraw the design.
+          colorImage.BitmapImage = newColorImage;
+          hasBeenChanged = true;
 
-        RenderImage();
+          RenderImage();
+        }
 
         if (progress != null)
         {
@@ -2721,8 +2731,11 @@ namespace ChainmailleDesigner
 
     private void RenderAllPatternElements(Bitmap rendering, Graphics g,
       Dictionary<Color, Color> colorReplacements = null,
-      string ringFilter = null, bool pushBackToColorImage = false)
+      string ringFilter = null, bool pushBackToColorImage = false,
+      ColorImage alternateColorImage = null)
     {
+      // Note: The alternateColorImage, if supplied, must be of the same size
+      // as the color image of the design.
       if (rendering != null && g != null && chainmaillePattern != null &&
           chainmaillePattern.PatternElements.Count > 0)
       {
@@ -2899,7 +2912,16 @@ namespace ChainmailleDesigner
                 {
                   cx = cxBase + element.ColorOffset.X;
                   cy = cyBase + element.ColorOffset.Y;
-                  elementColor = colorImage.ColorAt(cx, cy);
+                  if (alternateColorImage != null)
+                  {
+                    // Color the rendering per the alternate colors supplied.
+                    elementColor = alternateColorImage.ColorAt(cx, cy);
+                  }
+                  else
+                  {
+                    // Color the rendering using the design colors.
+                    elementColor = colorImage.ColorAt(cx, cy);
+                  }
 
                   // Check for rendering in alternate colors.
                   if (colorReplacements != null)
@@ -3170,7 +3192,8 @@ namespace ChainmailleDesigner
     /// <returns></returns>
     public Bitmap RenderImage(bool isAlternativeRendering = false,
       Dictionary<Color, Color> colorReplacements = null,
-      string ringFilter = null, bool pushBackToColorImage = false)
+      string ringFilter = null, bool pushBackToColorImage = false,
+      ColorImage alternateColorImage = null)
     { 
       Bitmap rendering = null;
       Size? size = ComputeRenderedImageSize();
@@ -3183,7 +3206,7 @@ namespace ChainmailleDesigner
         RenderBackground(rendering, g);
         RenderOutlines(rendering, g);
         RenderAllPatternElements(rendering, g, colorReplacements, ringFilter,
-          pushBackToColorImage);
+          pushBackToColorImage, alternateColorImage);
         g.Dispose();
       }
 
