@@ -30,6 +30,11 @@ using XyzColor = System.Tuple<double, double, double>;
 using FXyzColor = System.Tuple<double, double, double>;
 using NXyzColor = System.Tuple<double, double, double>;
 
+// Transformation specification for translating colors within the same color
+// space. These are scale, offset pairs for each of three components.
+using ColorTransform = System.Tuple<System.Tuple<double, double>,
+  System.Tuple<double, double>, System.Tuple<double, double>>;
+
 namespace ChainmailleDesigner
 {
   /// <summary>
@@ -166,6 +171,22 @@ namespace ChainmailleDesigner
         rT * deltaCPrime * deltaBigHPrime / (kC * sC * kH * sH));
 
       return result;
+    }
+
+    /// <summary>
+    /// Applies component scales and offsets to a LAB color.
+    /// </summary>
+    /// <param name="color">LAB color triad.</param>
+    /// <param name="transform">LAB color triad.</param>
+    /// <returns>LAB color triad.</returns>
+    public static LabColor TransformLabColor(LabColor color,
+      ColorTransform transform)
+    {
+      double L = color.Item1 * transform.Item1.Item1 + transform.Item1.Item2;
+      double a = color.Item2 * transform.Item2.Item1 + transform.Item2.Item2;
+      double b = color.Item3 * transform.Item3.Item1 + transform.Item3.Item2;
+
+      return new LabColor(L, a, b);
     }
 
     /// <summary>

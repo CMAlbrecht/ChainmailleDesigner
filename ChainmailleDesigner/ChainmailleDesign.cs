@@ -30,6 +30,11 @@ using ChainmailleDesigner.Features.CommandHistorySupport;
 
 using LabColor = System.Tuple<double, double, double>;
 
+// Transformation specification for translating colors within the same color
+// space. These are scale, offset pairs for each of three components.
+using ColorTransform = System.Tuple<System.Tuple<double, double>,
+  System.Tuple<double, double>, System.Tuple<double, double>>;
+
 namespace ChainmailleDesigner
 {
   /// <summary>
@@ -575,6 +580,7 @@ namespace ChainmailleDesigner
     /// </summary>
     public void ColorDesignFromOverlay(PaletteSection paletteSection,
       string ringFilter, IShapeProgressIndicator progress = null,
+      ColorTransform colorTransform = null,
       ColorImage alternateColorImage = null)
     {
       if (chainmaillePattern != null && colorImage != null &&
@@ -689,6 +695,13 @@ namespace ChainmailleDesigner
               LabColor colorSum = colorSums.GetPixel(cx, cy);
               LabColor averageColor = new LabColor(colorSum.Item1 / colorCount,
                 colorSum.Item2 / colorCount, colorSum.Item3 / colorCount);
+
+              // If a color transform is specified, apply it.
+              if (colorTransform != null)
+              {
+                averageColor =
+                  ColorConverter.TransformLabColor(averageColor, colorTransform);
+              }
 
               // Determine the closest palette section color and set the ring
               // color to the closest palette section color.
