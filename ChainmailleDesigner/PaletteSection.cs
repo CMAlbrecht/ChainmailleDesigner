@@ -89,21 +89,34 @@ namespace ChainmailleDesigner
       get { return colors; }
     }
 
+    /// <summary>
+    /// Get the closest color in the palette section to the LAB color
+    /// provided. A LAB color of 0, 0, 0 is interpreted as a transparent
+    /// un-assigned color.
+    /// </summary>
+    /// <param name="labColor"></param>
+    /// <returns>The closest color from the palette section or the transparent
+    /// color</returns>
     public Color GetClosestColor(LabColor labColor)
     {
       Color result = Color.Transparent;
 
-      double bestDistance = double.MaxValue;
-      double distance;
-      foreach (string colorName in colors.Keys)
+      if (labColor.Item1 != 0.0 || labColor.Item2 != 0.0 ||
+          labColor.Item3 != 0.0)
       {
-        LabColor paletteLabColor = LabColors[colorName];
-        distance = ColorConverter.ColorDifference(
-          labColor, paletteLabColor, 6.0);
-        if (distance < bestDistance)
+
+        double bestDistance = double.MaxValue;
+        double distance;
+        foreach (string colorName in colors.Keys)
         {
-          result = colors[colorName];
-          bestDistance = distance;
+          LabColor paletteLabColor = LabColors[colorName];
+          distance = ColorConverter.ColorDifference(
+            labColor, paletteLabColor, 6.0);
+          if (distance < bestDistance)
+          {
+            result = colors[colorName];
+            bestDistance = distance;
+          }
         }
       }
 

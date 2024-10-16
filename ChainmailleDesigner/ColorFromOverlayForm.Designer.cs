@@ -215,7 +215,7 @@ namespace ChainmailleDesigner
       this.bScaleTrackBar.Size = new System.Drawing.Size(142, 16);
       this.bScaleTrackBar.TabIndex = 11;
       this.bScaleTrackBar.TickFrequency = 2;
-      this.bScaleTrackBar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.bOffsetTrackBar_MouseUp);
+      this.bScaleTrackBar.ValueChanged += new System.EventHandler(this.bScaleTrackBar_ValueChanged);
       // 
       // bStripPanel
       // 
@@ -252,7 +252,7 @@ namespace ChainmailleDesigner
       this.bOffsetTrackBar.Size = new System.Drawing.Size(142, 16);
       this.bOffsetTrackBar.TabIndex = 8;
       this.bOffsetTrackBar.TickFrequency = 10;
-      this.bOffsetTrackBar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.bOffsetTrackBar_MouseUp);
+      this.bOffsetTrackBar.ValueChanged += new System.EventHandler(this.bOffsetTrackBar_ValueChanged);
       // 
       // aScaleTrackBar
       // 
@@ -266,7 +266,7 @@ namespace ChainmailleDesigner
       this.aScaleTrackBar.Size = new System.Drawing.Size(142, 16);
       this.aScaleTrackBar.TabIndex = 7;
       this.aScaleTrackBar.TickFrequency = 2;
-      this.aScaleTrackBar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.aOffsetTrackBar_MouseUp);
+      this.aScaleTrackBar.ValueChanged += new System.EventHandler(this.aScaleTrackBar_ValueChanged);
       // 
       // aStripPanel
       // 
@@ -303,7 +303,7 @@ namespace ChainmailleDesigner
       this.aOffsetTrackBar.Size = new System.Drawing.Size(142, 16);
       this.aOffsetTrackBar.TabIndex = 4;
       this.aOffsetTrackBar.TickFrequency = 10;
-      this.aOffsetTrackBar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.aOffsetTrackBar_MouseUp);
+      this.aOffsetTrackBar.ValueChanged += new System.EventHandler(this.aOffsetTrackBar_ValueChanged);
       // 
       // lScaleTrackBar
       // 
@@ -317,7 +317,7 @@ namespace ChainmailleDesigner
       this.lScaleTrackBar.Size = new System.Drawing.Size(142, 16);
       this.lScaleTrackBar.TabIndex = 3;
       this.lScaleTrackBar.TickFrequency = 2;
-      this.lScaleTrackBar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.lOffsetTrackBar_MouseUp);
+      this.lScaleTrackBar.ValueChanged += new System.EventHandler(this.lScaleTrackBar_ValueChanged);
       // 
       // lStripPanel
       // 
@@ -354,7 +354,7 @@ namespace ChainmailleDesigner
       this.lOffsetTrackBar.Size = new System.Drawing.Size(142, 16);
       this.lOffsetTrackBar.TabIndex = 0;
       this.lOffsetTrackBar.TickFrequency = 10;
-      this.lOffsetTrackBar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.lOffsetTrackBar_MouseUp);
+      this.lOffsetTrackBar.ValueChanged += new System.EventHandler(this.lOffsetTrackBar_ValueChanged);
       // 
       // shapeProgressBar
       // 

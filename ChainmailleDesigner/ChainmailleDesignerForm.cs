@@ -2440,7 +2440,7 @@ namespace ChainmailleDesigner
         paletteForm.Palette);
       if (dlg.ShowDialog() == DialogResult.OK)
       {
-        chainmailleDesign.ColorDesignFromOverlay(
+        chainmailleDesign.ColorDesignFromLabColorImage(dlg.LabColorImage,
           dlg.PaletteSection, dlg.RingFilterString, this, dlg.ColorTransform);
         ShowRenderedImageAtZoom();
       }

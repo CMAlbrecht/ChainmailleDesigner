@@ -36,6 +36,7 @@ namespace ChainmailleDesigner
     Palette palette = null;
     PaletteSection paletteSection = null;
     ColorTransform colorTransform;
+    LabImage labColorImage = null;
     bool initializationComplete = false;
 
     // Dynamic UI element generation.
@@ -78,6 +79,11 @@ namespace ChainmailleDesigner
 
     private void ColorFromOverlayForm_Shown(object sender, EventArgs e)
     {
+      if (design != null)
+      {
+        labColorImage = design.LabColorImageFromOverlay(this);
+      }
+
       DrawPreviewImage();
     }
 
@@ -121,10 +127,14 @@ namespace ChainmailleDesigner
         ColorImage previewColorImage =
           new ColorImage(new Bitmap(design.ColorImage.BitmapImage));
 
-        // Set the preview color image based on the overlay colors.
-        design.ColorDesignFromOverlay(paletteSection, ringFilterString, this,
-          colorTransform, previewColorImage);
+        // Modify the preview color image based on the ring filter, LAB color
+        // image, color transform, and palette section.
+        // Rings not passed by the filter will retain their color from the
+        // design, unaltered by the overlay.
+        design.ColorDesignFromLabColorImage(labColorImage, paletteSection,
+          ringFilterString, this, colorTransform, previewColorImage);
         Bitmap sourceImage;
+
         // Because this is a preview, we don't want to change the render image
         // of the design yet, so we will use an alternative render image, then
         // transform it for dispaly in the preview panel.
@@ -221,6 +231,11 @@ namespace ChainmailleDesigner
       }
     }
 
+    public LabImage LabColorImage
+    {
+      get { return labColorImage; }
+    }
+
     public PaletteSection PaletteSection
     { get { return paletteSection; } }
 
@@ -303,13 +318,13 @@ namespace ChainmailleDesigner
       DrawPreviewImage();
     }
 
-    private void aOffsetTrackBar_MouseUp(object sender, MouseEventArgs e)
+    private void aOffsetTrackBar_ValueChanged(object sender, EventArgs e)
     {
       SetColorTransform();
       DrawPreviewImage();
     }
 
-    private void aScaleTrackBar_MouseUp(object sender, MouseEventArgs e)
+    private void aScaleTrackBar_ValueChanged(object sender, EventArgs e)
     {
       SetColorTransform();
       DrawPreviewImage();
@@ -321,13 +336,13 @@ namespace ChainmailleDesigner
       DrawPreviewImage();
     }
 
-    private void bOffsetTrackBar_MouseUp(object sender, MouseEventArgs e)
+    private void bOffsetTrackBar_ValueChanged(object sender, EventArgs e)
     {
       SetColorTransform();
       DrawPreviewImage();
     }
 
-    private void bScaleTrackBar_MouseUp(object sender, MouseEventArgs e)
+    private void bScaleTrackBar_ValueChanged(object sender, EventArgs e)
     {
       SetColorTransform();
       DrawPreviewImage();
@@ -339,13 +354,13 @@ namespace ChainmailleDesigner
       DrawPreviewImage();
     }
 
-    private void lOffsetTrackBar_MouseUp(object sender, MouseEventArgs e)
+    private void lOffsetTrackBar_ValueChanged(object sender, EventArgs e)
     {
       SetColorTransform();
       DrawPreviewImage();
     }
 
-    private void lScaleTrackBar_MouseUp(object sender, MouseEventArgs e)
+    private void lScaleTrackBar_ValueChanged(object sender, EventArgs e)
     {
       SetColorTransform();
       DrawPreviewImage();

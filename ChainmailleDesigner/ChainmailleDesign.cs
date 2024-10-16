@@ -573,140 +573,95 @@ namespace ChainmailleDesigner
     }
 
     /// <summary>
-    /// Using the colors from the overlay image, determine the ring colors
-    /// for the design, given a palette section. Each ring is assigned the
-    /// color from the palette section that is closest to the average color
-    /// of the overlay pixels found within the outline of that ring.
+    /// Using the colors from the supplied L*a*b* color image, determine the
+    /// ring colors for the design using the closest matching colors from the
+    /// given palette section.
     /// </summary>
-    public void ColorDesignFromOverlay(PaletteSection paletteSection,
-      string ringFilter, IShapeProgressIndicator progress = null,
+    public void ColorDesignFromLabColorImage(LabImage labColorImage,
+      PaletteSection paletteSection, string ringFilter,
+      IShapeProgressIndicator progress = null,
       ColorTransform colorTransform = null,
       ColorImage alternateColorImage = null)
     {
       if (chainmaillePattern != null && colorImage != null &&
-          paletteSection != null && paletteSection.ColorCount > 0 &&
-          overlayImage != null)
+          labColorImage != null && paletteSection != null &&
+          paletteSection.ColorCount > 0)
       {
-        // Create an empty color image for the design, based upon the
-        // dimensions and pixel format of the old.
+        // Create a copy of the current color image for the design.
         Bitmap newColorImage = new Bitmap(colorImage.BitmapImage);
-
-        // Set up for computing Lab color averages.
-        LabImage colorSums = new LabImage(
-          colorImage.Width, colorImage.Height);
-        Dictionary<int, Dictionary<int, int>> colorCounts =
-          new Dictionary<int, Dictionary<int, int>>();
-        for (int cx = 0; cx < colorImage.Width; cx++)
-        {
-          colorCounts.Add(cx, new Dictionary<int, int>());
-          for (int cy = 0; cy < colorImage.Height; cy++)
-          {
-            colorCounts[cx].Add(cy, 0);
-          }
-        }
-
-        // Dictionary to speed ring lookups.
-        Dictionary<int, Dictionary<int, Tuple<ChainmaillePatternElementId,
-          ChainmaillePatternElement>>> ringLookup =
-          new Dictionary<int, Dictionary<int,
-          Tuple<ChainmaillePatternElementId, ChainmaillePatternElement>>>();
 
         // Progress bar scaling.
         if (progress != null)
         {
-          progress.ShapeProgressScale = overlayImage.Height;
+          progress.ShapeProgressScale = newColorImage.Height;
         }
 
-        // For each pixel in the overlay image.
-        LabColor overlayColor;
-        for (int oy = 0; oy < overlayImage.Height; oy++)
-        {
-          // Progress bar progress.
-          if (progress != null)
-          {
-            progress.ShapeProgressValue = oy;
-          }
-
-          for (int ox = 0; ox < overlayImage.Width; ox++)
-          {
-            overlayColor = ColorUtils.RgbToLab(overlayImage.GetPixel(ox, oy));
-
-            // Determine where the overlay pixel falls in the rendered image.
-            PointF oPointF = new PointF(ox, oy);
-            PointF rPointF =
-              TransformOverlayImagePointFToRenderedImage(oPointF);
-            Point rPoint = new Point(
-              (int)(rPointF.X + 0.5), (int)(rPointF.Y + 0.5));
-
-            // Determine which ring corresponds to the rendered image pixel.
-            ChainmaillePatternElement element;
-            ChainmaillePatternElementId elementId;
-            if (ringLookup.ContainsKey(rPoint.X) &&
-                ringLookup[rPoint.X].ContainsKey(rPoint.Y))
-            {
-              elementId = ringLookup[rPoint.X][rPoint.Y].Item1;
-              element = ringLookup[rPoint.X][rPoint.Y].Item2;
-            }
-            else
-            {
-              elementId = PatternElementAtRenderedPoint(rPoint, out element);
-              if (!ringLookup.ContainsKey(rPoint.X))
-              {
-                ringLookup.Add(rPoint.X, new Dictionary<int,
-                  Tuple<ChainmaillePatternElementId,
-                  ChainmaillePatternElement>>());
-              }
-              ringLookup[rPoint.X].Add(rPoint.Y,
-                new Tuple<ChainmaillePatternElementId,
-                ChainmaillePatternElement>(elementId, element));
-            }
-            if (elementId != null && (string.IsNullOrEmpty(ringFilter) ||
-              element.RingSizeName == ringFilter))
-            {
-              // Determine which pixel of the color image corresponds to the
-              // ring.
-              Point? cPoint = ElementToPointInColorImage(elementId, element);
-              if (cPoint.HasValue)
-              {
-                // Add the overlay pixel color information to the running
-                // color sum for that pixel of the color image.
-                int cx = cPoint.Value.X;
-                int cy = cPoint.Value.Y;
-                LabColor oldSum = colorSums.GetPixel(cx, cy);
-                colorSums.SetPixel(cx, cy, new LabColor(
-                  oldSum.Item1 + overlayColor.Item1,
-                  oldSum.Item2 + overlayColor.Item2,
-                  oldSum.Item3 + overlayColor.Item3));
-                colorCounts[cx][cy]++;
-              }
-            }
-          }
-        }
+        LabColor ringColor;
 
         // For each pixel of the color image.
         for (int cy = 0; cy < newColorImage.Height; cy++)
         {
+          // Progress bar progress.
+          if (progress != null)
+          {
+            progress.ShapeProgressValue = cy;
+          }
+
           for (int cx = 0; cx < newColorImage.Width; cx++)
           {
-            int colorCount = colorCounts[cx][cy];
-            if (colorCount > 0)
+            if (!String.IsNullOrEmpty(ringFilter))
             {
-              // Compute the average overlay color.
-              LabColor colorSum = colorSums.GetPixel(cx, cy);
-              LabColor averageColor = new LabColor(colorSum.Item1 / colorCount,
-                colorSum.Item2 / colorCount, colorSum.Item3 / colorCount);
+              // Determine which pattern element corresponds to this pixel of
+              // the color image and apply the ring size filter.
+              ChainmaillePatternElement referencedElement;
+              ChainmaillePatternElementId elementId =
+                PatternElementAtColorImagePoint(new Point(cx, cy),
+                out referencedElement);
+              if (referencedElement != null &&
+                  referencedElement.RingSizeName == ringFilter)
+              {
+                // The element passes the ring size filter; use the LAB color
+                // image for this ring.
+                ringColor = labColorImage.GetPixel(cx, cy);
+
+                // If a color transform is specified, apply it.
+                // Leave color 0, 0, 0 as is though.
+                if (colorTransform != null && (ringColor.Item1 != 0.0 ||
+                    ringColor.Item2 != 0.0 || ringColor.Item3 != 0.0))
+                {
+                  ringColor = ColorConverter.TransformLabColor(ringColor,
+                    colorTransform);
+                }
+
+                // Determine the closest palette section color and set the ring
+                // color to the closest palette section color.
+                newColorImage.SetPixel(cx, cy,
+                  paletteSection.GetClosestColor(ringColor));
+              }
+              else
+              {
+                // Continue to use the existing color from the design.
+              }
+            }
+            else
+            {
+              // Don't filter rings by size; use the LAB color image for all
+              // rings.
+              ringColor = labColorImage.GetPixel(cx, cy);
 
               // If a color transform is specified, apply it.
-              if (colorTransform != null)
+              // Leave color 0, 0, 0 as is though.
+              if (colorTransform != null && (ringColor.Item1 != 0.0 ||
+                  ringColor.Item2 != 0.0 || ringColor.Item3 != 0.0))
               {
-                averageColor =
-                  ColorConverter.TransformLabColor(averageColor, colorTransform);
+                ringColor = ColorConverter.TransformLabColor(ringColor,
+                  colorTransform);
               }
 
               // Determine the closest palette section color and set the ring
               // color to the closest palette section color.
               newColorImage.SetPixel(cx, cy,
-                paletteSection.GetClosestColor(averageColor));
+                paletteSection.GetClosestColor(ringColor));
             }
           }
         }
@@ -1766,6 +1721,137 @@ namespace ChainmailleDesigner
       }
     }
 
+    /// <summary>
+    /// Build an L*a*b* color image for the design by averaging the colors of
+    /// the overlay pixels that overlie each ring of the design.
+    /// </summary>
+    /// <returns>L*a*b* color image, or null if no overlay or design
+    /// incomplete. </returns>
+    public LabImage LabColorImageFromOverlay(IShapeProgressIndicator progress = null)
+    {
+      LabImage result = null;
+      if (chainmaillePattern != null && colorImage != null &&
+          overlayImage != null)
+      {
+        // Create an empty LAB color image for the design, based upon the
+        // dimensions of its current color image.
+        result = new LabImage(
+          colorImage.Width, colorImage.Height);
+
+        // Set up per-ring counts for computing LAB color averages.
+        Dictionary<int, Dictionary<int, int>> colorCounts =
+          new Dictionary<int, Dictionary<int, int>>();
+        for (int cx = 0; cx < colorImage.Width; cx++)
+        {
+          colorCounts.Add(cx, new Dictionary<int, int>());
+          for (int cy = 0; cy < colorImage.Height; cy++)
+          {
+            colorCounts[cx].Add(cy, 0);
+          }
+        }
+
+        // Dictionary to speed ring lookups.
+        Dictionary<int, Dictionary<int, Tuple<ChainmaillePatternElementId,
+          ChainmaillePatternElement>>> ringLookup =
+          new Dictionary<int, Dictionary<int,
+          Tuple<ChainmaillePatternElementId, ChainmaillePatternElement>>>();
+
+        // Progress bar scaling.
+        if (progress != null)
+        {
+          progress.ShapeProgressScale = overlayImage.Height;
+        }
+
+        // For each pixel in the overlay image, determine which ring it
+        // overlies, then add the overlay color (converted to L*a*b*)
+        // to the color sum for that ring.
+        LabColor overlayColor;
+        for (int oy = 0; oy < overlayImage.Height; oy++)
+        {
+          // Progress bar progress.
+          if (progress != null)
+          {
+            progress.ShapeProgressValue = oy;
+          }
+
+          for (int ox = 0; ox < overlayImage.Width; ox++)
+          {
+            overlayColor = ColorUtils.RgbToLab(overlayImage.GetPixel(ox, oy));
+
+            // Determine where the overlay pixel falls in the rendered image.
+            PointF oPointF = new PointF(ox, oy);
+            PointF rPointF =
+              TransformOverlayImagePointFToRenderedImage(oPointF);
+            Point rPoint = new Point(
+              (int)(rPointF.X + 0.5), (int)(rPointF.Y + 0.5));
+
+            // Determine which ring corresponds to the rendered image pixel.
+            ChainmaillePatternElement element;
+            ChainmaillePatternElementId elementId;
+            if (ringLookup.ContainsKey(rPoint.X) &&
+                ringLookup[rPoint.X].ContainsKey(rPoint.Y))
+            {
+              elementId = ringLookup[rPoint.X][rPoint.Y].Item1;
+              element = ringLookup[rPoint.X][rPoint.Y].Item2;
+            }
+            else
+            {
+              elementId = PatternElementAtRenderedPoint(rPoint, out element);
+              if (!ringLookup.ContainsKey(rPoint.X))
+              {
+                ringLookup.Add(rPoint.X, new Dictionary<int,
+                  Tuple<ChainmaillePatternElementId,
+                  ChainmaillePatternElement>>());
+              }
+              ringLookup[rPoint.X].Add(rPoint.Y,
+                new Tuple<ChainmaillePatternElementId,
+                ChainmaillePatternElement>(elementId, element));
+            }
+            if (elementId != null)
+            {
+              // Determine which pixel of the color image corresponds to the
+              // ring.
+              Point? cPoint = ElementToPointInColorImage(elementId, element);
+              if (cPoint.HasValue)
+              {
+                // Add the overlay pixel color information to the running
+                // color sum for that pixel of the color image.
+                int cx = cPoint.Value.X;
+                int cy = cPoint.Value.Y;
+                LabColor oldSum = result.GetPixel(cx, cy);
+                result.SetPixel(cx, cy, new LabColor(
+                  oldSum.Item1 + overlayColor.Item1,
+                  oldSum.Item2 + overlayColor.Item2,
+                  oldSum.Item3 + overlayColor.Item3));
+                colorCounts[cx][cy]++;
+              }
+            }
+          }
+        }
+
+        // For each pixel of the color image (i.e. each ring of the design)
+        // use its color sum and count to determine its average LAB color.
+        // Elements for which there is no count retain their original zero-
+        // value components.
+        for (int cy = 0; cy < result.Height; cy++)
+        {
+          for (int cx = 0; cx < result.Width; cx++)
+          {
+            int colorCount = colorCounts[cx][cy];
+            if (colorCount > 0)
+            {
+              // Compute the average overlay color for each element.
+              LabColor colorSum = result.GetPixel(cx, cy);
+              result.SetPixel(cx, cy, new LabColor(colorSum.Item1 / colorCount,
+                colorSum.Item2 / colorCount, colorSum.Item3 / colorCount));
+            }
+          }
+        }
+      }
+
+      return result;
+    }
+
     public string Messages
     {
       get { return messages; }
@@ -1962,6 +2048,45 @@ namespace ChainmailleDesigner
       {
         hiddenPaletteSectionNames = value;
       }
+    }
+
+    public ChainmaillePatternElementId PatternElementAtColorImagePoint(
+      Point point, out ChainmaillePatternElement referencedElement)
+    {
+      ChainmaillePatternElementId elementId = null;
+      int x = point.X;
+      int y = point.Y;
+      int cxBase, cyBase;
+      referencedElement = null;
+
+      if (colorImage != null && x >= 0 && y >= 0 &&
+          x < colorImage.Width && y < colorImage.Height)
+      {
+        int column = x / chainmaillePattern.ColorSize.Width;
+        int row = y / chainmaillePattern.ColorSize.Height;
+        Point colorOffset = new Point(
+          x - column * chainmaillePattern.ColorSize.Width,
+          y - row * chainmaillePattern.ColorSize.Height);
+
+        foreach (ChainmaillePatternElement element
+          in chainmaillePattern.PatternElements)
+        {
+          if (element.ColorOffset.X == colorOffset.X &&
+              element.ColorOffset.Y == colorOffset.Y)
+          {
+            referencedElement = element;
+            elementId = new ChainmaillePatternElementId();
+            elementId.ElementIndex = referencedElement.Index;
+            // Element id row and column are one-based.
+            elementId.Column = column + 1;
+            elementId.Row = row + 1;
+
+            break;
+          }
+        }
+      }
+
+      return elementId;
     }
 
     /// <summary>
