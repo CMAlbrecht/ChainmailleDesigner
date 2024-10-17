@@ -19,16 +19,25 @@
 
 using System;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Windows.Forms;
+
+// Transformation specification for translating colors within the same color
+// space. These are scale, offset pairs for each of three components.
+using ColorTransform = System.Tuple<System.Tuple<double, double>,
+  System.Tuple<double, double>, System.Tuple<double, double>>;
 
 namespace ChainmailleDesigner
 {
-  public partial class ColorFromOverlayForm : Form
+  public partial class ColorFromOverlayForm : Form, IShapeProgressIndicator
   {
     string ringFilterString = string.Empty;
     ChainmailleDesign design = null;
     Palette palette = null;
     PaletteSection paletteSection = null;
+    ColorTransform colorTransform;
+    LabImage labColorImage = null;
+    bool initializationComplete = false;
 
     // Dynamic UI element generation.
     private float xScaleFactor = 1;
@@ -47,6 +56,8 @@ namespace ChainmailleDesigner
 
       InitializeFromDesign();
       InitializeFromPalette();
+      SetColorTransform();
+      initializationComplete = true;
     }
 
     private void AddRingFilterButton(int filterIndex, string filterName,
@@ -64,6 +75,104 @@ namespace ChainmailleDesigner
       filterRadioButton.CheckedChanged +=
         new System.EventHandler(RingFilterButton_CheckedChanged);
       ringFilterGroupBox.Controls.Add(filterRadioButton);
+    }
+
+    private void ColorFromOverlayForm_Shown(object sender, EventArgs e)
+    {
+      if (design != null)
+      {
+        labColorImage = design.LabColorImageFromOverlay(this);
+      }
+
+      DrawPreviewImage();
+    }
+
+    public ColorTransform ColorTransform
+    {
+      get { return colorTransform; }
+    }
+
+    private void DrawPreviewImage()
+    {
+      if (design != null && design.RenderedImage != null &&
+        initializationComplete)
+      {
+        ringFilterString = string.Empty;
+        if (ringFilterGroupBox.Visible)
+        {
+          // Determine which ring filter to apply.
+          foreach (Control control in ringFilterGroupBox.Controls)
+          {
+            if (control is RadioButton && (control as RadioButton).Checked)
+            {
+              ringFilterString = (control as RadioButton).Text;
+              if (ringFilterString == "All Rings")
+              {
+                // "All Rings" means no filtering.
+                ringFilterString = string.Empty;
+              }
+              break;
+            }
+          }
+        }
+
+        if (previewPanel.BackgroundImage == null)
+        {
+          previewPanel.BackgroundImage = new Bitmap(
+            previewPanel.ClientRectangle.Width,
+            previewPanel.ClientRectangle.Height);
+        }
+
+        // Create a local copy of the color image of the design.
+        ColorImage previewColorImage =
+          new ColorImage(new Bitmap(design.ColorImage.BitmapImage));
+
+        // Modify the preview color image based on the ring filter, LAB color
+        // image, color transform, and palette section.
+        // Rings not passed by the filter will retain their color from the
+        // design, unaltered by the overlay.
+        design.ColorDesignFromLabColorImage(labColorImage, paletteSection,
+          ringFilterString, this, colorTransform, previewColorImage);
+        Bitmap sourceImage;
+
+        // Because this is a preview, we don't want to change the render image
+        // of the design yet, so we will use an alternative render image, then
+        // transform it for dispaly in the preview panel.
+        Bitmap alternativeRenderedImage =
+          design.RenderImage(true, null, ringFilterString, false,
+          previewColorImage);
+
+        sourceImage =
+          design.TransformRenderedImageForDisplay(alternativeRenderedImage);
+        previewColorImage.Dispose();
+        alternativeRenderedImage.Dispose();
+
+        Graphics g = Graphics.FromImage(previewPanel.BackgroundImage);
+        g.Clear(SystemColors.Control);
+        float zoomFactor = Math.Min(
+          previewPanel.BackgroundImage.Width /
+          (float)sourceImage.Width,
+          previewPanel.BackgroundImage.Height /
+          (float)sourceImage.Height);
+        Size destinationSize = new Size(
+          (int)(sourceImage.Width * zoomFactor),
+          (int)(sourceImage.Height * zoomFactor));
+        Rectangle destinationRectangle = new Rectangle(
+          (int)((previewPanel.BackgroundImage.Width -
+          destinationSize.Width) * 0.5F),
+          (int)((previewPanel.BackgroundImage.Height -
+          destinationSize.Height) * 0.5F),
+          destinationSize.Width, destinationSize.Height);
+        ImageAttributes imageAttributes = new ImageAttributes();
+        g.DrawImage(sourceImage, destinationRectangle,
+          0, 0, sourceImage.Width, sourceImage.Height,
+          GraphicsUnit.Pixel, imageAttributes);
+        g.Dispose();
+        sourceImage.Dispose();
+
+        // Invalidate the panel so that it is redrawn.
+        previewPanel.Invalidate();
+      }
     }
 
     private void InitializeControlSizes()
@@ -122,6 +231,11 @@ namespace ChainmailleDesigner
       }
     }
 
+    public LabImage LabColorImage
+    {
+      get { return labColorImage; }
+    }
+
     public PaletteSection PaletteSection
     { get { return paletteSection; } }
 
@@ -130,6 +244,7 @@ namespace ChainmailleDesigner
     {
       paletteSection =
         palette.Section((string)paletteSectionComboBox.SelectedItem);
+      DrawPreviewImage();
     }
 
     private void RingFilterButton_CheckedChanged(object sender, EventArgs e)
@@ -145,12 +260,110 @@ namespace ChainmailleDesigner
           // "All Rings" means no filtering.
           ringFilterString = string.Empty;
         }
+        DrawPreviewImage();
       }
     }
 
     public string RingFilterString
     {
       get { return ringFilterString; }
+    }
+
+    private void SetColorTransform()
+    {
+      double lScale = 1.0;
+      double lOffset = 0.0;
+      if (lCheckBox.Checked)
+      {
+        lScale = 1.0 + 0.1 * lScaleTrackBar.Value;
+        lOffset = lOffsetTrackBar.Value;
+      }
+
+      double aScale = 1.0;
+      double aOffset = 0.0;
+      if (aCheckBox.Checked)
+      {
+
+        aScale = 1.0 + 0.1 * aScaleTrackBar.Value;
+        aOffset = aOffsetTrackBar.Value;
+      }
+
+      double bScale = 1.0;
+      double bOffset = 0.0;
+      if (bCheckBox.Checked)
+      {
+        bScale = 1.0 + 0.1 * bScaleTrackBar.Value;
+        bOffset = bOffsetTrackBar.Value;
+      }
+
+      colorTransform = new ColorTransform(
+        new Tuple<double, double>(lScale, lOffset),
+        new Tuple<double, double>(aScale, aOffset),
+        new Tuple<double, double>(bScale, bOffset));
+    }
+
+    public int ShapeProgressScale
+    {
+      set { shapeProgressBar.Maximum = value; }
+    }
+
+    public int ShapeProgressValue
+    {
+      set { shapeProgressBar.Value = value; }
+    }
+
+    private void aCheckBox_CheckedChanged(object sender, EventArgs e)
+    {
+      SetColorTransform();
+      DrawPreviewImage();
+    }
+
+    private void aOffsetTrackBar_ValueChanged(object sender, EventArgs e)
+    {
+      SetColorTransform();
+      DrawPreviewImage();
+    }
+
+    private void aScaleTrackBar_ValueChanged(object sender, EventArgs e)
+    {
+      SetColorTransform();
+      DrawPreviewImage();
+    }
+
+    private void bCheckBox_CheckedChanged(object sender, EventArgs e)
+    {
+      SetColorTransform();
+      DrawPreviewImage();
+    }
+
+    private void bOffsetTrackBar_ValueChanged(object sender, EventArgs e)
+    {
+      SetColorTransform();
+      DrawPreviewImage();
+    }
+
+    private void bScaleTrackBar_ValueChanged(object sender, EventArgs e)
+    {
+      SetColorTransform();
+      DrawPreviewImage();
+    }
+
+    private void lCheckBox_CheckedChanged(object sender, EventArgs e)
+    {
+      SetColorTransform();
+      DrawPreviewImage();
+    }
+
+    private void lOffsetTrackBar_ValueChanged(object sender, EventArgs e)
+    {
+      SetColorTransform();
+      DrawPreviewImage();
+    }
+
+    private void lScaleTrackBar_ValueChanged(object sender, EventArgs e)
+    {
+      SetColorTransform();
+      DrawPreviewImage();
     }
 
   }

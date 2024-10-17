@@ -291,12 +291,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_1B105B44041C47DC9E85890F983B3522"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_1B26AFB295054701B5EC80641BED0A11"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -1281,6 +1275,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_7C1CBF580FED4C1EA3DF14A02D66774B"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_7CB2BCF9AFC446B98B22AE466367C703"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -2013,12 +2013,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_C1837C8BA24A41E5AA8F597FACF984DF"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_C2353C9C3F0E409495E9CA476F2A33A3"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -2140,6 +2134,12 @@
         "Entry"
         {
         "MsmKey" = "8:_CEC719FA856649DCBFCE1A7087A1DBF3"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_CF60D42906BB4972AFCC41EE48903D6E"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -2692,6 +2692,12 @@
         "Entry"
         {
         "MsmKey" = "8:_FFDF8FB9F2D84CDDBAD27A7B64A7AB46"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_FFEFC005E2304682BC39434545FEFF69"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -3708,26 +3714,6 @@
             "TargetName" = "8:e6-1ga16516-002.bmp"
             "Tag" = "8:"
             "Folder" = "8:_0B505B63710B4ABC8BC640EFDFE7BDC1"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1B105B44041C47DC9E85890F983B3522"
-            {
-            "SourcePath" = "8:..\\Documentation\\WebHelp\\Chainmaille Designer Users Manual_files\\image058.jpg"
-            "TargetName" = "8:image058.jpg"
-            "Tag" = "8:"
-            "Folder" = "8:_CEECE88460904FD893C2A792285F670B"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -7013,6 +6999,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7C1CBF580FED4C1EA3DF14A02D66774B"
+            {
+            "SourcePath" = "8:..\\Documentation\\WebHelp\\Chainmaille Designer Users Manual_files\\image121.png"
+            "TargetName" = "8:image121.png"
+            "Tag" = "8:"
+            "Folder" = "8:_CEECE88460904FD893C2A792285F670B"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7CB2BCF9AFC446B98B22AE466367C703"
             {
             "SourcePath" = "8:..\\Documentation\\WebHelp\\Chainmaille Designer Users Manual_files\\image103.png"
@@ -9453,26 +9459,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C1837C8BA24A41E5AA8F597FACF984DF"
-            {
-            "SourcePath" = "8:..\\Documentation\\WebHelp\\Chainmaille Designer Users Manual_files\\image059.png"
-            "TargetName" = "8:image059.png"
-            "Tag" = "8:"
-            "Folder" = "8:_CEECE88460904FD893C2A792285F670B"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C2353C9C3F0E409495E9CA476F2A33A3"
             {
             "SourcePath" = "8:..\\Documentation\\WebHelp\\Chainmaille Designer Users Manual_files\\image043.png"
@@ -9877,6 +9863,26 @@
             {
             "SourcePath" = "8:..\\Documentation\\WebHelp\\Chainmaille Designer Users Manual_files\\image011.png"
             "TargetName" = "8:image011.png"
+            "Tag" = "8:"
+            "Folder" = "8:_CEECE88460904FD893C2A792285F670B"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CF60D42906BB4972AFCC41EE48903D6E"
+            {
+            "SourcePath" = "8:..\\Documentation\\WebHelp\\Chainmaille Designer Users Manual_files\\image058.png"
+            "TargetName" = "8:image058.png"
             "Tag" = "8:"
             "Folder" = "8:_CEECE88460904FD893C2A792285F670B"
             "Condition" = "8:"
@@ -11733,6 +11739,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FFEFC005E2304682BC39434545FEFF69"
+            {
+            "SourcePath" = "8:..\\Documentation\\WebHelp\\Chainmaille Designer Users Manual_files\\image059.jpg"
+            "TargetName" = "8:image059.jpg"
+            "Tag" = "8:"
+            "Folder" = "8:_CEECE88460904FD893C2A792285F670B"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
         }
         "FileType"
         {
@@ -12351,15 +12377,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Chainmaille Designer"
-        "ProductCode" = "8:{2D3FEBD8-5FD7-4CFA-B535-721D9E997933}"
-        "PackageCode" = "8:{0EB82370-1E18-463B-9598-3C136697694B}"
+        "ProductCode" = "8:{245631D5-3A53-4831-8812-A7E9B8EE26FA}"
+        "PackageCode" = "8:{85AFB078-31EF-4288-8F7C-46485B8B4D78}"
         "UpgradeCode" = "8:{CF88F126-9C82-4BE9-A077-7F85407EE70C}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:3.1.0"
+        "ProductVersion" = "8:3.2.0"
         "Manufacturer" = "8:Dragon Enchained"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -12974,7 +13000,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_29F60CFCEE96453FB0F7EDC712F336CB"
             {
-            "SourcePath" = "8:..\\ChainmailleDesigner\\obj\\Debug\\ChainmailleDesigner.exe"
+            "SourcePath" = "8:..\\ChainmailleDesigner\\obj\\Release\\ChainmailleDesigner.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_E3E5959EDCA04A62A50833B501407D1F"

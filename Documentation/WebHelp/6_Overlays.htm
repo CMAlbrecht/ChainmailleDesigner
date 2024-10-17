@@ -172,39 +172,126 @@ color within each ring outline, then matching the average color for
 each ring to the closest color of the palette section of your
 choice.</p>
 <p class="MsoNormal">Before you start, however, make sure you have
-loaded a palette and positioned the overlay to your liking, and set
-the Ring Filter control (if applicable).&nbsp; [Note:&nbsp; If,
-like me, you use different palette sections for different ring
-sizes, you’ll have to do the coloring once for each ring size.]</p>
+loaded a palette and positioned the overlay to your liking.&nbsp;
+[Note:&nbsp; If, like me, you use different palette sections for
+different ring sizes, you’ll have to do the coloring once for each
+ring size.]</p>
+<p class="MsoCaption"><img width="172" height="336" id="Picture 1"
+src="Chainmaille%20Designer%20Users%20Manual_files/image055.png"
+alt="image" name="Picture 1"></p>
+<p class="MsoCaption">Iris overlay on Dragonscale bracelet</p>
 <p class="MsoNormal">To color the rings in this way, select Colors
-&gt; Color Rings from Overlay.&nbsp; This bring up a dialog in
-which you can choose the palette section to use for the coloring,
-and, if applicable, choose which ring sizes to affect.</p>
-<p align="center" style='text-align:center'><img width="362"
-height="202" id="Picture 110" src=
-"Chainmaille%20Designer%20Users%20Manual_files/image055.png" alt=
-"image" name="Picture 110"></p>
-<p class="MsoNormal">Once you click the OK button, there’s a lot of
-work going on behind the scenes.&nbsp; The progress bar will show
-how far along the process is (and with millions of pixels in the
-overlay image, the process will likely take a while).&nbsp; At the
-end you’ll be presented with your automatically-colored design.</p>
-<p class="MsoNormal">If you’re really lucky, you’ll be happy with
-the result.&nbsp; Most of the time, you will not be that
-lucky.&nbsp; I usually have to perform color replacement (see
-<b><i>Replacing Colors in Your Design,</i></b> below), followed up
-by individually painting rings along critical edges and other fine
-tuning.</p>
+&gt; Color Rings from Overlay.&nbsp; This brings up a very
+blank-looking form which stays blank while the designer completes
+the rather arduous process of computing the average overlay color
+for each ring.&nbsp; A small progress bar just below the Cancel
+button shows how this computation is progressing.&nbsp; The more
+pixels in the overlay image, the longer this part of the process
+takes.</p>
+<p class="MsoCaption"><img width="626" height="384" id="Picture 3"
+src="Chainmaille%20Designer%20Users%20Manual_files/image056.png"
+alt="image" name="Picture 3"></p>
+<p class="MsoCaption">Preview of automatic ring coloring using the
+Titanium palette section</p>
+<p class="MsoNormal">Once the pre-computation is complete, the
+dialog is filled in.&nbsp; In the dialog, you can see a preview of
+the result of coloring the rings from the overlay. You can change
+which section of the palette is used to match the overlay colors,
+and (if there are multiple ring sizes in your design) you can set
+which rings will be colored from the overlay; rings which you do
+not choose color from the overlay will retain their original
+color.&nbsp; In each case, the preview will be updated to show the
+result of your choices.</p>
+<p class="MsoNormal">You can also affect the matching of colors to
+the palette by changing the sliders in the Color Matching
+section.&nbsp; These controls transform the colors pre-computed
+from the overlay before matching them to the colors of the palette
+section.</p>
+<p class="MsoNormal">There are three sets of controls in the Color
+Matching section:</p>
+<p class="MsoListParagraphCxSpFirst" style=
+'margin-left:1.0in;text-indent:-.25in'><span style=
+'font-family:Symbol'>·<span style=
+'font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+The L* controls affect luminance (overall brightness).&nbsp; Moving
+either slider to the left makes the colors more black, while moving
+either slider to the right makes the colors whiter.</p>
+<p class="MsoListParagraphCxSpMiddle" style=
+'margin-left:1.0in;text-indent:-.25in'><span style=
+'font-family:Symbol'>·<span style=
+'font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+The a* controls affect the green-red component of the color.&nbsp;
+Moving either slider to the left makes the colors greener, while
+moving either slider to the right makes the colors more red.</p>
+<p class="MsoListParagraphCxSpLast" style=
+'margin-left:1.0in;text-indent:-.25in'><span style=
+'font-family:Symbol'>·<span style=
+'font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+The b* controls affect the blue-yellow component of the
+color.&nbsp; Moving either slider to the left makes the colors more
+blue, while moving either slider to the right makes the colors
+yellower.</p>
+<p class="MsoNormal">Each set of controls in the Color Matching
+section consists of one checkbox and two sliders, one above the
+other.&nbsp; The checkbox is easy to explain:&nbsp; with the
+checkbox off, colors will be unaffected by the sliders in that set
+of controls; with the checkbox on, the sliders in that set of
+controls will affect the color matching process.&nbsp; As for the
+sliders:</p>
+<p class="MsoListParagraphCxSpFirst" style=
+'margin-left:1.0in;text-indent:-.25in'><span style=
+'font-family:Symbol'>·<span style=
+'font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+The upper slider in each set changes the color offset, shifting all
+of the colors in the image uniformly.&nbsp; For example, moving the
+b* offset to the right makes all the colors the same amount
+yellower before they are matched to the palette colors.</p>
+<p class="MsoListParagraphCxSpLast" style=
+'margin-left:1.0in;text-indent:-.25in'><span style=
+'font-family:Symbol'>·<span style=
+'font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+The lower slider in each set changes the color scale, accentuating
+or de-emphasizing color differences within the image.&nbsp; For
+example, moving the L* scale to the right does make all the colors
+brighter, but rings that were already bright will become a lot
+brighter, while darker colors will be much less affected.</p>
+<p class="MsoNormal">If you really mess things up moving the
+sliders around, the easiest way to get back to “normal” is to
+uncheck the three checkboxes.</p>
+<h3><a name="node31" id="node31"></a>Technical Notes</h3>
+<p class="MsoNormal">Green-red?&nbsp; Blue-yellow?&nbsp; Why?</p>
+<p class="MsoNormal">These are the colors of the CIE L*a*b* color
+space.&nbsp; We use the CIE L*a*b* color space for this operation
+because it is the only color space for which the difference between
+colors can be computed in any consistent and useful way, and we
+can’t pick a “closest” color from a palette section without a
+consistent and useful measure of the difference between two
+colors.&nbsp; See the Wikipedia article on “Color Difference” if
+you really want to dig into the details.</p>
+<p class="MsoNormal">For those who really want to know, the offsets
+run from -50 to 50 with zero in the middle and the scales run from
+-0.5 to 2.5 with one in the middle.</p>
+<h3><a name="node32" id="node32"></a>When You’re Done Changing
+Things</h3>
+<p class="MsoNormal">Once you are satisfied with the coloration of
+the preview, clicking the OK button will apply those color changes
+to your design.&nbsp; At this point, I usually hide the overlay
+temporarily so that I can just see the assigned ring colors.&nbsp;
+If you’re really lucky, you’ll be happy with the result.&nbsp; Most
+of the time, you will not be that lucky.&nbsp; I usually have to
+perform color replacement (see <b><i>Replacing Colors in Your
+Design,</i></b> below), followed up by individually painting rings
+along critical edges and other fine tuning.</p>
 <p class="MsoNormal">For example, here’s an image off of the
 internet of St. Basil’s Cathedral, and the corresponding
 automatically colored result.</p>
 <p align="center" style='text-align:center'><img width="548"
 height="309" id="Picture 58" src=
-"Chainmaille%20Designer%20Users%20Manual_files/image056.png" alt=
+"Chainmaille%20Designer%20Users%20Manual_files/image057.png" alt=
 "image" name="Picture 58"></p>
 <p align="center" style='text-align:center'><img width="542"
 height="308" id="Picture 103" src=
-"Chainmaille%20Designer%20Users%20Manual_files/image057.png" alt=
+"Chainmaille%20Designer%20Users%20Manual_files/image058.png" alt=
 "image" name="Picture 103"></p>
 <p class="MsoCaption">St. Basil’s Cathedral, original image and
 auto-colored chainmaille design.</p>
@@ -221,13 +308,13 @@ results.&nbsp; Here’s a picture of me and the auto-colored
 result.</p>
 <p align="center" style='text-align:center'><img width="182"
 height="274" id="Picture 128" src=
-"Chainmaille%20Designer%20Users%20Manual_files/image058.jpg" alt=
+"Chainmaille%20Designer%20Users%20Manual_files/image059.jpg" alt=
 "image" name="Picture 128"><img width="183" height="275" id=
 "Picture 129" src=
-"Chainmaille%20Designer%20Users%20Manual_files/image059.png" alt=
+"Chainmaille%20Designer%20Users%20Manual_files/image060.png" alt=
 "image" name="Picture 129"><img width="156" height="240" id=
 "Picture 130" src=
-"Chainmaille%20Designer%20Users%20Manual_files/image060.png" alt=
+"Chainmaille%20Designer%20Users%20Manual_files/image061.png" alt=
 "image" name="Picture 130"></p>
 <p class="MsoNormal">Not so attractive, eh?&nbsp; However, simply
 replacing the non-black rings with all bronze or all champagne
@@ -236,10 +323,10 @@ from a limited-palette original, the way to a better design will be
 to further limit the palette.</p>
 <p align="center" style='text-align:center'><img width="182"
 height="275" id="Picture 131" src=
-"Chainmaille%20Designer%20Users%20Manual_files/image061.png" alt=
+"Chainmaille%20Designer%20Users%20Manual_files/image062.png" alt=
 "image" name="Picture 131"><img width="156" height="176" id=
 "Picture 132" src=
-"Chainmaille%20Designer%20Users%20Manual_files/image062.png" alt=
+"Chainmaille%20Designer%20Users%20Manual_files/image063.png" alt=
 "image" name="Picture 132"></p>
 <p class="MsoNormal">I’d still want to clean up the edges a bit
 manually, but to get to this point I have spent maybe five minutes

@@ -86,12 +86,22 @@ namespace ChainmailleDesigner
       return result;
     }
 
+    public int Height
+    {
+      get { return height; }
+    }
+
     public void SetPixel(int x, int y, LabColor labColor)
     {
       if (x >= 0 && x < width && y >= 0 && y < height)
       {
         pixels[x][y] = labColor;
       }
+    }
+
+    public int Width
+    {
+      get { return width; }
     }
 
   }

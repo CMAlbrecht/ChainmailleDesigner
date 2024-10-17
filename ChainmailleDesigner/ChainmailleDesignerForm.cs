@@ -2135,6 +2135,7 @@ namespace ChainmailleDesigner
 
       return doneDrawing;
     }
+
     public int ShapeProgressScale
     {
       set { shapeProgressBar.Maximum = value; }
@@ -2439,8 +2440,8 @@ namespace ChainmailleDesigner
         paletteForm.Palette);
       if (dlg.ShowDialog() == DialogResult.OK)
       {
-        chainmailleDesign.ColorDesignFromOverlay(
-          dlg.PaletteSection, dlg.RingFilterString, this);
+        chainmailleDesign.ColorDesignFromLabColorImage(dlg.LabColorImage,
+          dlg.PaletteSection, dlg.RingFilterString, this, dlg.ColorTransform);
         ShowRenderedImageAtZoom();
       }
     }
